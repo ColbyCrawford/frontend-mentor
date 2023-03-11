@@ -43,6 +43,9 @@
     max-block-size: 2.5rem;
 }
 
+#social .testimonials-item {
+    align-self: flex-start;
+}
 
 #social .testimonials-item:nth-child(2) {
     @media #{$break2open} {
