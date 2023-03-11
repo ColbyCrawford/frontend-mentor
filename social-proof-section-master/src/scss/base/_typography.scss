@@ -1,0 +1,28 @@
+@use '../abstracts/config' as *;
+
+body {
+    font-size: var(--fs-2);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-medium);
+    color: hsl(var(--clr-neutral-600));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-primary);
+}
+
+.heading-1 {
+    font-weight: 700;
+    
+    @media #{$break1} {
+        font-size: var(--fs-5);
+        line-height: 0.8;
+    }
+
+    @media #{$break2open} {
+        font-size: var(--fs-6);
+        line-height: 0.857;
+    }
+}
+
+

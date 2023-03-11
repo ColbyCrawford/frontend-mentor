@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.u-bg-primary-400 { background-color: hsl(var(--clr-primary-600)) !important; } 
+.u-bg-neutral-300 { background-color: hsl(var(--clr-neutral-300)) !important; }
+
+.u-text-neutral-100 { color: hsl(var(--clr-neutral-100)) !important; }
+.u-text-primary-600 { color: hsl(var(--clr-primary-600)) !important; }
+.u-text-secondary-300 { color: hsl(var(--clr-secondary-300)) !important; }
+
+.u-fs-body-md { font-size: var(--fs-body-md) !important; }
+
+.u-padding-block-20 { padding-block: 1.25rem !important; }
+.u-padding-inline-start-32 { padding-inline-start: 2rem !important; }
+.u-padding-inline-end-80 { padding-inline-end: 5rem !important; }
+
+.u-margin-block-end-16 { margin-block-end: pxToRem(16) !important; }
+
+.u-main-start { justify-content: start !important; }
+
+.u-max-width-445 { max-inline-size: 27.8125rem !important; }
+
