@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
+
+
+body {
+    font-family: var(--ff-body);
+    
+
+    @media #{$break1}, #{$break2} {
+        font-size: var(--fs-body-1);
+        line-height: 1.75;
+        color: hsl(var(--clr-neutral-600));
+    }
+
+    @media #{$break3open} {
+        font-size: var(--fs-body-2);
+        line-height: 1.777;
+        color: hsl(var(--clr-primary-400));
+    }
+}

@@ -1,11 +1,27 @@
 @use 'sass:meta';
 
-@layer normalize, new-css-reset, base, layouts, modules;
+@layer normalize, new-css-reset, abstracts, base, layouts, modules;
 
 @layer normalize {
-    @include meta.load-css('vendors/index');
+    @include meta.load-css('vendors');
 }
 
 @layer new-css-reset {
     @include meta.load-css('base/new-css-reset');
+}
+
+@layer abstracts {
+    @include meta.load-css('abstracts');
+}
+
+@layer base {
+    @include meta.load-css('base/typography');
+}
+
+@layer layouts {
+    @include meta.load-css('layouts');
+}
+
+@layer modules {
+    @include meta.load-css('modules');
 }
