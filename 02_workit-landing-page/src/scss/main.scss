@@ -15,7 +15,7 @@
 }
 
 @layer base {
-    @include meta.load-css('base/typography');
+    @include meta.load-css('base');
 }
 
 @layer layouts {

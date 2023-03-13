@@ -391,11 +391,13 @@
     --fs-8: 5rem;
     --fs-body-1: var(--fs-1);
     --fs-body-2: var(--fs-2);
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
   }
   /* breakpoints */
 }
 @layer base {
-  @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap");
   :root {
     /* colors */
     --clr-primary-400: 273, 85%, 13%;
@@ -418,6 +420,9 @@
     --fs-8: 5rem;
     --fs-body-1: var(--fs-1);
     --fs-body-2: var(--fs-2);
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
   }
   /* breakpoints */
   body {
@@ -436,6 +441,43 @@
       line-height: 1.777;
       color: hsl(var(--clr-primary-400));
     }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-heading);
+  }
+  .heading-1 {
+    line-height: 1;
+  }
+  @media (max-width:767.99px) {
+    .heading-1 {
+      font-size: var(--fs-5);
+    }
+  }
+  @media (min-width:768px) and (max-width:1198.99px) {
+    .heading-1 {
+      font-size: var(--fs-6);
+    }
+  }
+  @media (min-width:1199px) {
+    .heading-1 {
+      font-size: var(--fs-8);
+    }
+  }
+  .heading-2 {
+    font-size: var(--fs-6);
+    line-height: 1.1428;
+  }
+  .heading-3 {
+    font-size: var(--fs-4);
+    line-height: 1.25;
+  }
+  .body-1 {
+    font-size: var(--fs-1);
+    line-height: 1.75;
+  }
+  .body-2 {
+    font-size: var(--fs-2);
+    line-height: 1.777;
   }
 }
 @layer layouts {
@@ -461,6 +503,9 @@
     --fs-8: 5rem;
     --fs-body-1: var(--fs-1);
     --fs-body-2: var(--fs-2);
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
   }
   /* breakpoints */
   .container {
@@ -486,6 +531,77 @@
       width: calc(100% - var(--container-margin) * 2);
     }
   }
+  .hero {
+    background: hsl(var(--clr-primary-400));
+    text-align: center;
+  }
+  @media (max-width:767.99px), (min-width:768px) and (max-width:1198.99px) {
+    .hero {
+      padding-block-start: 2rem;
+    }
+  }
+  @media (min-width:1199px) {
+    .hero {
+      padding-block-start: 3.5rem;
+    }
+  }
+  .hero-content {
+    margin-inline: auto;
+  }
+  @media (max-width:767.99px) {
+    .hero-content {
+      max-inline-size: 100%;
+    }
+  }
+  @media (min-width:768px) and (max-width:1198.99px) {
+    .hero-content {
+      max-inline-size: 35.625rem;
+    }
+  }
+  @media (min-width:1199px) {
+    .hero-content {
+      max-inline-size: 40rem;
+    }
+  }
+  .hero-title {
+    color: hsl(var(--clr-neutral-100));
+    margin-block-end: 2.5rem;
+  }
+  .hero-img {
+    position: relative;
+    top: 5em;
+  }
+  .hero-title-underline {
+    position: relative;
+  }
+  .hero-title-underline::before {
+    content: "";
+    block-size: 3px;
+    inline-size: 100%;
+    bottom: 5px;
+    background: hsl(var(--clr-secondary-400));
+    position: absolute;
+    left: 3px;
+  }
+  @media (max-width:767.99px) {
+    .main-nav {
+      margin-block-end: 4rem;
+    }
+  }
+  @media (min-width:768px) and (max-width:1198.99px) {
+    .main-nav {
+      margin-block-end: 3.5rem;
+    }
+  }
+  @media (min-width:1199px) {
+    .main-nav {
+      margin-block-end: 3rem;
+    }
+  }
+  .main-nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 @layer modules {
   :root {
@@ -510,34 +626,47 @@
     --fs-8: 5rem;
     --fs-body-1: var(--fs-1);
     --fs-body-2: var(--fs-2);
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
   }
   /* breakpoints */
-  .btn-primary {
+  .btn-secondary {
     display: inline-block;
     font-weight: 700;
     padding: 0.8em 1.5em;
     letter-spacing: -0.16px;
   }
   @media (max-width:767.99px), (min-width:768px) and (max-width:1198.99px) {
-    .btn-primary {
+    .btn-secondary {
       font-size: var(--fs-body-1);
       line-height: 2;
     }
   }
   @media (min-width:768px) {
-    .btn-primary {
+    .btn-secondary {
       font-size: var(--fs-body-2);
       line-height: 1.777;
     }
   }
-  .btn-primary {
+  .btn-secondary {
     background-color: hsl(var(--clr-secondary-400));
     color: hsl(var(--clr-primary-400));
   }
-  .btn-primary:hover {
+  .btn-secondary:hover {
     background-color: transparent;
     border: 2px solid hsl(var(--clr-secondary-400));
     color: hsl(var(--clr-secondary-400));
+  }
+  .link-neutral-100 {
+    display: inline-block;
+    font-size: var(--fs-2);
+    font-weight: var(--fw-bold);
+    line-height: 1.777;
+  }
+  .link-neutral-100 {
+    color: hsl(var(--clr-neutral-100));
+    border-bottom: 3px solid hsl(var(--clr-secondary-400));
   }
 }
 

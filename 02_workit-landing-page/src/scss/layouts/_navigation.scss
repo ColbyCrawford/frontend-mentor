@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.main-nav {
+    
+    @media #{$break1} {
+        margin-block-end: pxToRem(64);
+    }
+
+    @media #{$break2} {
+        margin-block-end: pxToRem(56);
+    }
+
+    @media #{$break3open} {
+        margin-block-end: pxToRem(48);
+    }
+
+}
+
+.main-nav-list {
+    display: flex;
+    justify-content: space-between;
+
+   
+}

@@ -1,12 +1,8 @@
 @use '../abstracts/variables' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
-
-
 body {
     font-family: var(--ff-body);
     
-
     @media #{$break1}, #{$break2} {
         font-size: var(--fs-body-1);
         line-height: 1.75;
@@ -18,4 +14,41 @@ body {
         line-height: 1.777;
         color: hsl(var(--clr-primary-400));
     }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--ff-heading);
+}
+
+.heading-1 {
+    line-height: 1;
+    @media #{$break1} {
+        font-size: var(--fs-5);
+    }
+    @media #{$break2} {
+        font-size: var(--fs-6);
+    }
+    @media #{$break3open} {
+        font-size: var(--fs-8);
+    }
+}
+
+.heading-2 {
+    font-size: var(--fs-6);
+    line-height: 1.1428;
+}
+
+.heading-3 {
+    font-size: var(--fs-4);
+    line-height: 1.25;
+}
+
+.body-1 {
+    font-size: var(--fs-1);
+    line-height: 1.75;
+}
+
+.body-2 {
+    font-size: var(--fs-2);
+    line-height: 1.777;
 }

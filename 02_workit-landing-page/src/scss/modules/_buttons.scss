@@ -17,7 +17,7 @@
     }
 }
 
-.btn-primary {
+.btn-secondary {
     @extend %btn;
     background-color: hsl(var(--clr-secondary-400));
     color: hsl(var(--clr-primary-400));
