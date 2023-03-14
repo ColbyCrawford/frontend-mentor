@@ -39,8 +39,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .heading-3 {
-    font-size: var(--fs-4);
-    line-height: 1.25;
+    @media #{$break1}, #{$break2} {
+        font-size: var(--fs-3);
+        line-height: 1.28;
+    }
+
+    @media #{break3open} {
+        font-size: var(--fs-4);
+        line-height: 1.25;
+    }
 }
 
 .body-1 {

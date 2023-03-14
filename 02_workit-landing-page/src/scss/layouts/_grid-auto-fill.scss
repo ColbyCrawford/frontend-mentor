@@ -1,0 +1,20 @@
+@use '../abstracts' as *;
+
+
+.grid-col-3 {
+    display: grid;
+
+    @media #{$break1} {
+        gap: 2.5rem;
+    } 
+
+    @media #{$break2} {
+        gap: 3rem;
+    }
+
+    @media #{$break3open} {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+
+}

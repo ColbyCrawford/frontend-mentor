@@ -467,9 +467,17 @@
     font-size: var(--fs-6);
     line-height: 1.1428;
   }
-  .heading-3 {
-    font-size: var(--fs-4);
-    line-height: 1.25;
+  @media (max-width:767.99px), (min-width:768px) and (max-width:1198.99px) {
+    .heading-3 {
+      font-size: var(--fs-3);
+      line-height: 1.28;
+    }
+  }
+  @media break3open {
+    .heading-3 {
+      font-size: var(--fs-4);
+      line-height: 1.25;
+    }
   }
   .body-1 {
     font-size: var(--fs-1);
@@ -478,6 +486,16 @@
   .body-2 {
     font-size: var(--fs-2);
     line-height: 1.777;
+  }
+  .u-margin-block-end-156 {
+    margin-block-end: 9.75rem;
+  }
+  .u-bg-neutral-300 {
+    background-color: hsl(var(--clr-neutral-300));
+  }
+  main {
+    position: relative;
+    counter-reset: numbered-items;
   }
 }
 @layer layouts {
@@ -533,20 +551,34 @@
   }
   .hero {
     background: hsl(var(--clr-primary-400));
+    position: relative;
     text-align: center;
+    /* hero-content */
+  }
+  @media (max-width:767.99px) {
+    .hero {
+      padding-block-end: 6.25rem;
+    }
   }
   @media (max-width:767.99px), (min-width:768px) and (max-width:1198.99px) {
     .hero {
       padding-block-start: 2rem;
     }
   }
+  @media (min-width:768px) and (max-width:1198.99px) {
+    .hero {
+      padding-block-end: 8.75rem;
+    }
+  }
   @media (min-width:1199px) {
     .hero {
       padding-block-start: 3.5rem;
+      padding-block-end: 12.5rem;
     }
   }
   .hero-content {
     margin-inline: auto;
+    margin-block-end: 4rem;
   }
   @media (max-width:767.99px) {
     .hero-content {
@@ -563,13 +595,19 @@
       max-inline-size: 40rem;
     }
   }
+  /* hero-img-container */
+  .hero-img-container {
+    max-inline-size: 48.125rem;
+    min-inline-size: 25rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  /* hero-title */
   .hero-title {
     color: hsl(var(--clr-neutral-100));
     margin-block-end: 2.5rem;
-  }
-  .hero-img {
-    position: relative;
-    top: 5em;
   }
   .hero-title-underline {
     position: relative;
@@ -601,6 +639,25 @@
   .main-nav-list {
     display: flex;
     justify-content: space-between;
+  }
+  .grid-col-3 {
+    display: grid;
+  }
+  @media (max-width:767.99px) {
+    .grid-col-3 {
+      gap: 2.5rem;
+    }
+  }
+  @media (min-width:768px) and (max-width:1198.99px) {
+    .grid-col-3 {
+      gap: 3rem;
+    }
+  }
+  @media (min-width:1199px) {
+    .grid-col-3 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
   }
 }
 @layer modules {
@@ -667,6 +724,73 @@
   .link-neutral-100 {
     color: hsl(var(--clr-neutral-100));
     border-bottom: 3px solid hsl(var(--clr-secondary-400));
+  }
+  .spacer-curve {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 5;
+  }
+  .spacer-curve svg {
+    position: relative;
+    display: block;
+    width: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+  }
+  .spacer-curve .shape-fill {
+    fill: hsl(var(--clr-primary-400));
+  }
+  .numbered-item {
+    display: flex;
+  }
+  @media (max-width:767.99px) {
+    .numbered-item {
+      text-align: center;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  @media (min-width:768px) and (max-width:1198.99px) {
+    .numbered-item {
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+  @media (min-width:1199px) {
+    .numbered-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 3.5rem;
+    }
+  }
+  @media (min-width:768px) {
+    .numbered-item-content {
+      max-inline-size: 31.25rem;
+    }
+  }
+  .numbered-item::before {
+    counter-increment: numbered-items;
+    content: counter(numbered-items);
+    font-family: var(--ff-heading);
+    font-size: 1.25rem;
+    inline-size: 3rem;
+    block-size: 3rem;
+    border-radius: 50%;
+    border: 1px solid hsl(var(--clr-neutral-600));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  @media (max-width:767.99px), (min-width:1199px) {
+    .numbered-item::before {
+      margin-inline: auto;
+    }
   }
 }
 
