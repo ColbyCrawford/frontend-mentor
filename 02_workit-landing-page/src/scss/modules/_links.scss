@@ -9,7 +9,12 @@
 
 .link-neutral-100 {
     @extend %link;
+    --clr-accent: hsl(var(--clr-secondary-400));
 
     color: hsl(var(--clr-neutral-100));
-    border-bottom: 3px solid hsl(var(--clr-secondary-400));
+    border-bottom: 3px solid var(--clr-accent);
+
+    &:hover {
+        color: var(--clr-accent);
+    }
 }

@@ -1,5 +1,20 @@
 @use '../abstracts' as *;
 
+.cta {
+    @media #{$break1} {
+        margin-block-end: 4.5rem;
+    }
+
+    @media #{$break2} {
+        margin-block-end: 3.8rem;
+    }
+
+    @media #{$break3open} {
+        margin-block-end: 7.5rem;
+    }
+}
+
+
 .cta-content {
     position: relative;
     @media #{$break2} {
@@ -32,7 +47,14 @@
         max-inline-size: 70%;
         bottom: 0;
         right: 0;
+
+        &::after {
+            position: absolute;
+            content: url('../../assets/images/bg-pattern-3.svg');
+        }
     }
+
+    
 }
 
 .cta-img-container {

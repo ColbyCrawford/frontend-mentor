@@ -2,6 +2,7 @@
 
 .hero {
     background: hsl(var(--clr-primary-400));
+    background-repeat: no-repeat;
     position: relative;
     text-align: center;
 
@@ -9,18 +10,29 @@
         padding-block-end: pxToRem(100);
     }
 
-    @media #{$break1},
-    #{$break2} {
+    @media #{$break1}, #{$break2} {
         padding-block-start: pxToRem(32);
     }
 
     @media #{$break2} {
         padding-block-end: pxToRem(140);
+        background-image: 
+            url("../../assets/images/bg-pattern-1.svg"),
+            url("../../assets/images/bg-pattern-2.svg");
+        background-position: 
+            top 5rem left -14.4rem,
+            bottom 3.5rem right -6em;
     }
 
     @media #{$break3open} {
         padding-block-start: pxToRem(56);
         padding-block-end: pxToRem(200);
+        background-image: 
+            url("../../assets/images/bg-pattern-1.svg"),
+            url("../../assets/images/bg-pattern-2.svg");
+        background-position: 
+             top 5rem left -8rem,
+             bottom 3.5rem right -4em;
     }
     
     /* hero-content */
