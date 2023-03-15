@@ -20,5 +20,22 @@
 }
 
 .spacer-curve .shape-fill {
-    fill: hsl(var(--clr-primary-400));
+    --spacer-color: 0, 100%, 50%;
+    fill: hsl(var(--spacer-color));
+}
+
+
+/* layouts */
+.spacer-curve {
+   #cta > & {
+    
+    @media #{$break1}, #{$break2} {
+        margin-block-end: pxToRem(100);
+    }
+
+    @media #{$break3open} {
+        margin-block-end: pxToRem(110);
+    }
+
+   }
 }

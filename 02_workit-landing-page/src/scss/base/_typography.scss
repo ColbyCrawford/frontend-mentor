@@ -1,4 +1,17 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
+
+    // ********************** //
+    //       Type-Scale       //
+    //       ----------       //
+    // --fs-1: 1rem;     16px //
+    // --fs-2: 1.125rem; 18px //
+    // --fs-3: 1.75rem;  28px //
+    // --fs-4: 2rem;     32px //
+    // --fs-5: 3.125rem; 50px //
+    // --fs-6: 3.5rem;   56px //
+    // --fs-7: 3.75rem;  60px //
+    // --fs-8: 5rem;;    80px //
+    // ********************** //
 
 body {
     font-family: var(--ff-body);
@@ -34,8 +47,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .heading-2 {
-    font-size: var(--fs-6);
-    line-height: 1.1428;
+
+    @media #{$break1} {
+        font-size: var(--fs-4);
+        line-height: 1.5;
+    }
+
+    @media #{$break2} {
+        font-size: pxToRem(48);
+        line-height: 1.1666;
+    }
+
+    @media #{$break3open} {
+        font-size: var(--fs-6);
+        line-height: 1.1428;
+    }
 }
 
 .heading-3 {

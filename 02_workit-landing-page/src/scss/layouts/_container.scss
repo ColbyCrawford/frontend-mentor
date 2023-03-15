@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-.container {
+.w-container {
     --container-max-width: 1110px;
     max-inline-size: var(--container-max-width);
     margin-inline: auto;
