@@ -1,0 +1,22 @@
+@use "sass:meta";
+
+
+@layer normalize, local-reset, base, layouts, modules, pages, themes, utilites;
+
+@layer normalize {
+   @include meta.load-css('base/normalize');
+}
+
+@layer local-reset {
+   @include meta.load-css('base/local-reset');
+}
+
+@layer base {
+   @include meta.load-css('base');
+}
+
+@layer layouts {
+   @include meta.load-css('layouts');
+}
+
+
