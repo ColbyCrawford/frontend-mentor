@@ -439,5 +439,35 @@
     }
   }
 }
+@layer modules {
+  /* container */
+  /* colors */
+  /* typography */
+  .btn-primary-chevron {
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.6366px;
+    text-transform: uppercase;
+    font-weight: 800;
+    align-items: center;
+  }
+  .btn-primary-chevron {
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 100%);
+  }
+  .btn-text {
+    display: inline-block;
+    padding-inline: 32px;
+  }
+  .btn-icon {
+    background-color: hsl(24, 56%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+  }
+}
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
