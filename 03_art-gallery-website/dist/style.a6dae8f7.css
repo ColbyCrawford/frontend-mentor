@@ -368,8 +368,6 @@
   }
 }
 @layer base {
-  @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap");
   /* container */
   /* colors */
   /* typography */
@@ -438,22 +436,54 @@
       padding-block: 5rem;
     }
   }
+  .hero-container {
+    min-block-size: 700px;
+    display: flex;
+  }
+  @media (max-width: 767.99px) {
+    .hero-container {
+      flex-direction: column;
+    }
+    .hero-img {
+      inline-size: 100vw;
+      max-inline-size: 100vw;
+      display: block;
+      margin: 0 calc(50% - 50vw);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .hero-container {
+      align-items: center;
+      justify-content: end;
+    }
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .hero-text {
+      max-inline-size: 340px;
+    }
+  }
 }
 @layer modules {
   /* container */
   /* colors */
   /* typography */
-  .btn-primary-chevron {
+  .btn-primary-icon {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.2;
     cursor: pointer;
-    font-size: 20px;
-    line-height: 24px;
     letter-spacing: 3.6366px;
     text-transform: uppercase;
-    font-weight: 800;
-    align-items: center;
   }
-  .btn-primary-chevron {
+  .btn-primary-icon {
     background-color: hsl(0, 0%, 8%);
     color: hsl(0, 0%, 100%);
   }
@@ -461,12 +491,12 @@
     display: inline-block;
     padding-inline: 32px;
   }
-  .btn-icon {
+  .btn-icon-wrapper {
     background-color: hsl(24, 56%, 63%);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 1.5rem;
   }
 }
 

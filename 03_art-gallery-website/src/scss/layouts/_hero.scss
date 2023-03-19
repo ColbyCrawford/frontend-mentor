@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.hero {
+
+    &-container {
+        min-block-size: 700px;
+        display: flex;
+    }
+
+
+
+    @media #{$break1} {
+
+        &-container {
+            flex-direction: column;
+        }
+
+
+        &-img {
+            inline-size: 100vw;
+            max-inline-size: 100vw;
+            display: block;
+            margin: 0 calc(50% - 50vw);
+        }
+    }
+
+    @media #{$break2} {
+
+        &-container {
+            align-items: center;
+            justify-content: end;
+        }
+
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &-text {
+            max-inline-size: 340px;
+        }
+    }
+
+
+
+}
