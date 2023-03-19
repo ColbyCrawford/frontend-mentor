@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+
+.site-main.home {
+    @media #{$break1}, #{$break2} {
+        padding-block: pxToRem(120);
+    }
+
+    @media #{$break3open} {
+        padding-block: pxToRem(180);
+    }
+}

@@ -22,6 +22,22 @@
     @extend %btn;
     background-color: clr(neutral, dark);
     color: clr(neutral, light);
+
+    &-wrapper {
+        background-color: clr(primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    &:hover {
+        background-color: clr(primary);
+
+        .btn-primary-icon-wrapper {
+            background-color: clr(neutral, dark);
+        }
+    }
 }
 
 .btn-text {
@@ -29,10 +45,3 @@
     padding-inline: 32px;
 }
 
-.btn-icon-wrapper {
-    background-color: clr(primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-}

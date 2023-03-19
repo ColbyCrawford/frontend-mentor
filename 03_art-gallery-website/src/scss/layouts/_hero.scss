@@ -1,48 +1,89 @@
 @use '../abstracts' as *;
 
 .hero {
+    position: relative;
 
-    &-container {
-        min-block-size: 700px;
-        display: flex;
+    @media #{$break3open} {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0 50% 0 0;
+            z-index: -5;
+            background-color: clr(neutral, dark);
+        }
     }
+}
 
-
+.hero-container {
+    min-block-size: pxToRem(700);
+    display: flex;
 
     @media #{$break1} {
+        flex-direction: column;
+    }
+    @media #{$break2} {
+        align-items: center;
+        justify-content: end;
 
-        &-container {
-            flex-direction: column;
-        }
+    }
+    @media #{$break3open} {
+        align-items: center;
+    }
+}
 
 
-        &-img {
-            inline-size: 100vw;
-            max-inline-size: 100vw;
-            display: block;
-            margin: 0 calc(50% - 50vw);
+.hero-img {
+    @media #{$break1} {
+        inline-size: 100vw;
+        max-inline-size: 100vw;
+        display: block;
+        margin: 0 calc(50% - 50vw) 2rem;
+    }
+    @media #{$break2}, #{$break3open} {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+    }
+    @media #{$break2} {
+        left: 0;
+    }
+    @media #{$break3open} {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+.hero-text {
+
+    @media #{$break1} {
+        .hero-description {
+            padding-block: 2rem;
         }
     }
 
     @media #{$break2} {
+        max-inline-size: pxToRem(340);
 
-        &-container {
-            align-items: center;
-            justify-content: end;
-        }
-
-        &-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        &-text {
-            max-inline-size: 340px;
+        .hero-description {
+            padding-block: 3rem;
         }
     }
 
+    @media #{$break3open} {
+        display: flex;
+        justify-content: space-between;
+        inline-size: 100%;
 
-
+        .hero-title {
+            mix-blend-mode: difference;
+            color: clr(neutral, light);
+        }
+        .hero-text-content {
+            max-inline-size: pxToRem(350);
+        }
+        .hero-description {
+            padding-block-end: 4rem;
+        }
+    }
 }
