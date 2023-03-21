@@ -47,8 +47,31 @@
     min-height: 100%;
 }
 
+/* grid-1-1 */
+.grid-1-1 {
+    display: grid;
+    
+    @media #{$break2open} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* grid-1-2-1 */
 .grid-1-2-1 {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+
+    @media #{$break2open} {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
 }
+
+
+// LAYOUT SPECIFIC STYLES
+.site-footer .grid-1-2-1 {
+    @media #{$break1} {
+        gap: pxToRem(38);
+    }
+}
+
+
+

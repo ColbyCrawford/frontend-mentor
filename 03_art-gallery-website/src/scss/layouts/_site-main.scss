@@ -15,11 +15,13 @@
     background: clr(neutral, dark);
     color: clr(neutral, light);
 
-    @media #{$break1}, #{$break2} {
-        padding-block: pxToRem(104);
+    @media #{$break1} {
+        padding-block: 3rem 3.5rem;
     }
-
+    @media #{$break2} {
+        padding-block: pxToRem(88) pxToRem(80);
+    }
     @media #{$break3open} {
-        padding-block: pxToRem(128);
+        padding-block: pxToRem(104) pxToRem(128);
     }
 }

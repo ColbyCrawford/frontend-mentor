@@ -49,17 +49,12 @@
 /***************************/
 /* LAYOUTS SPECIFIC STYLES */
 /***************************/
-.btn-primary-icon {
-    .site-header.location & {
-        position: absolute;
-        top: 0;
-    }
+.site-header.map .btn-primary-icon {
+    position: absolute;
+    top: 0;
 
     @media #{$break1} {
-        .site-header.location & {
-            left: 0;
-        }
+        left: 0;
     }
-
 
 }
