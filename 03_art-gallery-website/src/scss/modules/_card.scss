@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+%card {
+
+    padding: 4rem 3rem;
+
+    @media #{$break1}, #{$break2} {
+        .card-title {
+            margin-block-end: 1.5rem;
+        }
+    }
+
+    @media #{$break3open} {
+        .card-title {
+            margin-block-end: 2rem;
+        }
+    }
+
+}
+
+.card-light {
+    @extend %card;
+    background-color: clr(neutral, light);
+
+    & .card-title {
+        color: clr(neutral, dark);
+    }
+
+    /* layout specific styles */
+    .grid-home & {
+        padding-inline-start: 0;
+    }
+}
+
+
+
+.card-dark {
+@extend %card;
+background-color: clr(neutral, dark);
+color: clr(neutral, light);
+}

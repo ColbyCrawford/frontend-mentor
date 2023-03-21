@@ -33,7 +33,7 @@
             from a spark of inspiration. Will these pieces inspire you? Visit
             us and find out.
           </p>
-          <a href="#" class="hero-btn btn-primary-icon">
+          <a href="location.html" class="hero-btn btn-primary-icon">
             <span class="btn-text">Our location</span>
             <span class="btn-primary-icon-wrapper">
               <img src="../assets/icon-arrow-right.svg" alt="">
@@ -47,16 +47,34 @@
   <main class="site-main home">
     <div class="container">
       <div class="grid-home">
-        <header class="card">
-          <h2>Your day at the gallery</h2>
-          <p>
+        <header class="grid-home-item-1 card-light">
+          <h2 class="card-title heading-2">Your day at the gallery</h2>
+          <p class="card-description">
             Wander through our distinct collections and find new insights about
             our artists. Dive into the details of their creative process.
           </p>
         </header>
-        <div class="card-dark">
-          <h2>Come &amp; be inspired</h2>
-          <p>
+        <picture class="grid-home-item-2">
+          <source media="(max-width: 767.99px)" srcset="../assets/mobile/image-grid-1.jpg">
+          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/tablet/image-grid-1.jpg">
+          <source media="(min-width: 1199px)" srcset="../assets/desktop/image-grid-1.jpg">
+          <img src="../assets/mobile/image-grid-1.jpg" alt="art gallery overview">
+        </picture>
+        <picture class="grid-home-item-3">
+          <source media="(max-width: 767.99px)" srcset="../assets/mobile/image-grid-2.jpg">
+          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/tablet/image-grid-2.jpg">
+          <source media="(min-width: 1199px)" srcset="../assets/desktop/image-grid-2.jpg">
+          <img src="../assets/mobile/image-grid-2.jpg" alt="art gallery room with bench and single piece of artwork">
+        </picture>
+        <picture class="grid-home-item-4">
+          <source media="(max-width: 767.99px)" srcset="../assets/mobile/image-grid-3.jpg">
+          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/tablet/image-grid-3.jpg">
+          <source media="(min-width: 1199px)" srcset="../assets/desktop/image-grid-3.jpg">
+          <img src="../assets/mobile/image-grid-3.jpg" alt="gallery upstairs hallway">
+        </picture>
+        <div class="grid-home-item-5 card-dark">
+          <h2 class="card-title heading-2">Come &amp; be inspired</h2>
+          <p class="card-description">
             We’re excited to welcome you to our gallery and see how our collections
             influence you.
           </p>
@@ -66,13 +84,30 @@
   </main>
 
 
-  <footer class="site-footer">
-    <div class="container">
-      <img src="../assets/logo-light.svg" alt="home">
+  <footer class="site-footer site-footer-dark">
+    <div class="grid-1-2-1 container">
+      <span class="icon-logo"></span>
       <p>
         The Modern Art Gallery is free to all visitors and open seven days a week
         from 8am to 9pm. Find us at 99 King Street, Newport, USA.
       </p>
+      <ul class="socials">
+        <li class="socials-item">
+          <a href="#" class="socials-link">
+            <span class="icon-facebook"></span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="#" class="socials-link">
+            <span class="icon-instagram"></span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a href="#" class="socials-link">
+            <span class="icon-twitter"></span>
+          </a>
+        </li>
+      </ul>
     </div>
   </footer>
 

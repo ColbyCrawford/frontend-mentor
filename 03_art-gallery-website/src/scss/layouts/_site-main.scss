@@ -10,3 +10,16 @@
         padding-block: pxToRem(180);
     }
 }
+
+.site-main.location {
+    background: clr(neutral, dark);
+    color: clr(neutral, light);
+
+    @media #{$break1}, #{$break2} {
+        padding-block: pxToRem(104);
+    }
+
+    @media #{$break3open} {
+        padding-block: pxToRem(128);
+    }
+}

@@ -1,0 +1,17 @@
+.socials {
+    display: flex;
+    gap: 1.25rem;
+
+    /* context specific styles */
+    .site-footer-dark &,
+    .site-footer-primary & {
+        justify-self: end;
+        align-self: start;
+    }
+}
+
+.socials-icon {
+    display: block;
+    max-inline-size: 1.25rem;
+    max-block-size: 1.25rem;
+}

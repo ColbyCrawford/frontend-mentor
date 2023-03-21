@@ -40,8 +40,26 @@
     }
 }
 
+/* use in button's with icons */
 .btn-text {
     display: inline-block;
     padding-inline: 32px;
 }
 
+/***************************/
+/* LAYOUTS SPECIFIC STYLES */
+/***************************/
+.btn-primary-icon {
+    .site-header.location & {
+        position: absolute;
+        top: 0;
+    }
+
+    @media #{$break1} {
+        .site-header.location & {
+            left: 0;
+        }
+    }
+
+
+}
