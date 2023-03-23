@@ -1,0 +1,59 @@
+/* colors */
+$clr-primary-400: hsl(233, 26%, 24%);
+
+$clr-secondary-400: hsl(136, 65%, 51%);
+$clr-tertiary-400:  hsl(192, 70%, 51%);
+
+$clr-neutral-100: hsl(0, 0%, 100%);
+$clr-neutral-200: hsl(0, 0%, 98%);
+$clr-neutral-300: hsl(220, 16%, 96%);
+$clr-neutral-400: hsl(233, 8%, 62%);
+
+$colors: (
+    primary: (
+          base: $clr-primary-400,
+    ),
+    secondary: (
+          base: $clr-secondary-400,
+    ),
+    tertiary: (
+          base: $clr-tertiary-400,
+    ),
+    neutral: (
+      lightest: $clr-neutral-100,
+       lighter: $clr-neutral-200,
+         light: $clr-neutral-300,
+          base: $clr-neutral-400,
+    )
+);
+
+
+/* gradients */
+$gradient-400: linear-gradient(to bottom right, $clr-secondary-400, $clr-tertiary-400);
+
+
+/* typography */
+$fs-1: .625rem;    // 10px
+$fs-2: .8125rem;   // 13px
+$fs-3: .875rem;    // 14px
+$fs-4: .9375rem;   // 15px
+$fs-5: 1rem;       // 16px
+$fs-6: 1.125rem;   // 18px
+$fs-7: 1.25rem;    // 20px
+$fs-8: 1.5rem;     // 24px
+$fs-9: 2rem;       // 32px
+$fs-10: 2.5rem;    // 40px
+$fs-11: 3.5rem ;   // 56px
+
+$fs-body-md: $fs-6;
+$fs-body-sm: $fs-4;
+
+$ff-primary: 'Public Sans', sans-serif;
+$ff-secondary: 'Public Sans', sans-serif;
+
+$ff-body: $ff-primary;
+$ff-heading: $ff-secondary;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;  

@@ -1,0 +1,63 @@
+@use '../abstracts' as *;
+
+// *********************** //
+//     Font Size Chart     //
+// $fs-1: .625rem;    10px // 
+// $fs-2: .8125rem;   13px //
+// $fs-3: .875rem;    14px //
+// $fs-4: .9375rem;   15px //
+// $fs-5: 1rem;       16px //
+// $fs-6: 1.125rem;   18px //
+// $fs-7: 1.25rem;    20px //
+// $fs-8: 1.5rem;     24px //
+// $fs-9: 2rem;       32px //
+// $fs-10: 2.5rem;    40px //
+// $fs-11: 3.5rem ;   56px //
+// *********************** //
+
+body {
+    font-family: $ff-body;
+    font-weight: $fw-regular;
+    color: clr(neutral);
+    background-color: clr(neutral, lighter);
+
+    @media #{$break1} {
+        font-size: $fs-body-sm;
+    }
+    @media #{$break2open} {
+        font-size: $fs-body-md;
+    }
+}
+
+h1, .heading-1,
+h2, .heading-2,
+h3, .heading-3,
+h4, .heading-4,
+h5, .heading-5,
+h6, .heading-6 {
+    font-family: $ff-heading;
+    font-weight: $fw-light;
+    color: clr(primary);
+}
+
+.heading-1 {
+    @media #{$break1} {
+        font-size: $fs-10;
+        line-height: 1.2;
+    }
+    @media #{$break2open} {
+        font-size: $fs-11;
+        line-height: 1.1428;
+    }
+} 
+
+.heading-2 {
+    @media #{$break1} {
+        font-size: $fs-9;
+        line-height: 1.1875 ;
+    }
+    @media #{$break2open} {
+        font-size: $fs-10;
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+%btn {
+    --p-btn-font-size: #{$fs-3};
+    --p-btn-font-weight: #{$fw-bold};
+    --p-btn-border-radius: 100vw;
+    --p-btn-padding: .5714em 2.3571em;
+
+    display: inline-flex;
+    font-size: var(--p-btn-font-size);
+    font-weight: var(--p-btn-font-weight);
+    line-height: 2;
+    padding: var(--p-btn-padding);
+    border-radius: var(--p-btn-border-radius);
+}
+
+.btn-gradient-400 {
+    @extend %btn;
+    background: $gradient-400;
+    color: clr(neutral, lightest);
+}
