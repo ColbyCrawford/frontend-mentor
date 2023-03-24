@@ -1,0 +1,9 @@
+@use '../abstracts' as *;
+
+.link {
+    display: inline-block;
+    &:hover { cursor: pointer; }
+}
+
+
+

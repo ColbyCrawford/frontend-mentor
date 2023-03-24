@@ -1,0 +1,4 @@
+// use to control the 'container' elements inline-margin
+@mixin containerSize($value) {
+    width: calc(100% - ($value * 2));
+}

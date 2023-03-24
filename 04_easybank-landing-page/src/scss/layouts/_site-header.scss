@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.site-header {
+    background-color: clr(neutral, lightest);
+    padding-block: 1.125rem;
+}
+
+.l-site-header {
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+
+    justify-content: space-between;
+    align-items: center;
+}

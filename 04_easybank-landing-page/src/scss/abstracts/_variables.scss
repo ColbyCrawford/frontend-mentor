@@ -1,36 +1,7 @@
-/* colors */
-$clr-primary-400: hsl(233, 26%, 24%);
+/* container */
 
-$clr-secondary-400: hsl(136, 65%, 51%);
-$clr-tertiary-400:  hsl(192, 70%, 51%);
-
-$clr-neutral-100: hsl(0, 0%, 100%);
-$clr-neutral-200: hsl(0, 0%, 98%);
-$clr-neutral-300: hsl(220, 16%, 96%);
-$clr-neutral-400: hsl(233, 8%, 62%);
-
-$colors: (
-    primary: (
-          base: $clr-primary-400,
-    ),
-    secondary: (
-          base: $clr-secondary-400,
-    ),
-    tertiary: (
-          base: $clr-tertiary-400,
-    ),
-    neutral: (
-      lightest: $clr-neutral-100,
-       lighter: $clr-neutral-200,
-         light: $clr-neutral-300,
-          base: $clr-neutral-400,
-    )
-);
-
-
-/* gradients */
-$gradient-400: linear-gradient(to bottom right, $clr-secondary-400, $clr-tertiary-400);
-
+/* box-model */
+$section-padding-block: 5.5rem 5rem;  // 88px 80px
 
 /* typography */
 $fs-1: .625rem;    // 10px
@@ -57,3 +28,6 @@ $ff-heading: $ff-secondary;
 $fw-light: 300;
 $fw-regular: 400;
 $fw-bold: 700;  
+
+/* border-radius */
+$border-radius-sm: .25rem; 

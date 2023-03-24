@@ -370,14 +370,74 @@
   }
 }
 @layer abstracts {
+  /* container */
+  /* box-model */
+  /* typography */
+  /* border-radius */
   /* colors */
   /* gradients */
-  /* typography */
+  /* functions */
 }
 @layer base {
+  /* container */
+  /* box-model */
+  /* typography */
+  /* border-radius */
   /* colors */
   /* gradients */
-  /* typography */
+  /* functions */
+  section {
+    --p-padding-block: 5.5rem 5rem;
+    padding-block: var(--p-padding-block);
+  }
+  @font-face {
+    font-family: "icomoon";
+    src: url("/icomoon.89bacd3a.eot?v8ic8u");
+    src: url("/icomoon.89bacd3a.eot?v8ic8u#iefix") format("embedded-opentype"), url("/icomoon.24582789.ttf?v8ic8u") format("truetype"), url("/icomoon.beda357b.woff?v8ic8u") format("woff"), url("/icomoon.bd295577.svg?v8ic8u#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  [class^=icon-],
+  [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .icon-close:before {
+    content: "\e900";
+  }
+  .icon-hamburger:before {
+    content: "\e901";
+  }
+  .icon-facebook:before {
+    content: "\e902";
+    color: #fff;
+  }
+  .icon-instagram:before {
+    content: "\e903";
+    color: #fff;
+  }
+  .icon-pinterest:before {
+    content: "\e904";
+    color: #fff;
+  }
+  .icon-twitter:before {
+    content: "\e905";
+    color: #fff;
+  }
+  .icon-youtube:before {
+    content: "\e906";
+    color: #fff;
+  }
   body {
     font-family: "Public Sans", sans-serif;
     font-weight: 400;
@@ -429,11 +489,81 @@
     }
   }
 }
-@layer layouts {}
-@layer modules {
+@layer layouts {
+  /* container */
+  /* box-model */
+  /* typography */
+  /* border-radius */
   /* colors */
   /* gradients */
+  /* functions */
+  .site-header {
+    background-color: hsl(0, 0%, 100%);
+    padding-block: 1.125rem;
+  }
+  .l-site-header {
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-main {
+    position: relative;
+  }
+  .site-main::before {
+    --p-overlay-color: 233, 26%, 24%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(hsl(var(--p-overlay-color)), hsl(var(--p-overlay-color), 0.01));
+  }
+  .site-nav {
+    display: flex;
+  }
+  @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
+    .site-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      padding-block: 2rem;
+      position: absolute;
+      z-index: 5;
+      background-color: hsl(0, 0%, 100%);
+      width: 100%;
+      border-radius: 0.25rem;
+      top: 4rem;
+    }
+  }
+  @media (min-width: 1199px) {
+    .site-nav {
+      gap: 1.75rem;
+    }
+  }
+  .container {
+    --p-container-max-inline-size: 1110px;
+    max-inline-size: var(--p-container-max-inline-size);
+    margin-inline: auto;
+  }
+  @media (max-width: 767.99px) {
+    .container {
+      width: calc(100% - 3rem);
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: calc(100% - 8rem);
+    }
+  }
+}
+@layer modules {
+  /* container */
+  /* box-model */
   /* typography */
+  /* border-radius */
+  /* colors */
+  /* gradients */
+  /* functions */
   .btn-gradient-400 {
     --p-btn-font-size: 0.875rem;
     --p-btn-font-weight: 700;
@@ -450,7 +580,35 @@
     background: linear-gradient(to bottom right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
     color: hsl(0, 0%, 100%);
   }
+  .menu-toggle {
+    cursor: pointer;
+  }
 }
-@layer utilities {}
+@layer utilities {
+  /* container */
+  /* box-model */
+  /* typography */
+  /* border-radius */
+  /* colors */
+  /* gradients */
+  /* functions */
+  /* bg-color */
+  .u-bg-primary-400 {
+    background-color: hsl(233, 26%, 24%);
+  }
+  .u-bg-neutral-300 {
+    background-color: hsl(220, 16%, 96%);
+  }
+  @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
+    .is-only-desktop {
+      display: none;
+    }
+  }
+  @media (min-width: 1199px) {
+    .is-not-desktop {
+      display: none;
+    }
+  }
+}
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

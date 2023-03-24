@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+section {
+    --p-padding-block: #{$section-padding-block};
+
+    padding-block: var(--p-padding-block);
+}

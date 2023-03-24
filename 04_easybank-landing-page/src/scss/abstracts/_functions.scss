@@ -1,6 +1,4 @@
-@use 'variables' as *;
-
-@function clr($base, $shade: base) {
-    $color: map-get(map-get($colors, $base), $shade);
-    @return $color;
+@function pxToRem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
 }
