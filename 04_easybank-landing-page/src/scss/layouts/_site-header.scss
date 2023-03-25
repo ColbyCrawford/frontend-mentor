@@ -3,6 +3,15 @@
 .site-header {
     background-color: clr(neutral, lightest);
     padding-block: 1.125rem;
+    position: relative;
+    z-index: 100;
+}
+
+.site-header-bg-fix {
+    background-color: clr(neutral, lightest);
+    display: inline-block;
+    position: absolute;
+    inset: 0;
 }
 
 .l-site-header {
@@ -13,3 +22,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
+
+

@@ -1,14 +1,4 @@
 @use '../abstracts' as *;
 
-.site-main {
-    position: relative;
-}
 
-.site-main::before {
-    --p-overlay-color: #{$clr-primary-400-hsla};
 
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(hsl(var(--p-overlay-color)), hsl(var(--p-overlay-color), 0.01));
-}

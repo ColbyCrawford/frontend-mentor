@@ -500,6 +500,14 @@
   .site-header {
     background-color: hsl(0, 0%, 100%);
     padding-block: 1.125rem;
+    position: relative;
+    z-index: 100;
+  }
+  .site-header-bg-fix {
+    background-color: hsl(0, 0%, 100%);
+    display: inline-block;
+    position: absolute;
+    inset: 0;
   }
   .l-site-header {
     display: flex;
@@ -507,16 +515,6 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-  }
-  .site-main {
-    position: relative;
-  }
-  .site-main::before {
-    --p-overlay-color: 233, 26%, 24%;
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(hsl(var(--p-overlay-color)), hsl(var(--p-overlay-color), 0.01));
   }
   .site-nav {
     display: flex;
@@ -528,17 +526,21 @@
       gap: 1.25rem;
       padding-block: 2rem;
       position: absolute;
-      z-index: 5;
+      z-index: -5;
       background-color: hsl(0, 0%, 100%);
-      width: 100%;
+      inline-size: 100%;
       border-radius: 0.25rem;
-      top: 4rem;
+      transition: 0.3s ease-in-out;
+      bottom: 0;
     }
   }
   @media (min-width: 1199px) {
     .site-nav {
       gap: 1.75rem;
     }
+  }
+  .is-open {
+    bottom: -18rem;
   }
   .container {
     --p-container-max-inline-size: 1110px;
@@ -583,6 +585,26 @@
   .menu-toggle {
     cursor: pointer;
   }
+  body::before {
+    --p-overlay-color: 233, 26%, 24%;
+  }
+  @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(hsl(var(--p-overlay-color)), hsl(var(--p-overlay-color), 0.01));
+      z-index: -10;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
+    body.overlay::before {
+      z-index: 100;
+      opacity: 1;
+    }
+  }
 }
 @layer utilities {
   /* container */
@@ -608,6 +630,9 @@
     .is-not-desktop {
       display: none;
     }
+  }
+  .u-overflow-y-none {
+    overflow-y: hidden;
   }
 }
 

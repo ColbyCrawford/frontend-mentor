@@ -9,14 +9,20 @@
         gap: 1.25rem;
         padding-block: 2rem;
         position: absolute;
-        z-index: 5;
+        z-index: -5;
         background-color: clr(neutral, lightest);
-        width: 100%;
+        inline-size: 100%;
         border-radius: $border-radius-sm;
-        top: 4rem;
+        transition: 0.3s ease-in-out;
+        bottom: 0;
     }
 
     @media #{$break3open} {
         gap: 1.75rem;
     }
 }
+
+.is-open {
+    bottom: -18rem;
+}
+

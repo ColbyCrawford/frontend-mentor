@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
   <script src="script.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
@@ -19,6 +20,9 @@
   <!-- PAGE-HEADER  -->
   <!------------------>
   <header class="site-header">
+    <span class="site-header-bg-fix" aria-hidden="true">
+      <!-- fixes z-index issue with the nav-menu on mobile and tablet devices -->
+    </span>
     <div class="l-site-header container">
       <img src="../assets/images/logo-dark.svg" alt="Easybank home.">
       <!-- PRIMARY NAVIGATION -->
@@ -162,7 +166,6 @@
       <a href="#" class="link">Careers</a>
       <a href="#" class="link">Support</a>
       <a href="#" class="link">Privacy Policy</a>
-
       <a href="#" class="btn-gradient-400">Request Invite</a>
       <span>© Easybank. All Rights Reserved</span>
     </div>
