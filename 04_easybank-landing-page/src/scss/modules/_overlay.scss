@@ -1,6 +1,6 @@
 @use '../abstracts' as *;
 
-body::before {
+.overlay::before {
     --p-overlay-color: #{$clr-primary-400-hsla};
 
     @media #{$break1}, #{$break2} {
@@ -8,13 +8,16 @@ body::before {
         position: fixed;
         inset: 0;
         background: linear-gradient(hsl(var(--p-overlay-color)), hsl(var(--p-overlay-color), 0.01));
-        z-index: -10;
-        opacity: 0;
         transition: 0.3s ease-in-out;
     }
 }
 
-body.overlay::before {
+.overlay-hidden::before {
+    opacity: 0;
+    z-index: -10;
+}
+
+.overlay-visible::before {
     @media #{$break1}, #{$break2} {
         z-index: 100;
         opacity: 1;

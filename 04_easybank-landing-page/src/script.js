@@ -2,47 +2,38 @@ window.onload=function() {
     const body = document.querySelector('body');
     const menuToggle = document.querySelector('.menu-toggle');
     const menuToggleIcon = menuToggle.children[0];
-    const siteNav = document.querySelector('.site-nav');
-    const siteMain = document.querySelector('.site-main');
+    const navbarMenu = document.querySelector('.navbar-links');
 
 
     var isMenuOpen = false;
     menuToggle.addEventListener('click', e => {
         toggleMenu();
+        toggleOverlay(body);
+        toggleOverflow(body);
+        
+        isMenuOpen = alternateBoolean(isMenuOpen);
     })
 
     function toggleMenu() {
         // swap icons and toggle overflow-y on 'body'
         swapMenuToggleIcons();
-
-        // toggle overlay on 'body'
-        toggleOverlay(body);
-        
+            
         // transition in menu
         menuTransition();
-
     }
 
     function swapMenuToggleIcons() {
         if(isMenuOpen) {
             menuToggleIcon.classList.add('icon-hamburger');
             menuToggleIcon.classList.remove('icon-close');
-            isMenuOpen = false;
-
-            // add u-overflow-y-none to body
-            toggleOverflow(body);
         } else {
             menuToggleIcon.classList.remove('icon-hamburger');
             menuToggleIcon.classList.add('icon-close');
-            isMenuOpen = true;
-
-            // remove u-overflow-y-none from body
-            toggleOverflow(body);
         }
     }
 
     function menuTransition() {
-        siteNav.classList.toggle('is-open');
+        navbarMenu.classList.toggle('is-open');
     }
 
     function toggleOverflow(el) {
@@ -50,9 +41,23 @@ window.onload=function() {
     }
 
     function toggleOverlay(el) {
-        el.classList.toggle('overlay');
+        if(isMenuOpen) {
+            el.classList.remove('overlay-visible');
+            el.classList.add('overlay-hidden');
+        } else {
+            el.classList.add('overlay-visible');
+            el.classList.remove('overlay-hidden');
+        }
     }
 
-    
+    function alternateBoolean(el) {
+        if(el) {
+            el = false;
+        } else {
+            el = true;
+        }
+
+        return el;
+    }
 
 }

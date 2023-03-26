@@ -15,23 +15,20 @@
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
 
-<body>
+<body class="overlay overlay-hidden">
   <!------------------>
   <!-- PAGE-HEADER  -->
   <!------------------>
-  <header class="site-header">
-    <span class="site-header-bg-fix" aria-hidden="true">
-      <!-- fixes z-index issue with the nav-menu on mobile and tablet devices -->
-    </span>
-    <div class="l-site-header container">
+  <header class="navbar">
+    <div class="l-navbar container">
       <img src="../assets/images/logo-dark.svg" alt="Easybank home.">
       <!-- PRIMARY NAVIGATION -->
-      <nav class="site-nav">
-        <a href="#" class="link">Home</a>
-        <a href="#" class="link">About</a>
-        <a href="#" class="link">Contact</a>
-        <a href="#" class="link">Blog</a>
-        <a href="#" class="link">Careers</a>
+      <nav class="navbar-links">
+        <a href="#" class="navbar-link">Home</a>
+        <a href="#" class="navbar-link">About</a>
+        <a href="#" class="navbar-link">Contact</a>
+        <a href="#" class="navbar-link">Blog</a>
+        <a href="#" class="navbar-link">Careers</a>
       </nav>
       <!-- end of primary navigation -->
       <button class="menu-toggle is-not-desktop" aria-labelledby="Open Menu">
@@ -48,15 +45,16 @@
   <main class="site-main">
     <!-- MAIN-SECTION-ONE (HERO) -->
     <section class="hero">
-      <div class="container">
-        <div>
+      <div class="l-hero container">
+        <div class="hero-text">
           <h1 class="heading-1">Next generation digital banking</h1>
-          <p>
+          <p class="hero-description">
             Take your financial life online. Your Easybank account will be a one-stop-shop
             for spending, saving, budgeting, investing, and much more.
           </p>
           <a href="#" class="btn-gradient-400">Request Invite</a>
         </div>
+        <div class="hero-img-container"><img class="hero-img" src="../assets/images/image-mockups.png" alt="Mockup of easybank app on mobile devices."></div>
       </div>
     </section>
     <!-- end of main-section-one -->
@@ -128,7 +126,7 @@
   <!----------------->
   <!-- PAGE-FOOTER -->
   <!----------------->
-  <footer class="u-bg-primary-400">
+  <footer class="footer u-bg-primary-400">
     <div class="container">
       <img src="../assets/images/logo-light.svg" alt="Easybank home.">
 

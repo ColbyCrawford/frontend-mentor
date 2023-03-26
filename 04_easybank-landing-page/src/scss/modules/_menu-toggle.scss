@@ -1,3 +1,10 @@
+@use '../abstracts' as *;
+
 .menu-toggle {
     cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+    @include outline(clr(primary));
+    border-radius: 0.25rem;
 }

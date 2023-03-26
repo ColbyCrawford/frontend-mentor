@@ -12,6 +12,21 @@
     line-height: 2;
     padding: var(--p-btn-padding);
     border-radius: var(--p-btn-border-radius);
+
+    &:hover,
+    &:focus-visible {
+        transform: scale(0.98);
+    }
+
+    &:focus-visible {
+        @include outline(clr(primary));
+    }
+
+    @supports not selector(:focus-visible) {
+        &:focus {
+            @include outline(clr(primary));
+        }
+    }
 }
 
 .btn-gradient-400 {
@@ -19,3 +34,4 @@
     background: $gradient-400;
     color: clr(neutral, lightest);
 }
+

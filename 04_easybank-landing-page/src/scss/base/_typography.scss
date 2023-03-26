@@ -23,9 +23,11 @@ body {
 
     @media #{$break1} {
         font-size: $fs-body-sm;
+        line-height: 1.5555;
     }
     @media #{$break2open} {
         font-size: $fs-body-md;
+        line-height: 1.6666;
     }
 }
 

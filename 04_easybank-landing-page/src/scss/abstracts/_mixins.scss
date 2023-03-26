@@ -2,3 +2,8 @@
 @mixin containerSize($value) {
     width: calc(100% - ($value * 2));
 }
+
+@mixin outline($clr) {
+    outline: 0.125rem solid $clr;
+    outline-offset: 0.25rem;
+}
