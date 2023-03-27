@@ -26,35 +26,35 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close:before {
+.icon-close::before {
     content: "\e900";
 }
 
-.icon-hamburger:before {
+.icon-hamburger::before {
     content: "\e901";
 }
 
-.icon-facebook:before {
+.icon-facebook::before {
     content: "\e902";
     color: #fff;
 }
 
-.icon-instagram:before {
+.icon-instagram::before {
     content: "\e903";
     color: #fff;
 }
 
-.icon-pinterest:before {
+.icon-pinterest::before {
     content: "\e904";
     color: #fff;
 }
 
-.icon-twitter:before {
+.icon-twitter::before {
     content: "\e905";
     color: #fff;
 }
 
-.icon-youtube:before {
+.icon-youtube::before {
     content: "\e906";
     color: #fff;
 }

@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.card-features {
+    @media #{$break1} {
+        text-align: center;
+    }
+}
+
+.card-features-title {
+    @media #{$break1} {
+        margin-block: 1.5rem 1rem;
+    }
+    @media #{$break2open} {
+        margin-block: 2.5rem 1.5rem;
+    }
+}

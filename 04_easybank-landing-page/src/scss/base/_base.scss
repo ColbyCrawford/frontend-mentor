@@ -1,5 +1,9 @@
 @use '../abstracts' as *;
 
+body {
+    overflow-x: hidden;
+}
+
 section {
     --p-padding-block: #{$section-padding-block};
 
