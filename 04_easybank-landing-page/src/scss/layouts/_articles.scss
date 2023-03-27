@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+#articles {
+    @media #{$break1} {
+        padding-block: 5.5rem;
+    }
+    @media #{$break2open} {
+        padding-block: 5rem;
+    }
+}
+
+.l-articles > h2 {
+    @media #{$break1} {
+        margin-block-end: 2rem;
+    }
+    @media #{$break2open} {
+        margin-block-end: 2.5rem;
+    }
+}

@@ -1,13 +1,13 @@
 @use '../abstracts' as *;
 
-.hero {
+#hero {
     position: relative;
 
     @media #{$break1} {
-        --p-padding-block: 0 88px;
+        padding-block: 0 5.5rem;
     }
     @media #{$break2open} {
-        --p-padding-block: 170px 170px;
+        padding-block: 10.625rem;
     }
 }
 

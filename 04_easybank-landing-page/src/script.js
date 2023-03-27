@@ -3,6 +3,8 @@ window.onload=function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuToggleIcon = menuToggle.children[0];
     const navbarMenu = document.querySelector('.navbar-links');
+    const main = document.getElementById('main');
+    const footer = document.getElementById('footer');
 
 
     var isMenuOpen = false;
@@ -10,6 +12,8 @@ window.onload=function() {
         toggleMenu();
         toggleOverlay(body);
         toggleOverflow(body);
+        toggleInert(main);
+        toggleInert(footer);
         
         isMenuOpen = alternateBoolean(isMenuOpen);
     })
@@ -47,6 +51,15 @@ window.onload=function() {
         } else {
             el.classList.add('overlay-visible');
             el.classList.remove('overlay-hidden');
+        }
+    }
+
+    // used to disable tabbable elements behind an overlay
+    function toggleInert(el) {
+        if(isMenuOpen) {
+            el.removeAttribute('inert');
+        } else {
+            el.setAttribute('inert','');
         }
     }
 

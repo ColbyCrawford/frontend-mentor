@@ -123,11 +123,15 @@ window.onload = function () {
   var menuToggle = document.querySelector('.menu-toggle');
   var menuToggleIcon = menuToggle.children[0];
   var navbarMenu = document.querySelector('.navbar-links');
+  var main = document.getElementById('main');
+  var footer = document.getElementById('footer');
   var isMenuOpen = false;
   menuToggle.addEventListener('click', function (e) {
     toggleMenu();
     toggleOverlay(body);
     toggleOverflow(body);
+    toggleInert(main);
+    toggleInert(footer);
     isMenuOpen = alternateBoolean(isMenuOpen);
   });
   function toggleMenu() {
@@ -159,6 +163,15 @@ window.onload = function () {
     } else {
       el.classList.add('overlay-visible');
       el.classList.remove('overlay-hidden');
+    }
+  }
+
+  // used to disable tabbable elements behind an overlay
+  function toggleInert(el) {
+    if (isMenuOpen) {
+      el.removeAttribute('inert');
+    } else {
+      el.setAttribute('inert', '');
     }
   }
   function alternateBoolean(el) {
@@ -195,7 +208,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62990" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56457" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
