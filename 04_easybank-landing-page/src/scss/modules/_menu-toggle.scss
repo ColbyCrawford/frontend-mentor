@@ -2,9 +2,20 @@
 
 .menu-toggle {
     cursor: pointer;
+    position: relative;
+    border-radius: 0.25rem;
 }
 
 .menu-toggle:focus-visible {
-    @include outline(clr(primary));
-    border-radius: 0.25rem;
+    @include outlineInner(clr(secondary));
+}
+
+.menu-toggle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.menu-toggle:focus-visible::before {
+    @include outlineOuter(clr(neutral, lightest));
 }

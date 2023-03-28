@@ -864,19 +864,30 @@
     line-height: 2;
     padding: var(--p-btn-padding);
     border-radius: var(--p-btn-border-radius);
+    position: relative;
   }
   .btn-gradient-400:hover, .btn-gradient-400:focus-visible {
     transform: scale(0.98);
   }
   .btn-gradient-400:focus-visible {
-    outline: 0.125rem solid hsl(233, 26%, 24%);
+    outline: 0.125rem solid hsl(136, 65%, 51%);
     outline-offset: 0.25rem;
   }
   @supports not selector(:focus-visible) {
     .btn-gradient-400:focus {
-      outline: 0.125rem solid hsl(233, 26%, 24%);
+      outline: 0.125rem solid hsl(136, 65%, 51%);
       outline-offset: 0.25rem;
     }
+  }
+  .btn-gradient-400::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--p-btn-border-radius);
+  }
+  .btn-gradient-400:focus-visible::before {
+    outline: 0.0625rem solid hsl(0, 0%, 100%);
+    outline-offset: 0.35rem;
   }
   .btn-gradient-400 {
     background: linear-gradient(to bottom right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
@@ -965,11 +976,21 @@
   }
   .menu-toggle {
     cursor: pointer;
+    position: relative;
+    border-radius: 0.25rem;
   }
   .menu-toggle:focus-visible {
-    outline: 0.125rem solid hsl(233, 26%, 24%);
+    outline: 0.125rem solid hsl(136, 65%, 51%);
     outline-offset: 0.25rem;
-    border-radius: 0.25rem;
+  }
+  .menu-toggle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .menu-toggle:focus-visible::before {
+    outline: 0.0625rem solid hsl(0, 0%, 100%);
+    outline-offset: 0.35rem;
   }
   .overlay::before {
     --p-overlay-color: 233, 26%, 24%;

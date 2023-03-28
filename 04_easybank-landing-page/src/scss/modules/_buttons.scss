@@ -12,6 +12,7 @@
     line-height: 2;
     padding: var(--p-btn-padding);
     border-radius: var(--p-btn-border-radius);
+    position: relative;
 
     &:hover,
     &:focus-visible {
@@ -19,14 +20,28 @@
     }
 
     &:focus-visible {
-        @include outline(clr(primary));
+        @include outlineInner(clr(secondary));
     }
 
     @supports not selector(:focus-visible) {
         &:focus {
-            @include outline(clr(primary));
+            @include outlineInner(clr(secondary));
         }
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: var(--p-btn-border-radius);
+    }
+
+    &:focus-visible::before {
+        @include outlineOuter(clr(neutral, lightest));
+        // outline: 1px solid clr(neutral, lightest);
+        // outline-offset: .35rem;
+    }
+
 }
 
 .btn-gradient-400 {
@@ -34,4 +49,3 @@
     background: $gradient-400;
     color: clr(neutral, lightest);
 }
-

@@ -3,7 +3,12 @@
     width: calc(100% - ($value * 2));
 }
 
-@mixin outline($clr) {
+@mixin outlineInner($clr) {
     outline: 0.125rem solid $clr;
     outline-offset: 0.25rem;
+}
+
+@mixin outlineOuter($clr) {
+    outline: 0.0625rem solid $clr;
+    outline-offset: .35rem;
 }
