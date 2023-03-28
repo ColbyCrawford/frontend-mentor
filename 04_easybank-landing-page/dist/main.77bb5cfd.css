@@ -802,11 +802,12 @@
   }
   .footer-links {
     display: grid;
+    font-size: 0.875rem;
+    line-height: 1.7333;
+    grid-auto-rows: min-content;
+    gap: 0.5rem;
   }
   @media (max-width: 767.99px) {
-    .footer-links {
-      gap: 0.5rem;
-    }
     .footer-links-item {
       text-align: center;
     }

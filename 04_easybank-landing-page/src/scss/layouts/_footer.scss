@@ -34,9 +34,12 @@
 
 .footer-links {
     display: grid;
+    font-size: $fs-3;
+    line-height: 1.7333;
+    grid-auto-rows: min-content;
+    gap: 0.5rem;
 
     @media #{$break1} {
-        gap: 0.5rem;
         &-item {
             text-align: center;
         }
@@ -79,6 +82,4 @@
         max-inline-size: max-content;
         justify-self: end;
     }
-
-
 }
