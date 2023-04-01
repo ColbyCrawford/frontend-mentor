@@ -1,0 +1,5 @@
+@use '../../abstracts' as *;
+
+#cities {
+    @include sectionMarginBlockEnd($desktop: #{$size-160});
+}

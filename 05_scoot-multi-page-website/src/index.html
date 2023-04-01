@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="stylesheet" href="scss/main.scss">
+  <title>Frontend Mentor | Scoot</title>
+</head>
+
+<body>
+
+  <!------------>
+  <!-- navbar -->
+  <!------------>
+  <header id="navbar">
+    <div class="l-navbar container">
+      <img src="../assets/logo-dark.svg" alt="Scoot home.">
+      <div class="navbar-options">
+        <ul class="navbar-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="locations.html">Location</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+        <a href="#" class="navbar-cta btn-secondary">Get Scootin</a>
+      </div>
+      <button class="menu-toggle">
+        <span class="icon-hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!---------->
+  <!-- main -->
+  <!---------->
+  <main id="main u-section-flow">
+    <section id="hero">
+      <div class="container">
+        <picture class="hero-bg-img">
+          <source media="(max-width: 767.99px)" srcset="../assets/images/home-hero-mobile.jpg">
+          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/images/home-hero-tablet.jpg">
+          <source media="(min-width: 1199px)" srcset="../assets/images/home-hero-desktop.jpg">
+          <img src="../assets/images/about-hero-mobile.jpg" alt="">
+        </picture>
+        <div class="hero-content">
+          <h1 class="heading-1">Scooter sharing made simple</h1>
+          <div class="hero-body">
+            <p class="hero-description">
+              Scoot takes the hassle out of urban mobility. Our bikes are placed in convenient
+              locations in each of our cities. Use our app to locate the nearest bike, unlock
+              it with a tap, and you’re away!
+            </p>
+            <a href="" class="btn-secondary">Get Scootin</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps">
+      <ul class="uncommon-list l-flex-3-cols container">
+        <li class="uncommon-list-item">
+          <img class="uncommon-list-item-img" src="../assets/images/locate.svg" alt="">
+          <div>
+            <h2 class="uncommon-list-item-title heading-4 u-text-primary-400">Locate with app</h2>
+            <p>
+              Use the app to find the nearest scooter to you. We are continuously placing scooters
+              in the areas with most demand, so one should never be too far away.
+            </p>
+          </div>
+        </li>
+        <li class="uncommon-list-item">
+          <img class="uncommon-list-item-img" src="../assets/images/scooter.svg" alt="">
+          <div>
+            <h2 class="uncommon-list-item-title heading-4 u-text-primary-400">Pick your scooter</h2>
+            <p>
+              We show the most important info for the scooters closest to you. So you know how much
+              charge they have left and can see roughly how much it will cost.
+            </p>
+          </div>
+        </li>
+        <li class="uncommon-list-item">
+          <div class="uncommon-list-item-decor">
+            <img class="uncommon-list-item-img" src="../assets/images/ride.svg" alt="">
+          </div>
+          <div>
+            <h2 class="uncommon-list-item-title heading-4 u-text-primary-400">Enjoy the ride</h2>
+            <p>
+              Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet,
+              and you’re off! Always lock bikes away from walkways and accessibility ramps.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="telemetry">
+      <div class="l-flex-common container">
+        <div class="common-block">
+          <h2 class="heading-2 u-text-primary-400">Easy to use riding telemetry</h2>
+          <p class="common-block-body">
+            The Scoot app is available with riding telemetry. This means it can show you your
+            average speed, how long you've been using the scooter, your traveling distance,
+            and many more things all in an easy to use app.
+          </p>
+          <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="common-img-container decor-after">
+          <img class="u-border-radius-circular" src="../assets/images/telemetry.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="cities">
+      <div class="l-flex-common-reverse container">
+        <div class="common-block">
+          <h2 class="heading-2 u-text-primary-400">Coming to a city near you</h2>
+          <p class="common-block-body">
+            Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure
+            to let us know if you want to see us in your hometown. We’re aiming to let our
+            scooters loose on 23 cities over the coming year.
+          </p>
+          <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="common-img-container decor-before">
+          <img class="u-border-radius-circular" src="../assets/images/near-you.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="payments">
+      <div class="l-flex-common container">
+        <div class="common-block">
+          <h2 class="heading-2 u-text-primary-400">Zero hassle payments</h2>
+          <p class="common-block-body">
+            Our payment is as easy as one two three. We accept most credit cards and debit cards.
+            You can also link your PayPal account inside the app. Need to pay later? No worries!
+            You can defer payment for up to a month.
+          </p>
+          <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="common-img-container decor-after">
+          <img class="u-border-radius-circular" src="../assets/images/payments.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="l-cta container">
+        <h2 class="cta-title heading-2 u-text-neutral-100">Sign up and Scoot off today</h2>
+        <div class="u-gap-18 u-flex u-cross-center">
+          <img src="../assets/images/app-store.svg" alt="Avaiable on the AppStore">
+          <img src="../assets/images/google-play.svg" alt="Avaiable on GooglePlay">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!------------>
+  <!-- footer -->
+  <!------------>
+  <footer id="footer">
+    <div class="l-footer container">
+      <img src="../assets/logo-light.svg" alt="Scoot home.">
+      <ul class="footer-links">
+        <li class="footer-links-item">
+          <a class="footer-link" href="about.html">About</a>
+        </li>
+        <li class="footer-links-item">
+          <a class="footer-link" href="locations.html">Location</a>
+        </li>
+        <li class="footer-links-item">
+          <a class="footer-link" href="careers.html">Careers</a>
+        </li>
+      </ul>
+      <ul class="socials">
+        <li class="socials-item">
+          <a class="socials-item-link" href="#" aria-hidden="true">
+            <span class="socials-icon icon-facebook"></span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-item-link" href="#" aria-hidden="true">
+            <span class="socials-icon icon-twitter"></span>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a class="socials-item-link" href="#" aria-hidden="true">
+            <span class="socials-icon icon-instagram"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>

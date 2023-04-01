@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+
+    /* layouts */
+    #footer & {
+        @media #{$break2open} {
+            justify-self: end;
+        }
+    }
+}
+
+.socials-item {
+    max-block-size: max-content;
+}
+
+.socials-item-link {
+    display: block;
+    max-block-size: max-content;
+}
+
+.socials-icon {
+    display: block;
+    font-size: 1.5rem;
+}

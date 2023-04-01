@@ -1,0 +1,31 @@
+@use 'sass:meta';
+
+@layer normalize, reset, abstracts, base, layouts, modules, utilities;
+
+@layer normalize {
+    @include meta.load-css("base/normalize");
+}
+
+@layer reset {
+    @include meta.load-css("base/reset");
+}
+
+@layer abstracts {
+    @include meta.load-css("abstracts")
+}
+
+@layer base {
+    @include meta.load-css("base")
+}
+
+@layer layouts {
+    @include meta.load-css("layouts")
+}
+
+@layer modules {
+    @include meta.load-css("modules")
+}
+
+@layer utilities {
+    @include meta.load-css("utilities")
+}

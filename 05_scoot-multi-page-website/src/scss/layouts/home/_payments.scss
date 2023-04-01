@@ -1,0 +1,5 @@
+@use '../../abstracts' as *;
+
+#payments {
+    @include sectionMarginBlockEnd($tablet: 6.5rem, $desktop: #{$size-200});
+}

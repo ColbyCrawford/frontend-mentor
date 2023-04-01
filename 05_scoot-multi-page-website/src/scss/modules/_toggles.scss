@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.menu-toggle {
+    #navbar & {
+        @media #{$break1} {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-35%);
+        }
+        @media #{$break2open} {
+            display: none;
+        }
+    }
+}

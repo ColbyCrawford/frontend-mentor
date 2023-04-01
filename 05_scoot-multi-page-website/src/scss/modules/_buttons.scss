@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+%btn {
+    --p-btn-font-size: $fs-1;
+    --p-btn-padding-block: 0.9333em;
+    --p-btn-max-inline-size: 11.25rem;
+    --p-btn-font-family: #{$ff-secondary};
+
+    display: inline-flex;
+    justify-content: center;
+    font-family: var(--p-btn-font-family);
+    font-size: var(--p-btn-font-size);
+    line-height: 1.666;
+    padding-block: var(--p-btn-padding-block);
+    max-inline-size: var(--p-btn-max-inline-size);
+    inline-size: 100%;
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: clr(secondary);
+    color: clr(neutral, lightest)
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: clr(primary);
+}

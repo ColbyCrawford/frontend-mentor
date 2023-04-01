@@ -1,0 +1,39 @@
+@use '../../abstracts' as *;
+
+#navbar {
+    background-color: clr(neutral, lightest);
+    padding-block: 1.375rem;
+}
+
+.l-navbar {
+    display: grid;
+    position: relative;
+    @media #{$break1} {
+        justify-content: center;
+    }
+    @media #{$break2open} {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 3.625rem;
+    }
+}
+
+.navbar-options {
+    @media #{$break1} {
+        display: none;
+    } 
+    @media #{$break2open} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3.625rem;
+    }
+}
+
+.navbar-links {
+    @media #{$break2open} {
+        display: flex;
+        gap: 2rem;
+    }
+}
+

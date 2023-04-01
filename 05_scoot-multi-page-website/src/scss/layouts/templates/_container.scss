@@ -1,0 +1,15 @@
+@use '../../abstracts' as *;
+
+
+.container {
+    max-inline-size: 1110px;
+    margin-inline: auto;
+    @media #{$break1} {
+        @include containerMargin(2rem);
+    }
+    @media #{$break2open} {
+        @include containerMargin(6.125rem);
+    }
+}
+
+

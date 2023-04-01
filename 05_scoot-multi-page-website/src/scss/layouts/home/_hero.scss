@@ -1,0 +1,89 @@
+@use '../../abstracts' as *;
+
+#hero {
+    position: relative;
+    @media #{$break1} {
+        padding-block: pxToRem(115) pxToRem(179);
+        &::after {
+            content: url('../../assets/patterns/right-arrow.svg');
+            position: absolute;
+            bottom: 5%;
+            right: 70%;
+        }
+    }
+    @media #{$break2} {
+        --p-section-margin-block-end: #{$size-120};
+        padding-block: pxToRem(137) pxToRem(217);
+        &::after {
+            content: url('../../assets/patterns/right-arrow.svg');
+            position: absolute;
+            bottom: 5%;
+            left: 0%;
+        }
+    }
+    @media #{$break3open} {
+        --p-section-margin-block-end: #{$size-160};
+        padding-block: pxToRem(152);
+        &::after {
+            content: url('../../assets/patterns/right-arrow.svg');
+            position: absolute;
+            top: 56%;
+            left: 49%;
+        }
+    }
+}
+
+.hero-bg-img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: clr(primary, dark, 0.5);
+    }
+
+    & > img {
+        object-fit: cover;
+        min-inline-size: 100%;
+        min-block-size: 100%;
+    }
+}
+
+.hero-content {
+    color: clr(neutral, lightest);
+    @media #{$break1}, #{$break2} {
+        text-align: center;
+    }
+    @media #{$break3open} {
+        max-inline-size: pxToRem(500);
+    }
+}
+
+.hero-body {
+    @media #{$break3open} {
+        margin-inline-start: pxToRem(95);
+    }
+}
+
+.hero-description {
+    position: relative;
+    @media #{$break1} {
+        margin-block: 1.5rem 2.125rem;
+    }
+    @media #{$break2} {
+        margin-block: 1.5rem 2rem;
+    }
+    @media #{$break3open} {
+        margin-block: 2.5rem;
+        &::before {
+            content: url('../../assets/patterns/line.svg');
+            position: absolute;
+            top: 32.5%;
+            left: -62%;
+        }
+    }
+}
+

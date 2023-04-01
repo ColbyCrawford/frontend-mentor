@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.common-block {
+    &-body {
+        padding-block: 1.5rem 2.5rem;
+    }
+
+    @media #{$break1}, #{$break2} {
+        text-align: center;
+    }
+
+    // layouts
+    .l-flex-common &,
+    .l-flex-common-reverse & {
+        max-inline-size: pxToRem(445);
+    }
+}
+
+.common-img-container {
+    position: relative;
+}
+.decor-before {
+    &::before {
+        content: url('../../assets/patterns/circle.svg');
+        position: absolute;
+        left: calc(-100% + -4rem);
+    }
+}
+.decor-after {
+    &::after {
+        content: url('../../assets/patterns/circle.svg');
+        position: absolute;
+        left: calc(100% + 4rem);
+    }
+}
+
+
+

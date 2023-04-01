@@ -1,0 +1,38 @@
+@use '../../abstracts' as *;
+
+.l-flex-common {
+    display: flex;
+    @media #{$break1}, #{$break2} {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 3.5rem;
+    }
+    @media #{$break3open} {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.l-flex-common-reverse {
+    @extend .l-flex-common;
+    @media #{$break3open} {
+        flex-direction: row-reverse;
+    }
+}
+
+.l-flex-3-cols {
+    display: flex;
+    @media #{$break1} {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    @media #{$break2} {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    @media #{$break3open} {
+        gap: 1.875rem;
+    }
+}
+
+

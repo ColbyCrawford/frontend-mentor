@@ -1,0 +1,4 @@
+@mixin containerMargin($value) {
+    inline-size: calc(100% - ($value * 2));
+}
+

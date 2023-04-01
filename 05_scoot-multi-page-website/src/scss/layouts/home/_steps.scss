@@ -1,0 +1,6 @@
+@use '../../abstracts' as *;
+
+#steps {
+    @include sectionMarginBlockEnd($tablet: #{$size-144}, $desktop: #{$size-200});
+}
+

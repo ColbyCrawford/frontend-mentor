@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    --p-section-margin-block-end: 7.5rem;
+    margin-block-end: var(--p-section-margin-block-end);
+}
+
+img {
+    display: inline-block;
+}
