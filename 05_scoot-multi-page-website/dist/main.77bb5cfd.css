@@ -864,7 +864,10 @@
     font-size: 1.5rem;
   }
   .common-block-body {
-    padding-block: 1.5rem 2.5rem;
+    margin-block: 1.5rem 2.5rem;
+  }
+  .common-block-title {
+    margin-block-end: 1.5rem;
   }
   @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
     .common-block {

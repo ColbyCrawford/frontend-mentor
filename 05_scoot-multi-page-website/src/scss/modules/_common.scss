@@ -1,8 +1,13 @@
 @use '../abstracts' as *;
 
 .common-block {
+
     &-body {
-        padding-block: 1.5rem 2.5rem;
+        margin-block: 1.5rem 2.5rem;
+    }
+
+    &-title {
+        margin-block-end: 1.5rem;
     }
 
     @media #{$break1}, #{$break2} {
