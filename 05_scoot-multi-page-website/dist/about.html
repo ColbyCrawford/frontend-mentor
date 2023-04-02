@@ -39,18 +39,21 @@
 
 
   <section class="masthead">
-    <div class="container">
-      <h1 class="heading-1">About</h1>
+    <div class="l-masthead container">
+      <h1 class="masthead-title heading-1">About</h1>
     </div>
+    <picture class="masthead-bg">
+      <source media="(max-width: 767.99px)" srcset="/about-hero-mobile.78755c4c.jpg">
+      <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/about-hero-tablet.96b9aabd.jpg">
+      <source media="(min-width: 1199px)" srcset="/about-hero-desktop.088722ec.jpg">
+      <img class="masthead-bg-img" src="/about-hero-mobile.78755c4c.jpg" alt="" aria-hidden="true">
+    </picture>
   </section>
 
 
 
   <section id="mobility">
-    <div class="l-flex-common-reverse container">
-      <div class="common-img-container">
-        <img class="u-border-radius-circular" src="/digital-era.fc350775.jpg" alt="">
-      </div>
+    <div class="l-flex-common container">
       <div class="common-block">
         <h2 class="common-block-title heading-2 u-text-primary-400">Mobility for the digital era</h2>
         <p>
@@ -58,14 +61,24 @@
           provide low cost, smart access to scooters at your fingertips.
         </p>
       </div>
+      <div class="common-img-container decor-after">
+        <img class="u-border-radius-circular" src="/digital-era.fc350775.jpg" alt="">
+      </div>
     </div>
   </section>
 
   <section id="urban">
-    <div class="container">
-      Better urban living
-      We’re helping connect cities and bring people closer together. Our scooters are also
-      fully-electric and we offset the minimal carbon footprint for each ride.
+    <div class="l-flex-common-reverse container">
+      <div class="common-block">
+        <h2 class="common-block-title heading-2 u-text-primary-400">Better urban living</h2>
+        <p>
+          We’re helping connect cities and bring people closer together. Our scooters are also
+          fully-electric and we offset the minimal carbon footprint for each ride.
+        </p>
+      </div>
+      <div class="common-img-container decor-before">
+        <img class="u-border-radius-circular" src="/better-living.391cfb9a.jpg" alt="">
+      </div>
     </div>
   </section>
 
@@ -73,19 +86,36 @@
 
   <section id="values">
     <div class="container">
-      Our values
-      01
-      Our tech
-      We’re using cutting edge technology to drive accessible urban transportation forward.
-      Our fully electric scooters are a joy to ride!
-      02
-      Our integrity
-      We are fully committed to deliver a great yet safe, sustainable micro-mobility experience
-      in every city we serve.
-      03
-      Our community
-      We support every community we serve. All workers are paid a living wage based on their
-      location and are Scoot employees.
+      <h2 class="heading-2 u-text-primary-400">Our values</h2>
+      <ul class="features-list">
+        <li class="features-list-item">
+          <img class="u-border-radius-circular" src="/our-tech.9746fc48.jpg" alt="" aria-hidden="true">
+          <div class="features-list-number">01</div>
+          <h3 class="features-list-item-title heading-4">Our tech</h3>
+          <p>
+            We’re using cutting edge technology to drive accessible urban transportation forward.
+            Our fully electric scooters are a joy to ride!
+          </p>p
+        </li>
+        <div class="features-list-item">
+          <img class="u-border-radius-circular" src="/our-integrity.4d2c019d.jpg" alt="" aria-hidden="true">
+          <div class="features-list-number">02</div>
+          <h3 class="features-list-item-title heading-4">Our integrity</h3>
+          <p>
+            We are fully committed to deliver a great yet safe, sustainable micro-mobility experience
+            in every city we serve.
+          </p>
+        </div>
+        <div class="features-list-item">
+          <img class="u-border-radius-circular" src="/our-community.b3d48640.jpg" alt="" aria-hidden="true">
+          <div class="features-list-number">03</div>
+          <h3 class="features-list-item-title heading-4">Our community</h3>
+          <p>
+            We support every community we serve. All workers are paid a living wage based on their
+            location and are Scoot employees.
+          </p>
+        </div>
+      </ul>
     </div>
   </section>
 
@@ -93,7 +123,7 @@
 
   <section id="faq">
     <div class="container">
-      FAQs
+      <h2 class="heading-2 u-text-primary-400">FAQs</h2>
       How it works
       How do I download the app?
       To download the Scoot app, you can search “Scoot” in both the App and Google Play stores.

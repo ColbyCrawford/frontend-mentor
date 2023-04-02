@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.features-list {
+    @media #{$break3open} {
+        display: flex;
+        gap: 1.875rem;
+    }
+}
+
+.features-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-title {
+        color: clr(primary);
+        margin-block-end: 1.5rem;
+    }
+}
+
+.features-list-number {
+    background-color: clr(secondary);
+    color: clr(primary);
+    border-radius: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 6rem; 
+    block-size: 6rem;
+    margin-block-start: -2.5rem;
+
+    @media #{$break1} {
+        margin-block-end: 1rem;
+    }
+    @media #{$break2open} {
+        margin-block-end: 2rem;
+    }
+
+}

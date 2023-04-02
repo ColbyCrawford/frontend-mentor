@@ -43,13 +43,7 @@
   <!---------->
   <main id="main">
     <section id="hero">
-      <div class="container">
-        <picture class="hero-bg-img">
-          <source media="(max-width: 767.99px)" srcset="/home-hero-mobile.5d7761f1.jpg">
-          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/home-hero-tablet.47c5c699.jpg">
-          <source media="(min-width: 1199px)" srcset="/home-hero-desktop.adb29bcf.jpg">
-          <img src="/about-hero-mobile.78755c4c.jpg" alt="">
-        </picture>
+      <div class="l-hero container">
         <div class="hero-content">
           <h1 class="heading-1">Scooter sharing made simple</h1>
           <div class="hero-body">
@@ -62,6 +56,12 @@
           </div>
         </div>
       </div>
+      <picture class="hero-bg-img">
+        <source media="(max-width: 767.99px)" srcset="/home-hero-mobile.5d7761f1.jpg">
+        <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/home-hero-tablet.47c5c699.jpg">
+        <source media="(min-width: 1199px)" srcset="/home-hero-desktop.adb29bcf.jpg">
+        <img src="/about-hero-mobile.78755c4c.jpg" alt="" aria-hidden="true">
+      </picture>
     </section>
 
     <section id="steps">
@@ -104,7 +104,7 @@
     <section id="telemetry">
       <div class="l-flex-common container">
         <div class="common-block">
-          <h2 class="heading-2 u-text-primary-400">Easy to use riding telemetry</h2>
+          <h2 class="common-block-title heading-2 u-text-primary-400">Easy to use riding telemetry</h2>
           <p class="common-block-body">
             The Scoot app is available with riding telemetry. This means it can show you your
             average speed, how long you've been using the scooter, your traveling distance,
@@ -121,7 +121,7 @@
     <section id="cities">
       <div class="l-flex-common-reverse container">
         <div class="common-block">
-          <h2 class="heading-2 u-text-primary-400">Coming to a city near you</h2>
+          <h2 class="common-block-title heading-2 u-text-primary-400">Coming to a city near you</h2>
           <p class="common-block-body">
             Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure
             to let us know if you want to see us in your hometown. We’re aiming to let our
@@ -138,7 +138,7 @@
     <section id="payments">
       <div class="l-flex-common container">
         <div class="common-block">
-          <h2 class="heading-2 u-text-primary-400">Zero hassle payments</h2>
+          <h2 class="common-block-title heading-2 u-text-primary-400">Zero hassle payments</h2>
           <p class="common-block-body">
             Our payment is as easy as one two three. We accept most credit cards and debit cards.
             You can also link your PayPal account inside the app. Need to pay later? No worries!
