@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+%overlay::before {
+    @media #{$break1} {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-color: hsl(0, 0%, 0%);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.overlay-hidden::before {
+    @extend %overlay;
+    z-index: -50;
+    opacity: 0;
+}
+
+
+.overlay-visible::before {
+    @extend %overlay;
+    @media #{$break1} {
+        z-index: 50;    
+        opacity: 0.75;
+    }
+}
+

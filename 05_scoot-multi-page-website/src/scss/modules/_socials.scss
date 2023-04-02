@@ -16,6 +16,12 @@
     max-block-size: max-content;
 }
 
+
+.socials-item-link:hover > .socials-icon::before,
+.socials-item-link:focus-visible > .socials-icon::before {
+    color: clr(neutral, lightest);
+}
+
 .socials-item-link {
     display: block;
     max-block-size: max-content;
@@ -25,3 +31,4 @@
     display: block;
     font-size: 1.5rem;
 }
+

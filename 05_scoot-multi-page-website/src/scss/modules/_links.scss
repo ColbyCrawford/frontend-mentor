@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+.link {
+    display: inline-block;
+
+    &:hover,
+    &:focus-visible {
+        color: clr(secondary);
+    }
+}

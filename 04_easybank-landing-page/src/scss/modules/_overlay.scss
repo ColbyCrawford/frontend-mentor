@@ -19,7 +19,7 @@
 
 .overlay-visible::before {
     @media #{$break1}, #{$break2} {
-        z-index: 100;
         opacity: 1;
+        z-index: 100;
     }
 }

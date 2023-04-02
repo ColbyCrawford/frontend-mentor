@@ -1,11 +1,12 @@
 @use "../abstracts" as *;
 
 .menu-toggle {
+    border-radius: 0.25rem;
     #navbar & {
         @media #{$break1} {
             position: absolute;
             top: 50%;
-            transform: translateY(-35%);
+            transform: translateY(-50%);
         }
         @media #{$break2open} {
             display: none;
