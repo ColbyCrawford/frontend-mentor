@@ -412,6 +412,18 @@
     }
   }
   @media (max-width: 767.99px) {
+    .heading-3 {
+      font-size: 1.5rem;
+      line-height: 1.1666;
+    }
+  }
+  @media (min-width: 768px) {
+    .heading-3 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+  }
+  @media (max-width: 767.99px) {
     .heading-4 {
       font-size: 1.25rem;
       line-height: 1.4;
@@ -905,6 +917,34 @@
       --p-section-margin-block-end: 12.5rem;
     }
   }
+  @media (min-width: 1199px) {
+    #faq {
+      --p-section-margin-block-end: 10rem;
+    }
+  }
+  .l-faq {
+    display: grid;
+  }
+  @media (min-width: 1199px) {
+    .l-faq {
+      grid-template-columns: 1fr 2fr;
+      column-gap: 1.875rem;
+    }
+  }
+  .faq-list {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (max-width: 767.99px) {
+    .faq-list:not(:last-child) {
+      margin-block-end: 3rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .faq-list:not(:last-child) {
+      margin-block-end: 4rem;
+    }
+  }
 }
 @layer modules {
   .socials {
@@ -1086,7 +1126,6 @@
       position: fixed;
       inset: 0;
       background-color: hsl(0, 0%, 0%);
-      transition: 0.3s ease-in-out;
     }
   }
   .overlay-hidden::before {
@@ -1135,6 +1174,29 @@
     .features-list-number {
       margin-block-end: 2rem;
     }
+  }
+  .faq-card {
+    background-color: #f1f4f9;
+    color: #4a5668;
+    padding: 2rem 2rem 2rem 2.5rem;
+  }
+  .faq-card-label {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+  }
+  .faq-card-body {
+    display: none;
+  }
+  .faq-radio-btn:checked + .faq-card-label + .faq-card-body {
+    display: block;
+  }
+  .faq-radio-btn:checked + .faq-card-label > .icon-chevron {
+    rotate: 180deg;
+    transition: 0.3s ease-in-out;
   }
 }
 @layer utilities {

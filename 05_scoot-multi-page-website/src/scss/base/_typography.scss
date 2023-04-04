@@ -47,6 +47,17 @@ h6, .heading-6 {
     }
 }
 
+.heading-3 {
+    @media #{$break1} {
+        font-size: $fs-4;
+        line-height: 1.1666;
+    }
+    @media #{$break2open} {
+        font-size: $fs-6;
+        line-height: 1.2;
+    }
+}
+
 .heading-4 {
     @media #{$break1} {
         font-size: $fs-3;

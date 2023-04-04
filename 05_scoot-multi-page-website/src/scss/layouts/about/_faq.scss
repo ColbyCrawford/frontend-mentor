@@ -1,0 +1,33 @@
+@use '../../abstracts' as *;
+
+#faq {
+    @include sectionMarginBlockEnd($desktop: #{$size-160});
+}
+
+
+.l-faq {
+    display: grid;
+    @media #{$break1}, #{$break2} {
+
+    }
+    @media #{$break3open} {
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1.875rem;
+    }
+
+  
+}
+
+.faq-list {
+    display: grid;
+    gap: 1rem;
+}
+.faq-list:not(:last-child) {
+    @media #{$break1} {
+        margin-block-end: 3rem;
+    }
+    @media #{$break2open} {
+        margin-block-end: 4rem;
+    }
+}
+

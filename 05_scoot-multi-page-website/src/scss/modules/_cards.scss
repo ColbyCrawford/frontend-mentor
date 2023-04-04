@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.faq-card {
+    background-color: clr(neutral, lighter);
+    color: clr(primary);
+    padding: 2rem 2rem 2rem 2.5rem;
+}
+
+.faq-card-label {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.faq-card-body {
+    display: none;
+}
+.faq-radio-btn:checked + .faq-card-label + .faq-card-body {
+    display: block;
+}
+.faq-radio-btn:checked + .faq-card-label > .icon-chevron {
+    rotate: 180deg;
+    transition: 0.3s ease-in-out;
+}
+
+// .faq-radio-btn {
+//     display: block;
+//     border: 1px solid #000;
+//     width: 15px; height: 15px;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     cursor: pointer;
+// }
+// .faq-radio-btn:checked::before {
+//     content: '';
+//     width: 8px; height: 8px;
+//     background-color: #000;
+//     border-radius: 50%;
+// }
