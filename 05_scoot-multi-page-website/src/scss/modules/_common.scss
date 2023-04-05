@@ -24,17 +24,21 @@
     position: relative;
 }
 .decor-before {
-    &::before {
-        content: url('../../assets/patterns/circle.svg');
-        position: absolute;
-        left: calc(-100% + -4rem);
+    @media #{$break2open} {
+        &::before {
+            content: url('../../assets/patterns/circle.svg');
+            position: absolute;
+            left: calc(-100% + -4rem);
+        }
     }
 }
 .decor-after {
-    &::after {
-        content: url('../../assets/patterns/circle.svg');
-        position: absolute;
-        left: calc(100% + 4rem);
+    @media #{$break2open} {
+        &::after {
+            content: url('../../assets/patterns/circle.svg');
+            position: absolute;
+            left: calc(100% + 4rem);
+        }
     }
 }
 

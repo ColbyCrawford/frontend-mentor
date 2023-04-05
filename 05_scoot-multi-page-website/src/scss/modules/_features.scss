@@ -13,9 +13,16 @@
     align-items: center;
     text-align: center;
 
+    @media #{$break1}, #{$break2} {
+        margin-block-end: 3.5rem
+    }
+
     &-title {
         color: clr(primary);
         margin-block-end: 1.5rem;
+    }
+    &-body {
+        max-inline-size: pxToRem(457);
     }
 }
 

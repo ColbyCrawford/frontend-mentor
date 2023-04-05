@@ -15,6 +15,12 @@
     }
 }
 
+#cta-title {
+    @media #{$break2open} {
+        max-inline-size: pxToRem(497);
+    }
+}
+
 .l-cta {
     display: flex;
     @media #{$break1}, #{$break2} {
@@ -29,9 +35,5 @@
     }
 }
 
-.cta-title {
-    @media #{$break2open} {
-        max-inline-size: pxToRem(497);
-    }
-}
+
 

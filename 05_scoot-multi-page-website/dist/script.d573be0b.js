@@ -134,6 +134,38 @@ menuToggle.addEventListener('click', function (e) {
   // change isMenuOpen value
   isMenuOpen = changeBoolean(isMenuOpen);
 });
+document.getElementsByName("faq1").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    if (el.getAttribute("data-waschecked") == "true") {
+      el.checked = false;
+      el.setAttribute("data-waschecked", "false");
+    } else {
+      el.checked = true;
+      el.setAttribute("data-waschecked", "true");
+    }
+    disableRadioAttributes("faq1", el);
+  });
+});
+document.getElementsByName("faq2").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    if (el.getAttribute("data-waschecked") == "true") {
+      el.checked = false;
+      el.setAttribute("data-waschecked", "false");
+    } else {
+      el.checked = true;
+      el.setAttribute("data-waschecked", "true");
+    }
+    disableRadioAttributes("faq2", el);
+  });
+});
+function disableRadioAttributes(radioGroup, radio) {
+  var radios = document.getElementsByName(radioGroup);
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i] == radio) {} else {
+      radios[i].setAttribute("data-waschecked", "false");
+    }
+  }
+}
 function swapMenuIcons() {
   if (isMenuOpen) {
     menuIcon.classList.add('icon-hamburger');
@@ -195,7 +227,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49269" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55729" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

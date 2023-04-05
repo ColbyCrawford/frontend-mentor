@@ -21,10 +21,14 @@
 .faq-radio-btn:checked + .faq-card-label + .faq-card-body {
     display: block;
 }
-.faq-radio-btn:checked + .faq-card-label > .icon-chevron {
-    rotate: 180deg;
-    transition: 0.3s ease-in-out;
+.faq-radio-btn + .faq-card-label > .icon-chevron {
+    transition: rotate 0.3s ease-in-out;
 }
+.faq-radio-btn:checked + .faq-card-label > .icon-chevron {
+    rotate: -180deg;
+    transition: rotate 0.3s ease-in-out;
+}
+
 
 // .faq-radio-btn {
 //     display: block;

@@ -10,13 +10,6 @@
         padding-block: 4.5rem;
     }
 
-    &-title {
-        color: clr(neutral, lightest);
-        @media #{$break1} {
-            text-align: center;
-        }
-    }
-
     &-bg {
         position: absolute;
         inset: 0;
@@ -33,6 +26,13 @@
             min-block-size: 100%;
             object-fit: cover;
         }
+    }
+}
+
+#masthead-title {
+    color: clr(neutral, lightest);
+    @media #{$break1} {
+        text-align: center;
     }
 }
 
