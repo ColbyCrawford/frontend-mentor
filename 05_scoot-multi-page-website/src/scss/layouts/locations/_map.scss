@@ -1,0 +1,14 @@
+@use '../../abstracts' as *;
+
+.l-map {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    outline: 2px solid limegreen;
+}
+
+.map-img {
+    width: 100%;
+    display: block;
+}

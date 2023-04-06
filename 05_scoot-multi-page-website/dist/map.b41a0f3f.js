@@ -117,62 +117,49 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+})({"js/map.js":[function(require,module,exports) {
+var mapImage = document.querySelector('.map-img');
+var baseImage = {
+  x: 1110,
+  y: 543
+};
+var newYork = document.getElementById('new-york');
+var newYorkPos = {
+  x: 160,
+  y: 95
+};
+window.onload = function (e) {
+  var currentImageX = mapImage.width;
+  var currentImageY = mapImage.height;
+  updatePointer(currentImageX, currentImageY);
+};
+window.onresize = function (e) {
+  var currentImageX = mapImage.width;
+  var currentImageY = mapImage.height;
+  updatePointer(currentImageX, currentImageY);
+};
+function updatePointer(currentX, currentY) {
+  // Get largest dimension increase
+  var xScale = currentX / baseImage.x;
+  var yScale = currentY / baseImage.y;
+  var scale;
+  var yOffset = 0;
+  var xOffset = 0;
+  if (xScale > yScale) {
+    // The image fits perfectly in x axis, stretched in y
+    scale = xScale;
+    yOffset = (currentY - baseImage.y * scale) / 2;
+  } else {
+    // The image fits perfectly in y axis, stretched in x
+    scale = yScale;
+    xOffset = (currentX - baseImage.x * scale) / 2;
   }
-  return bundleURL;
+  newYork.style.top = newYorkPos.y * scale + yOffset + "px";
+  newYork.style.left = newYorkPos.x * scale + xOffset + "px";
+  // pointer.css('top', (target.y) * scale + yOffset);
+  // pointer.css('left', (target.x) * scale + xOffset);
 }
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-  return '/';
-}
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-    cssTimeout = null;
-  }, 50);
-}
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./../../assets/vendors/icomoon/fonts/icomoon.eot":[["icomoon.89bacd3a.eot","../assets/vendors/icomoon/fonts/icomoon.eot"],"../assets/vendors/icomoon/fonts/icomoon.eot"],"./../../assets/vendors/icomoon/fonts/icomoon.ttf":[["icomoon.24582789.ttf","../assets/vendors/icomoon/fonts/icomoon.ttf"],"../assets/vendors/icomoon/fonts/icomoon.ttf"],"./../../assets/vendors/icomoon/fonts/icomoon.woff":[["icomoon.beda357b.woff","../assets/vendors/icomoon/fonts/icomoon.woff"],"../assets/vendors/icomoon/fonts/icomoon.woff"],"./../../assets/vendors/icomoon/fonts/icomoon.svg":[["icomoon.bd295577.svg","../assets/vendors/icomoon/fonts/icomoon.svg"],"../assets/vendors/icomoon/fonts/icomoon.svg"],"./../../assets/patterns/white-circles.svg":[["white-circles.07348e79.svg","../assets/patterns/white-circles.svg"],"../assets/patterns/white-circles.svg"],"./../../assets/patterns/right-arrow.svg":[["right-arrow.f1edbe1b.svg","../assets/patterns/right-arrow.svg"],"../assets/patterns/right-arrow.svg"],"./../../assets/patterns/line.svg":[["line.a039a0b7.svg","../assets/patterns/line.svg"],"../assets/patterns/line.svg"],"./../../assets/patterns/circle.svg":[["circle.86c65ac9.svg","../assets/patterns/circle.svg"],"../assets/patterns/circle.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -341,5 +328,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.77bb5cfd.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/map.js"], null)
+//# sourceMappingURL=/map.b41a0f3f.js.map

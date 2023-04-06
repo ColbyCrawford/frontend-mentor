@@ -202,6 +202,15 @@ function changeBoolean(boolean) {
     return boolean = true;
   }
 }
+var mapLocations = [{
+  name: "NewYork",
+  x: 100,
+  y: 200
+}, {
+  name: "London",
+  x: 200,
+  y: 200
+}];
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -227,7 +236,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55729" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49980" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -5,6 +5,7 @@ const navMenu = document.querySelector('.navbar-actions-panel');
 const main = document.getElementById('main');
 const footer = document.getElementById('footer');
 
+
 let isMenuOpen = false;
 
 menuToggle.addEventListener('click', e => {
@@ -98,3 +99,13 @@ function changeBoolean(boolean) {
         return boolean = true;
     }
 }
+
+
+var mapLocations = [
+    { name: "NewYork", x: 100, y: 200 },
+    { name: "London", x: 200, y: 200 }
+];
+
+
+
+

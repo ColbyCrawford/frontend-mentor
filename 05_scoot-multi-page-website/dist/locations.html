@@ -38,20 +38,34 @@
 
 
 
-  <section class="masthead">
-    <div class="container">
-      <h1 class="heading-1">Locations</h1>
+  <section class="masthead" aria-labelledby="masthead-title">
+    <div class="l-masthead container">
+      <h1 id="masthead-title" class="heading-1">Locations</h1>
     </div>
+    <picture class="masthead-bg">
+      <source media="(max-width: 767.99px)" srcset="/careers-locations-hero-mobile.6bd2b6fe.jpg">
+      <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/careers-locations-hero-tablet.531f82d7.jpg">
+      <source media="(min-width: 1199px)" srcset="/careers-locations-hero-desktop.65f357a2.jpg">
+      <img class="masthead-bg-img" src="/careers-locations-hero-mobile.6bd2b6fe.jpg" alt="" aria-hidden="true">
+    </picture>
   </section>
 
 
 
   <section id="map">
-    <div class="container">
-      New York
-      London
-      Yokohama
-      Jakarta
+    <div class="l-map container u-text-center">
+      <picture>
+        <source media="(max-width: 767.99px)" srcset="/world-map-mobile.cc59e7e9.png">
+        <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/world-map-tablet.a4855e38.png">
+        <source media="(min-width: 1199px)" srcset="/world-map-desktop.3c038066.png">
+        <img class="map-img" src="/world-map-mobile.cc59e7e9.png" alt="map of the world">
+      </picture>
+      <div class="map-marker map-marker-1">
+        <p id="new-york" class="map-location">New York</p>
+      </div>
+      <p class="map-location london">London</p>
+      <p class="map-location yokohama">Yokohama</p>
+      <p class="map-location jakarta">Jakarta</p>
     </div>
   </section>
 
@@ -119,5 +133,6 @@
   </footer>
   
   <script src="/script.d573be0b.js"></script>
+  <!-- <script src="js/map.js"></script> -->
 </body>
 </html>
