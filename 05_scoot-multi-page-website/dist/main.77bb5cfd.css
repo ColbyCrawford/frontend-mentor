@@ -642,6 +642,16 @@
   }
   @media (max-width: 767.99px) {
     .masthead {
+      --p-section-margin-block-end: 4.5rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .masthead {
+      --p-section-margin-block-end: 9rem;
+    }
+  }
+  @media (max-width: 767.99px) {
+    .masthead {
       padding-block: 3.75rem;
     }
   }
@@ -962,13 +972,13 @@
     }
   }
   @media (max-width: 767.99px) {
-    #values-title {
-      margin-block-end: 4rem;
+    #map {
+      --p-section-margin-block-end: 4.5rem;
     }
   }
-  @media (min-width: 768px) {
-    #values-title {
-      margin-block-end: 6.5rem;
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    #map {
+      --p-section-margin-block-end: 4rem;
     }
   }
   .l-map {
@@ -976,11 +986,61 @@
     margin-left: 50%;
     transform: translateX(-50%);
     position: relative;
-    outline: 2px solid limegreen;
   }
   .map-img {
     width: 100%;
     display: block;
+  }
+  @media (max-width: 767.99px) {
+    .map-img {
+      margin-block-end: 2.5rem;
+    }
+  }
+  @media (max-width: 767.99px) {
+    #inquiry {
+      --p-section-margin-block-end: 4.5rem;
+    }
+  }
+  .l-inquiry {
+    display: grid;
+  }
+  @media (max-width: 767.99px) {
+    .l-inquiry {
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .l-inquiry {
+      text-align: center;
+      gap: 2.5rem;
+    }
+  }
+  @media (min-width: 1199px) {
+    .l-inquiry {
+      gap: 1.875rem;
+      grid-template-columns: 21.9375rem 27.8125rem 1fr;
+    }
+  }
+  @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
+    .inquiry-btn {
+      justify-self: center;
+    }
+  }
+  @media (min-width: 1199px) {
+    .inquiry-btn {
+      justify-self: end;
+    }
+  }
+  @media (max-width: 767.99px) {
+    #benefits {
+      --p-section-margin-block-end: 9rem;
+    }
+  }
+  @media (min-width: 1199px) {
+    #jobs {
+      --p-section-margin-block-end: 10rem;
+    }
   }
 }
 @layer modules {
@@ -1179,6 +1239,16 @@
       opacity: 0.75;
     }
   }
+  @media (max-width: 767.99px) {
+    .features-title {
+      margin-block-end: 4rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .features-title {
+      margin-block-end: 6.5rem;
+    }
+  }
   @media (min-width: 1199px) {
     .features-list {
       display: flex;
@@ -1192,7 +1262,7 @@
     text-align: center;
   }
   @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
-    .features-list-item {
+    .features-list-item:not(:last-child) {
       margin-block-end: 3.5rem;
     }
   }
@@ -1250,6 +1320,55 @@
     rotate: -180deg;
     transition: rotate 0.3s ease-in-out;
   }
+  .job-card {
+    background-color: #f1f4f9;
+    color: #4a5668;
+    display: flex;
+  }
+  @media (max-width: 767.99px) {
+    .job-card {
+      padding: 2.25rem 2rem 2rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+    .job-card > .btn-secondary {
+      max-inline-size: 100%;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .job-card {
+      justify-content: space-between;
+      padding: 2.125rem 3rem;
+    }
+  }
+  @media (min-width: 1199px) {
+    .job-card {
+      justify-content: space-between;
+      padding: 2rem 4rem 2.1875rem 2.5rem;
+    }
+  }
+  @media (max-width: 767.99px), (min-width: 768px) and (max-width: 1198.99px) {
+    .job-card:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+  }
+  @media (min-width: 1199px) {
+    .job-card:not(:last-child) {
+      margin-block-end: 1.5rem;
+    }
+  }
+  @media (max-width: 767.99px) {
+    .job-card-title {
+      margin-block-end: 0.25rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .job-card-title {
+      margin-block-end: 0.5rem;
+    }
+  }
   .map-location {
     color: #4a5668;
     display: flex;
@@ -1261,9 +1380,6 @@
       padding-block: 1.375rem;
       font-size: 1.5rem;
       line-height: 1.1666;
-    }
-    .map-location:not(:last-child) {
-      margin-block-end: 1rem;
     }
   }
   @media (min-width: 768px) and (max-width: 1198.99px), (min-width: 1199px) {
@@ -1305,18 +1421,65 @@
       bottom: -1rem;
     }
   }
-  @media (min-width: 768px) and (max-width: 1198.99px) {
+  @media (max-width: 767.99px) {
+    .map-marker:not(:last-child) {
+      margin-block-end: 1rem;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px), (min-width: 1199px) {
     .map-marker {
       position: absolute;
       width: 0;
       height: 0;
       z-index: 50;
-      margin-left: -61px;
-      margin-top: 8px;
     }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .map-marker {
+      margin-left: -60px;
+      margin-top: -16px;
+    }
+  }
+  @media (min-width: 1199px) {
+    .map-marker {
+      margin-left: -94.5px;
+      margin-top: -36px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
     .map-marker-1 {
-      top: 15%;
-      left: 24%;
+      top: 21%;
+      left: 23%;
+    }
+    .map-marker-2 {
+      top: 12.5%;
+      left: 44.4%;
+    }
+    .map-marker-3 {
+      top: 24%;
+      left: 85.75%;
+    }
+    .map-marker-4 {
+      top: 56.5%;
+      left: 78.25%;
+    }
+  }
+  @media (min-width: 1199px) {
+    .map-marker-1 {
+      top: 15.25%;
+      left: 23.5%;
+    }
+    .map-marker-2 {
+      top: 8%;
+      left: 44.4%;
+    }
+    .map-marker-3 {
+      top: 20%;
+      left: 85.75%;
+    }
+    .map-marker-4 {
+      top: 51.25%;
+      left: 78.25%;
     }
   }
 }

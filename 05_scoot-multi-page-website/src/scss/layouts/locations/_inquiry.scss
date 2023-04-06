@@ -1,0 +1,31 @@
+@use '../../abstracts' as *;
+
+#inquiry {
+    @include sectionMarginBlockEnd($mobile: 4.5rem)
+}
+
+.l-inquiry {
+    display: grid;
+    
+    @media #{$break1} {
+        text-align: center;
+        gap: 2rem;
+    }
+    @media #{$break2} {
+        text-align: center;
+        gap: 2.5rem;
+    }
+    @media #{$break3open} {
+        gap: 1.875rem;
+        grid-template-columns: pxToRem(351) pxToRem(445) 1fr;
+    }
+}
+
+.inquiry-btn {
+    @media #{$break1}, #{$break2} {
+        justify-self: center;
+    }
+    @media #{$break3open} {
+        justify-self: end;
+    }
+}

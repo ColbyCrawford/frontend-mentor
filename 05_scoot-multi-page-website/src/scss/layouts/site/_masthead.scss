@@ -1,11 +1,15 @@
 @use '../../abstracts' as *;
 
 .masthead {
+    @include sectionMarginBlockEnd($mobile: 4.5rem, $tablet: $size-144);
+
     position: relative;
     isolation: isolate;
+
     @media #{$break1} {
         padding-block: 3.75rem;
     }
+
     @media #{$break2open} {
         padding-block: 4.5rem;
     }
@@ -14,6 +18,7 @@
         position: absolute;
         inset: 0;
         z-index: -1;
+
         &::before {
             content: '';
             position: absolute;
@@ -31,6 +36,7 @@
 
 #masthead-title {
     color: clr(neutral, lightest);
+
     @media #{$break1} {
         text-align: center;
     }
@@ -49,4 +55,3 @@
     }
 
 }
-

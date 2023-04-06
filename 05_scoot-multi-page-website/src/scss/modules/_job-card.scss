@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.job-card {
+    background-color: clr(neutral, lighter);
+    color: clr(primary);
+    display: flex;
+
+    @media #{$break1} {
+        padding: 2.25rem 2rem 2rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        & > .btn-secondary {
+            max-inline-size: 100%;
+        }
+    }
+    @media #{$break2} {
+        justify-content: space-between;
+        padding: 2.125rem 3rem;
+    }
+    @media #{$break3open} {
+        justify-content: space-between;
+        padding: 2rem 4rem 2.1875rem 2.5rem;
+    }
+
+    &:not(:last-child) {
+        @media #{$break1}, #{$break2} {
+            margin-block-end: 1rem;
+        }
+        @media #{$break3open}{
+            margin-block-end: 1.5rem;
+        }
+    }
+
+    &-title {
+        @media #{$break1} {
+            margin-block-end: 0.25rem;
+        }
+        @media #{$break2open} {
+            margin-block-end: 0.5rem;
+        }
+    }
+
+}

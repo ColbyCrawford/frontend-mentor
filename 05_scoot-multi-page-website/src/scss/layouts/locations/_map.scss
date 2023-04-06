@@ -1,14 +1,21 @@
 @use '../../abstracts' as *;
 
+#map {
+    @include sectionMarginBlockEnd($mobile: 4.5rem, $tablet: 4rem);
+}
+
 .l-map {
     display: inline-block;
     margin-left: 50%;
     transform: translateX(-50%);
     position: relative;
-    outline: 2px solid limegreen;
 }
 
 .map-img {
     width: 100%;
     display: block;
+
+    @media #{$break1} {
+        margin-block-end: 2.5rem;
+    }
 }

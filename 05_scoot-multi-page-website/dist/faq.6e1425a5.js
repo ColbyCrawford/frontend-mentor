@@ -117,50 +117,31 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/script.js":[function(require,module,exports) {
-var body = document.querySelector('body');
-var menuToggle = document.querySelector('.menu-toggle');
-var menuIcon = menuToggle.children[0];
-var navMenu = document.querySelector('.navbar-actions-panel');
-var main = document.getElementById('main');
-var footer = document.getElementById('footer');
-var isMenuOpen = false;
-menuToggle.addEventListener('click', function (e) {
-  toggleMenu();
-  toggleOverlay(body);
-  toggleInert(main);
-  toggleInert(footer);
-
-  // change isMenuOpen value
-  isMenuOpen = changeBoolean(isMenuOpen);
+})({"js/faq.js":[function(require,module,exports) {
+document.getElementsByName("faq1").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    if (el.getAttribute("data-waschecked") == "true") {
+      el.checked = false;
+      el.setAttribute("data-waschecked", "false");
+    } else {
+      el.checked = true;
+      el.setAttribute("data-waschecked", "true");
+    }
+    disableRadioAttributes("faq1", el);
+  });
 });
-
-// document.getElementsByName("faq1").forEach(function (el) {
-//     el.addEventListener("click", e => {
-//         if (el.getAttribute("data-waschecked") == "true") {
-//             el.checked = false;
-//             el.setAttribute("data-waschecked", "false");
-//         } else {
-//             el.checked = true;
-//             el.setAttribute("data-waschecked", "true");
-//         }
-//         disableRadioAttributes("faq1", el);
-//     });
-// });
-
-// document.getElementsByName("faq2").forEach(function (el) {
-//     el.addEventListener("click", e => {
-//         if (el.getAttribute("data-waschecked") == "true") {
-//             el.checked = false;
-//             el.setAttribute("data-waschecked", "false");
-//         } else {
-//             el.checked = true;
-//             el.setAttribute("data-waschecked", "true");
-//         }
-//         disableRadioAttributes("faq2", el);
-//     });
-// });
-
+document.getElementsByName("faq2").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    if (el.getAttribute("data-waschecked") == "true") {
+      el.checked = false;
+      el.setAttribute("data-waschecked", "false");
+    } else {
+      el.checked = true;
+      el.setAttribute("data-waschecked", "true");
+    }
+    disableRadioAttributes("faq2", el);
+  });
+});
 function disableRadioAttributes(radioGroup, radio) {
   var radios = document.getElementsByName(radioGroup);
   for (var i = 0; i < radios.length; i++) {
@@ -169,51 +150,6 @@ function disableRadioAttributes(radioGroup, radio) {
     }
   }
 }
-function swapMenuIcons() {
-  if (isMenuOpen) {
-    menuIcon.classList.add('icon-hamburger');
-    menuIcon.classList.remove('icon-close');
-  } else {
-    menuIcon.classList.remove('icon-hamburger');
-    menuIcon.classList.add('icon-close');
-  }
-}
-function toggleMenu() {
-  navMenu.classList.toggle('is-open');
-  swapMenuIcons();
-}
-function toggleOverlay(el) {
-  if (isMenuOpen) {
-    el.classList.remove('overlay-visible');
-    el.classList.add('overlay-hidden');
-  } else {
-    el.classList.add('overlay-visible');
-    el.classList.remove('overlay-hidden');
-  }
-}
-function toggleInert(el) {
-  if (isMenuOpen) {
-    el.removeAttribute('inert');
-  } else {
-    el.setAttribute('inert', 'true');
-  }
-}
-function changeBoolean(boolean) {
-  if (boolean) {
-    return boolean = false;
-  } else {
-    return boolean = true;
-  }
-}
-var mapLocations = [{
-  name: "NewYork",
-  x: 100,
-  y: 200
-}, {
-  name: "London",
-  x: 200,
-  y: 200
-}];
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -383,5 +319,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
-//# sourceMappingURL=/script.d573be0b.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/faq.js"], null)
+//# sourceMappingURL=/faq.6e1425a5.js.map

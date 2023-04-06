@@ -1,0 +1,5 @@
+@use '../../abstracts' as *;
+
+#benefits {
+    @include sectionMarginBlockEnd($mobile: $size-144);
+}

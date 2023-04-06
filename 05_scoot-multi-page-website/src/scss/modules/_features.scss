@@ -1,5 +1,15 @@
 @use '../abstracts' as *;
 
+.features-title {
+    @media #{$break1} {
+        margin-block-end: 4rem;
+    }
+    @media #{$break2open} {
+        margin-block-end: 6.5rem;
+    }
+}
+
+
 .features-list {
     @media #{$break3open} {
         display: flex;
@@ -13,8 +23,10 @@
     align-items: center;
     text-align: center;
 
-    @media #{$break1}, #{$break2} {
-        margin-block-end: 3.5rem
+    &:not(:last-child) {
+        @media #{$break1}, #{$break2} {
+            margin-block-end: 3.5rem
+        }
     }
 
     &-title {
