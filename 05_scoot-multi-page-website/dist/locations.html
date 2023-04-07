@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.d2f577a7.png">
   <link rel="stylesheet" href="/main.77bb5cfd.css">
-  
+
   <title>Locations | Scoot</title>
 </head>
-<body>
+
+<body class="overlay-hidden">
 
   <!------------>
   <!-- navbar -->
@@ -36,66 +38,67 @@
     </div>
   </header>
 
-
-
-  <section class="masthead" aria-labelledby="masthead-title">
-    <div class="l-masthead container">
-      <h1 id="masthead-title" class="heading-1">Locations</h1>
-    </div>
-    <picture class="masthead-bg">
-      <source media="(max-width: 767.99px)" srcset="/careers-locations-hero-mobile.6bd2b6fe.jpg">
-      <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/careers-locations-hero-tablet.531f82d7.jpg">
-      <source media="(min-width: 1199px)" srcset="/careers-locations-hero-desktop.65f357a2.jpg">
-      <img class="masthead-bg-img" src="/careers-locations-hero-mobile.6bd2b6fe.jpg" alt="" aria-hidden="true">
-    </picture>
-  </section>
-
-
-
-  <section id="map">
-    <div class="l-map container u-text-center">
-      <picture>
-        <source media="(max-width: 767.99px)" srcset="/world-map-mobile.cc59e7e9.png">
-        <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/world-map-tablet.a4855e38.png">
-        <source media="(min-width: 1199px)" srcset="/world-map-desktop.3c038066.png">
-        <img class="map-img" src="/world-map-mobile.cc59e7e9.png" alt="map of the world">
+  <!---------->
+  <!-- main -->
+  <!---------->
+  <main id="main">
+    <section class="masthead" aria-labelledby="masthead-title">
+      <div class="l-masthead container">
+        <h1 id="masthead-title" class="heading-1">Locations</h1>
+      </div>
+      <picture class="masthead-bg">
+        <source media="(max-width: 767.99px)" srcset="/careers-locations-hero-mobile.6bd2b6fe.jpg">
+        <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/careers-locations-hero-tablet.531f82d7.jpg">
+        <source media="(min-width: 1199px)" srcset="/careers-locations-hero-desktop.65f357a2.jpg">
+        <img class="masthead-bg-img" src="/careers-locations-hero-mobile.6bd2b6fe.jpg" alt="" aria-hidden="true">
       </picture>
-      <div class="map-marker map-marker-1">
-        <p class="map-location">New York</p>
-      </div>
-      <div class="map-marker map-marker-2">
-        <p class="map-location london">London</p>
-      </div>
-      <div class="map-marker map-marker-3">
-        <p class="map-location yokohama">Yokohama</p>
-      </div>
-      <div class="map-marker map-marker-4">
-        <p class="map-location jakarta">Jakarta</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="inquiry">
-    <div class="l-inquiry container">
-      <h2 class="heading-2 u-text-primary-400">Your city not listed?</h2>
-      <p>
-        If you’d like to see Scoot in your hometown, be sure to let us know. We track
-        requests and plan launches based on demand. Feel free to message us by clicking
-        the link or messaging us on social.
-      </p>
-      <a href="#" class="inquiry-btn btn-secondary">Message Us</a>
-    </div>
-  </section>
-
-  <section id="cta">
-    <div class="l-cta container">
-      <h2 id="cta-title" class="heading-2 u-text-neutral-100">Sign up and Scoot off today</h2>
-      <div class="u-gap-18 u-flex">
-        <img class="u-width-full-line" src="/app-store.d37d94a2.svg" alt="Avaiable on the AppStore">
-        <img class="u-width-full-line" src="/google-play.2a0e61d8.svg" alt="Avaiable on GooglePlay">
+    <section id="map" aria-label="Our Locations">
+      <div class="l-map container u-text-center">
+        <picture>
+          <source media="(max-width: 767.99px)" srcset="/world-map-mobile.cc59e7e9.png">
+          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="/world-map-tablet.a4855e38.png">
+          <source media="(min-width: 1199px)" srcset="/world-map-desktop.3c038066.png">
+          <img class="map-img" src="/world-map-mobile.cc59e7e9.png" alt="map of the world">
+        </picture>
+        <div class="map-marker map-marker-1">
+          <p class="map-location">New York</p>
+        </div>
+        <div class="map-marker map-marker-2">
+          <p class="map-location london">London</p>
+        </div>
+        <div class="map-marker map-marker-3">
+          <p class="map-location yokohama">Yokohama</p>
+        </div>
+        <div class="map-marker map-marker-4">
+          <p class="map-location jakarta">Jakarta</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="inquiry" aria-labelledby="inquiry-title">
+      <div class="l-inquiry container">
+        <h2 id="inquiry-title" class="heading-2 u-text-primary-400">Your city not listed?</h2>
+        <p>
+          If you’d like to see Scoot in your hometown, be sure to let us know. We track
+          requests and plan launches based on demand. Feel free to message us by clicking
+          the link or messaging us on social.
+        </p>
+        <a href="#" class="inquiry-btn btn-secondary">Message Us</a>
+      </div>
+    </section>
+
+    <section id="cta" aria-labelledby="cta-title">
+      <div class="l-cta container">
+        <h2 id="cta-title" class="heading-2 u-text-neutral-100">Sign up and Scoot off today</h2>
+        <div class="u-gap-18 u-flex">
+          <img class="u-width-full-line" src="/app-store.d37d94a2.svg" alt="Avaiable on the AppStore">
+          <img class="u-width-full-line" src="/google-play.2a0e61d8.svg" alt="Avaiable on GooglePlay">
+        </div>
+      </div>
+    </section>
+  </main>
 
 
 
@@ -137,7 +140,8 @@
       </ul>
     </div>
   </footer>
-  
+
   <script src="/script.d573be0b.js"></script>
 </body>
+
 </html>

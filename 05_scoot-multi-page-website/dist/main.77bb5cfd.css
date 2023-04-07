@@ -1086,20 +1086,6 @@
   .common-img-container {
     position: relative;
   }
-  @media (min-width: 768px) {
-    .decor-before::before {
-      content: url("/circle.86c65ac9.svg");
-      position: absolute;
-      left: calc(-100% - 4rem);
-    }
-  }
-  @media (min-width: 768px) {
-    .decor-after::after {
-      content: url("/circle.86c65ac9.svg");
-      position: absolute;
-      left: calc(100% + 4rem);
-    }
-  }
   @media (max-width: 767.99px) {
     .uncommon-list-item {
       text-align: center;
@@ -1480,6 +1466,76 @@
     .map-marker-4 {
       top: 51.25%;
       left: 78.25%;
+    }
+  }
+  .circle-ls::before,
+  .circle-rs::after,
+  .left-down-arrow::before,
+  .left-up-arrow::before,
+  .right-down-arrow::after {
+    position: absolute;
+  }
+  .left-down-arrow::before,
+  .left-up-arrow::before,
+  .right-down-arrow::after {
+    z-index: 10;
+  }
+  @media (min-width: 768px) {
+    .circle-rs::after {
+      content: url("/circle.86c65ac9.svg");
+      left: calc(100% + 4rem);
+    }
+  }
+  @media (min-width: 768px) {
+    .circle-ls::before {
+      content: url("/circle.86c65ac9.svg");
+      left: calc(-100% - 4rem);
+    }
+  }
+  .left-down-arrow::before {
+    content: url("/left-downward-arrow.b80bac39.svg");
+    bottom: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .left-down-arrow::before {
+      left: 40%;
+    }
+  }
+  @media (min-width: 1199px) {
+    .left-down-arrow::before {
+      left: -25%;
+    }
+  }
+  #payments .left-down-arrow::before {
+    left: 58%;
+    top: 25%;
+  }
+  .left-up-arrow::before {
+    content: url("/left-upward-arrow.491c55ae.svg");
+    bottom: 5%;
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .left-up-arrow::before {
+      left: 40%;
+    }
+  }
+  @media (min-width: 1199px) {
+    .left-up-arrow::before {
+      left: -25%;
+    }
+  }
+  .right-down-arrow::after {
+    content: url("/right-arrow.f1edbe1b.svg");
+    top: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1198.99px) {
+    .right-down-arrow::after {
+      left: -100%;
+    }
+  }
+  @media (min-width: 1199px), (max-width: 767.99px) {
+    .right-down-arrow::after {
+      right: 53%;
     }
   }
 }

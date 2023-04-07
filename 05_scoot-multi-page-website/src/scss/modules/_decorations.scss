@@ -1,0 +1,71 @@
+@use '../abstracts' as *;
+
+.circle-ls::before,
+.circle-rs::after,
+.left-down-arrow::before,
+.left-up-arrow::before,
+.right-down-arrow::after {
+    position: absolute;
+}
+
+.left-down-arrow::before,
+.left-up-arrow::before,
+.right-down-arrow::after {
+    z-index: 10;
+}
+
+
+.circle-rs::after {
+    @media #{$break2open} {
+        content: url('../../assets/patterns/circle.svg');
+        left: calc(100% + 4rem);
+    }
+    
+}
+
+.circle-ls::before {
+    @media #{$break2open} { 
+        content: url('../../assets/patterns/circle.svg');
+        left: calc(-100% + -4rem);
+    }
+}
+
+.left-down-arrow::before {
+    content: url('../../assets/patterns/left-downward-arrow.svg');
+    bottom: 0;
+    @media #{$break2} {
+        left: 40%;
+    }
+    @media #{$break3open} {
+        left: -25%;
+    }
+    
+    #payments & {
+        left: 58%;
+        top: 25%;
+    }
+}
+
+.left-up-arrow::before {
+    content: url('../../assets/patterns/left-upward-arrow.svg');
+    bottom: 5%;
+    
+    @media #{$break2} {
+        left: 40%;
+    }
+    @media #{$break3open} {
+        left: -25%;
+    }
+}
+
+.right-down-arrow::after {
+    content: url('../../assets/patterns/right-arrow.svg');
+    top: 0;
+
+    @media #{$break2} {
+        left: -100%;
+    }
+    @media #{$break3open}, #{$break1} {
+        right: 53%;
+    }
+}
