@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.socials {
+    display: flex;
+    gap: pxToRem(28);
+
+}
+
+.socials-icon {
+    color: hsl(var(--clr-neutral-600));
+    max-inline-size: 1.25rem;
+    max-block-size: 1.25rem;
+    display: block;
+
+    &:hover {
+        color: hsl(var(--clr-primary-400));
+    }
+
+}

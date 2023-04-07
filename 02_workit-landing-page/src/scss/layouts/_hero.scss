@@ -1,0 +1,80 @@
+@use '../abstracts' as *;
+
+.hero {
+    background: hsl(var(--clr-primary-400));
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+
+    @media #{$break1} {
+        padding-block-end: pxToRem(100);
+    }
+
+    @media #{$break1}, #{$break2} {
+        padding-block-start: pxToRem(32);
+    }
+
+    @media #{$break2} {
+        padding-block-end: pxToRem(140);
+        background-image: 
+            url("../../assets/images/bg-pattern-1.svg"),
+            url("../../assets/images/bg-pattern-2.svg");
+        background-position: 
+            top 5rem left -14.4rem,
+            bottom 3.5rem right -6em;
+    }
+
+    @media #{$break3open} {
+        padding-block-start: pxToRem(56);
+        padding-block-end: pxToRem(200);
+        background-image: 
+            url("../../assets/images/bg-pattern-1.svg"),
+            url("../../assets/images/bg-pattern-2.svg");
+        background-position: 
+             top 5rem left -8rem,
+             bottom 3.5rem right -4em;
+    }
+    
+    /* hero-content */
+    &-content {
+        margin-inline: auto;
+        margin-block-end: pxToRem(64);
+
+        @media #{$break1} {
+            max-inline-size: 100%;
+        }
+
+        @media #{$break2} {
+            max-inline-size: pxToRem(570);
+        }
+
+        @media #{$break3open} {
+            max-inline-size: pxToRem(640);
+        }
+    }
+}
+
+/* hero-img-container */
+.hero-img-container {
+    max-inline-size: pxToRem(770);
+    min-inline-size: pxToRem(400);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* hero-title */
+.hero-title {
+    color: hsl(var(--clr-neutral-100));
+    margin-block-end: pxToRem(40);
+}
+
+.hero-title-underline {
+    position: relative;
+}
+
+.hero-title-underline::before {
+    @include text-underline(hsl(var(--clr-secondary-400)), 3px, 100%, 5px);
+    left: 3px;
+}

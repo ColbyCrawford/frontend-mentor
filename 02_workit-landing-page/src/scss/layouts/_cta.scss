@@ -1,0 +1,96 @@
+@use '../abstracts' as *;
+
+.cta {
+    @media #{$break1} {
+        margin-block-end: 4.5rem;
+    }
+
+    @media #{$break2} {
+        margin-block-end: 3.8rem;
+    }
+
+    @media #{$break3open} {
+        margin-block-end: 7.5rem;
+    }
+}
+
+
+.cta-content {
+    position: relative;
+    @media #{$break2} {
+        min-height: 30rem;
+    }
+
+    @media #{$break3open} {
+        min-height: 35rem;
+    }
+}
+
+.cta-img-container,
+.cta-text {
+    @media #{$break2open} {
+        position: absolute;
+    }
+}
+
+.cta-text {
+    background-color: hsl(var(--clr-primary-400));
+    color: hsl(var(--clr-neutral-100));
+    text-align: center;
+
+    @media #{$break1} {
+        padding: 2rem;
+    }
+
+    @media #{$break2open} {
+        padding: 3rem 3.5rem;
+        max-inline-size: 70%;
+        bottom: 0;
+        right: 0;
+
+        &::after {
+            position: absolute;
+            content: url('../../assets/images/bg-pattern-3.svg');
+        }
+    }
+
+    
+}
+
+.cta-img-container {
+    @media #{$break1} {
+        position: relative;
+        top: 3.5rem;
+        z-index: -5;
+    }
+}
+
+.cta-text-body {
+    @media #{$break1} {
+        margin-block: 1rem 1.5rem; 
+    }
+
+    @media #{$break2} {
+        margin-block: 1.5rem;
+    }
+
+    @media #{$break3open} {
+        margin-block: 2rem;
+    }
+}
+
+.cta-img {
+    display: block;
+
+    @media #{$break1} {
+        margin-inline: auto;
+    }
+
+    @media #{$break1}, #{$break2} {
+        max-inline-size: pxToRem(280);
+    }
+
+    @media #{$break3open} {
+        max-inline-size: pxToRem(450);
+    }
+}

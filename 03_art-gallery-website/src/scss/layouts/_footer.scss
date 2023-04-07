@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+.site-footer {
+    @media #{$break1} {
+        padding-block: 3rem;
+    }
+    @media #{$break2} {
+        padding-block: 3.5rem;
+    }
+    @media #{$break3open} {
+        padding-block: 5rem;
+    }
+}
+
+.site-footer-dark {
+    background: clr(neutral, dark);
+    color: clr(neutral, light);
+}
+
+.site-footer-primary {
+    background: clr(primary);
+    color: clr(neutral, dark);
+}

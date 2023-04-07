@@ -1,0 +1,5 @@
+@use '../abstracts' as *;
+
+/* bg-color */
+.u-bg-primary-400 { background-color: clr(primary); } 
+.u-bg-neutral-300 { background-color: clr(neutral, light)}

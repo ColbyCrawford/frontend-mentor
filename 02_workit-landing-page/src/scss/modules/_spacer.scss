@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.spacer-curve {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 5;
+}
+
+.spacer-curve svg {
+    position: relative;
+    display: block;
+    width: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+}
+
+.spacer-curve .shape-fill {
+    --spacer-color: 0, 100%, 50%;
+    fill: hsl(var(--spacer-color));
+}
+
+
+/* layouts */
+.spacer-curve {
+   #cta > & {
+    
+    @media #{$break1}, #{$break2} {
+        margin-block-end: pxToRem(100);
+    }
+
+    @media #{$break3open} {
+        margin-block-end: pxToRem(110);
+    }
+
+   }
+}

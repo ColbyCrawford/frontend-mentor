@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+%btn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    padding: 0.8em 1.5em;
+    letter-spacing: -0.16px;
+
+    @media #{$break1}, #{$break2} {
+        font-size: var(--fs-body-1);
+        line-height: 2;
+    }
+
+    @media #{$break2open} {
+        font-size: var(--fs-body-2);
+        line-height: 1.777;
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: hsl(var(--clr-secondary-400));
+    color: hsl(var(--clr-primary-400));
+
+    &:hover {
+        background-color: transparent;
+        border: 2px solid hsl(var(--clr-secondary-400));
+        color: hsl(var(--clr-secondary-400));
+    }
+}

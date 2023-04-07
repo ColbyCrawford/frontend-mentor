@@ -1,0 +1,85 @@
+@use '../abstracts' as *;
+
+#hero {
+    position: relative;
+
+    @media #{$break1} {
+        padding-block: 0 5.5rem;
+    }
+    @media #{$break2open} {
+        padding-block: 10.625rem;
+    }
+}
+
+.l-hero {
+    display: flex;
+    position: relative;
+    @media #{$break1}, #{$break2} {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2.5rem;
+    }
+}
+
+.hero-img-container {
+    @media #{$break1} {
+        margin-top: -8rem;
+    }
+    @media #{$break2} {
+        margin-top: -31rem;
+    }
+    @media #{$break3open} {
+        position: absolute;
+        right: -18rem;
+        top: -18.5rem;  
+    }
+}
+
+.hero-bg-decor {
+    position: absolute;
+    z-index: -10;
+   
+    
+    @media #{$break1} {
+        top: -3rem;
+        inline-size: 100vw;
+    }
+
+    @media #{$break2} {
+        top: -33rem;
+        inline-size: 100vw;
+    }
+
+    @media #{$break3open} {
+        top: -25rem;
+        right: -29rem;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.hero-text {
+    @media #{$break1}, #{$break2} {
+        text-align: center;
+    }
+
+    @media #{$break2} {
+        max-inline-size: pxToRem(580);
+    }
+
+    @media #{$break3open} {
+        max-inline-size: 40%;
+    }
+}
+
+.hero-description {
+    @media #{$break1} {
+        padding-block: 1rem 2rem;
+    }
+    @media #{$break2open} {
+        padding-block: 1.5rem 2.25rem;
+    }
+}

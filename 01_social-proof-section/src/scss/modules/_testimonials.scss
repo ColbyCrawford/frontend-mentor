@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+
+.testimonials {
+    display: flex;
+    margin-block-start: 4.5rem;
+
+    @media #{$break1} {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @media #{$break2open} {
+        gap: 2rem;
+    }
+
+}
+
+.testimonials-item {
+    flex: 1 1 25%;
+    background-color: hsl(var(--clr-primary-600));
+    border-radius: .5rem;
+    color: hsl(var(--clr-neutral-100));
+    padding: 2.5rem 2rem 2.2rem;
+}
+
+.testimonials-item-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media #{$break1} {
+        margin-block-end: 1.5rem;
+    }
+
+    @media #{$break2open} {
+        margin-block-end: 2rem;
+    }
+}
+
+.testimonials-item-image {
+    border-radius: 50%;
+    max-inline-size: 2.5rem;
+    max-block-size: 2.5rem;
+}
+
+#social .testimonials-item {
+    align-self: flex-start;
+}
+
+#social .testimonials-item:nth-child(2) {
+    @media #{$break2open} {
+        margin-block-start: pxToRem(16);
+    }
+}
+#social .testimonials-item:nth-child(3) {
+    @media #{$break2open} {
+        margin-block-start: pxToRem(32);
+    }
+}

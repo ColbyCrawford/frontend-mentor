@@ -1,0 +1,121 @@
+@use '../abstracts' as *;
+
+// root element 
+#navbar {
+    background-color: clr(neutral, lightest);
+    position: relative;
+    z-index: 100;
+}
+
+// hides navigation menu on mobile & tablet devices so menu
+// appears to transition out from behind the navbar
+#navbar::before {
+    content: '';
+    background-color: clr(neutral, lightest);
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+// flex layout for navbar
+.l-navbar {
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+    min-height: 4rem;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+// navigation links & menu styles
+.navbar-links {
+    display: flex;
+
+    @media #{$break1},
+    #{$break2} {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        padding-block: 2rem;
+        position: absolute;
+        z-index: -5;
+        background-color: clr(neutral, lightest);
+        inline-size: 100%;
+        border-radius: $border-radius-sm;
+        transition: 0.3s ease-in-out;
+        bottom: 0;
+    }
+
+    @media #{$break3open} {
+        gap: 1.75rem;
+        align-self: stretch;
+    }
+}
+
+// state class for navbar-links (aka navbar menu)
+.is-open {
+
+    @media #{$break1} {
+        bottom: -19rem;
+    }
+
+    @media #{$break2} {
+        bottom: -20rem;
+    }
+
+}
+
+
+.navbar-link {
+    position: relative;
+
+    &:focus-visible::before,
+    &:hover::before {
+        content: '';
+        position: absolute;
+        min-block-size: .25rem;
+        inline-size: 100%;
+        background: #{$gradient-400};
+        bottom: 0;
+    }
+
+    // if browser doesn't support :focus-visible then use :focus 
+    @supports not selector(:focus-visible) {
+        &:focus {
+            color: clr(primary);
+        }
+
+        &:focus::before {
+            content: '';
+            position: absolute;
+            min-block-size: .25rem;
+            inline-size: 100%;
+            background: #{$gradient-400};
+            bottom: 0;
+        }
+    }
+
+
+    @media #{$break1},
+    #{$break2} {
+        color: clr(primary);
+        font-size: $fs-6;
+
+        &:focus-visible::before,
+        &:hover::before {
+            bottom: -0.25rem;
+        }
+    }
+
+    @media #{$break3open} {
+        display: flex;
+        align-items: center;
+        font-size: $fs-3;
+
+        &:focus-visible,
+        &:hover {
+            color: clr(primary);
+        }
+    }
+}

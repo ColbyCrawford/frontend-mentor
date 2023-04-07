@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+%btn {
+    --p-btn-font-size: #{$fs-3};
+    --p-btn-font-weight: #{$fw-bold};
+    --p-btn-border-radius: 100vw;
+    --p-btn-padding: .5714em 2.3571em;
+
+    display: inline-flex;
+    font-size: var(--p-btn-font-size);
+    font-weight: var(--p-btn-font-weight);
+    line-height: 2;
+    padding: var(--p-btn-padding);
+    border-radius: var(--p-btn-border-radius);
+    position: relative;
+
+    &:hover,
+    &:focus-visible {
+        transform: scale(0.98);
+    }
+
+    &:focus-visible {
+        @include outlineInner(clr(secondary));
+    }
+
+    @supports not selector(:focus-visible) {
+        &:focus {
+            @include outlineInner(clr(secondary));
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: var(--p-btn-border-radius);
+    }
+
+    &:focus-visible::before {
+        @include outlineOuter(clr(neutral, lightest));
+        // outline: 1px solid clr(neutral, lightest);
+        // outline-offset: .35rem;
+    }
+
+}
+
+.btn-gradient-400 {
+    @extend %btn;
+    background: $gradient-400;
+    color: clr(neutral, lightest);
+}
