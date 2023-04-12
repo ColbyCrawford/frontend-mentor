@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.link {
+    font-size: $fs-7;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16666em;
+}
+
+.link-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.125rem;
+}
+
+.link-icon-full {
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+    justify-content: space-between;
+}

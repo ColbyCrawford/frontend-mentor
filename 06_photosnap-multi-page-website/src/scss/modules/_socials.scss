@@ -1,0 +1,17 @@
+.socials {
+    display: flex;
+    gap: 0.833125rem;
+
+    &-icon {
+        display: block;
+        font-size: 1.25rem;
+    }
+}
+
+.socials-link:hover {
+    & > .icon-facebook::before { --p-icon-bg: linear-gradient(225deg, hsl(202, 62%, 62%) 0%, hsl(257, 88%, 55%) 100%); }
+    & > .icon-youtube::before { --p-icon-bg: linear-gradient(45deg, hsl(341, 74%, 48%) 0%, hsl(0, 100%, 68%) 100%); }
+    & > .icon-instagram::before { --p-icon-bg:  linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%); }
+    & > .icon-twitter::before { --p-icon-bg: linear-gradient(225deg, #65FFEB 0%, #27718A 100%); }
+    & > .icon-pinterest::before { --p-icon-bg: linear-gradient(225deg, #F6C683 0%, #DE3838 100%); }
+}

@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+%btn {
+    display: inline-flex;
+    justify-content: center;
+    font-size: $fs-7;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16666em;
+    padding: 1em 2em;
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: clr(neutral, darkest);
+    color: clr(neutral, lightest);
+}

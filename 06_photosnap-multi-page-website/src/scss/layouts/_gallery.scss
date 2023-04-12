@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+#gallery {
+    display: grid;
+    @media #{$break3open} {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media #{$break2} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery-card {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 150px 0 0 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%);
+    }
+    &-text { 
+        inline-size: 100%;
+        padding: 40px;
+        position: absolute;
+        bottom: 0;
+        color: clr(neutral, lightest);
+    }
+    &-author { 
+        font-size: $fs-6; 
+    }
+    &-bg {
+        display: block;
+        object-fit: cover;
+        block-size: 100%;
+        inline-size: 100%;
+    }
+    &-header {
+        padding-block-end: 1rem;
+        border-block-end: 1px solid clr(neutral, lightest, 0.25);
+        margin-block-end: 1.25rem;
+    }
+}
+
+
+

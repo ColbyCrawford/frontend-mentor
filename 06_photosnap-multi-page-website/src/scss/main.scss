@@ -1,0 +1,27 @@
+@use 'sass:meta';
+
+@layer normalize, reset, abstracts, base, layouts, pages, modules, utilities;
+
+// (1) - Normalize [LEAST PRIORITY]
+@layer normalize { @include meta.load-css("base/normalize"); }
+
+// (2) - Reset
+@layer reset { @include meta.load-css("base/reset"); }
+
+// (3) - Abstracts
+@layer abstracts { @include meta.load-css('abstracts'); }
+
+// (4) - Base
+@layer base { @include meta.load-css('base'); }
+
+// (5) - Layouts
+@layer layouts { @include meta.load-css('layouts'); }
+
+// (6) - Pages
+@layer pages { @include meta.load-css('pages'); }
+
+// (7) - Modules
+@layer modules { @include meta.load-css('modules'); }
+
+// (8) - Utilities [HIGHEST PRIORITY]
+@layer utilities { @include meta.load-css('utilities'); }           

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="stylesheet" href="scss/main.scss">
+  <title>Home | Photosnap</title>
+</head>
+
+<body>
+
+  <!-- ---------- -->
+  <!-- Navigation -->
+  <!-- ---------- -->
+  <header id="navigation">
+    <div class="l-navigation l-container">
+      <img src="assets/logo-dark.svg" alt="Photosnap home.">
+      <nav class="navigation-menu">
+        <ul class="navigation-links">
+          <li><a href="pages/stories.html" class="link">Stories</a></li>
+          <li><a href="pages/features.html" class="link">Features</a></li>
+          <li><a href="pages/pricing.html" class="link">Pricing</a></li>
+        </ul>
+        <a href="#" class="navigation-btn btn-primary">Get an invite</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false">
+        <svg class="hamburger" viewBox="0 0 100 100" width="32">
+          <rect class="line top" width="80" height="6" x="10" , y="36">
+          </rect>
+          <rect class="line bottom" width="80" height="6" x="10" , y="54">
+          </rect>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <main id="main">
+    <!-- ---- -->
+    <!-- Hero -->
+    <!-- ---- -->
+    <section id="hero">
+      <div class="l-common-grid">
+        <div class="common-grid-masthead u-max-block-size-650">
+          <div class="common-grid-masthead-wrapper">
+            <header class="text-group">
+              <h1 class="heading-lg">Create and share your photo Stories</h1>
+              <p class="text-group-body">
+                Photosnap is a platform for photographers and visual storytellers. We make it
+                easy to share photos, tell stories and connect with others.
+              </p>
+              <div class="link-icon">
+                <a href="#" class="link">Get an invite</a>
+                <span class="icon-arrow"></span>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div class="common-grid-img-container u-max-block-size-650">
+          <img class="common-grid-img" src="assets/images/home/create-and-share-desktop.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- ------- -->
+    <!-- Stories -->
+    <!-- ------- -->
+    <section id="stories">
+      <div class="l-common-grid-reverse">
+        <div class="common-grid-content u-max-block-size-600">
+          <div class="text-group">
+            <h2 class="heading-lg">Beautiful stories every time</h2>
+            <p class="text-group-body">
+              We provide design templates to ensure your stories look terrific. Easily add
+              photos, text, embed maps and media from other networks. Then share your story
+              with everyone.
+            </p>
+            <div class="link-icon">
+              <a href="pages/stories.html" class="link">View the stories</a>
+              <span class="icon-arrow"></span>
+            </div>
+          </div>
+        </div>
+        <div class="common-grid-img-container u-max-block-size-600">
+          <img class="common-grid-img" src="assets/images/home/beautiful-stories-deskotp.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- -------- -->
+    <!-- Everyone -->
+    <!-- -------- -->
+    <section id="everyone">
+      <div class="l-common-grid">
+        <div class="common-grid-content u-max-block-size-600">
+          <div class="text-group">
+            <h2 class="heading-lg">Designed for everyone</h2>
+            <p class="text-group-body">
+              Photosnap can help you create stories that resonate with your audience. Our
+              tool is designed for photographers of all levels, brands, businesses you name it.
+            </p>
+            <div class="link-icon">
+              <a href="pages/stories.html" class="link">View the stories</a>
+              <span class="icon-arrow"></span>
+            </div>
+          </div>
+        </div>
+        <div class="common-grid-img-container u-max-block-size-600">
+          <img class="common-grid-img" src="assets/images/home/designed-for-everyone-desktop.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ------- -->
+    <!-- Gallery -->
+    <!-- ------- -->
+    <section id="gallery">
+      <article class="gallery-card">
+        <div class="gallery-card-text">
+          <header class="gallery-card-header">
+            <h2 class="heading-sm">The Mountains</h2>
+            <p class="gallery-card-author">by John Appleseed</p>
+          </header>
+          <div class="link-icon-full">
+            <a href="pages/stories.html" class="link">Read Story</a>
+            <span class="icon-arrow"></span>
+          </div>
+        </div>
+        <picture>
+          <source media="(max-width: 767.99px)" srcset="assets/images/stories/mobile/mountains.jpg">
+          <source media="(min-width: 768px)" srcset="assets/images/stories/desktop/mountains.jpg">
+          <img class="gallery-card-bg" src="assets/images/stories/mobile/mountains.jpg" alt="">
+        </picture>
+      </article>
+      <article class="gallery-card">
+        <div class="gallery-card-text">
+          <header class="gallery-card-header">
+            <h2 class="heading-sm">Sunset Cityscapes</h2>
+            <p class="gallery-card-author">by Benjamin Cruz</p>
+          </header>
+          <div class="link-icon-full">
+            <a href="pages/stories.html" class="link">Read Story</a>
+            <span class="icon-arrow"></span>
+          </div>
+        </div>
+        <picture>
+          <source media="(max-width: 767.99px)" srcset="assets/images/stories/mobile/cityscapes.jpg">
+          <source media="(min-width: 768px)" srcset="assets/images/stories/desktop/cityscapes.jpg">
+          <img class="gallery-card-bg" src="assets/images/stories/mobile/cityscapes.jpg" alt="">
+        </picture>
+      </article>
+      <article class="gallery-card">
+        <div class="gallery-card-text">
+          <header class="gallery-card-header">
+            <h2 class="heading-sm">18 Days Voyage</h2>
+            <p class="gallery-card-author">by Alexei Borodin</p>
+          </header>
+          <div class="link-icon-full">
+            <a href="pages/stories.html" class="link">Read Story</a>
+            <span class="icon-arrow"></span>
+          </div>
+        </div>
+        <picture>
+          <source media="(max-width: 767.99px)" srcset="assets/images/stories/mobile/18-days-voyage.jpg">
+          <source media="(min-width: 768px)" srcset="assets/images/stories/desktop/18-days-voyage.jpg">
+          <img class="gallery-card-bg" src="assets/images/stories/mobile/18-days-voyage.jpg" alt="">
+        </picture>
+      </article>
+      <article class="gallery-card">
+        <div class="gallery-card-text">
+          <header class="gallery-card-header">
+            <h2 class="heading-sm">Architecturals</h2>
+            <p class="gallery-card-author">by Samantha Brooke</p>
+          </header>
+          <div class="link-icon-full">
+            <a href="pages/stories.html" class="link">Read Story</a>
+            <span class="icon-arrow"></span>
+          </div>
+        </div>
+        <picture>
+          <source media="(max-width: 767.99px)" srcset="assets/images/stories/mobile/architecturals.jpg">
+          <source media="(min-width: 768px)" srcset="assets/images/stories/desktop/architecturals.jpg">
+          <img class="gallery-card-bg" src="assets/images/stories/mobile/architecturals.jpg" alt="">
+        </picture>
+        
+      </article>    
+    </section>
+
+
+    <!-- -------- -->
+    <!-- Features -->
+    <!-- -------- -->
+    <section id="features">
+      <div class="l-features l-container">
+        <div class="features-item">
+            <img class="features-item-icon" src="assets/images/features/responsive.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">100% Responsive</h2>
+            <p>No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.</p>
+          </div>
+        </div>
+        <div class="features-item">
+            <img class="features-item-icon" src="assets/images/features/no-limit.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">No Photo Upload Limit</h2>
+            <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.</p>
+          </div>
+        </div>
+        <div class="features-item">
+            <img class="features-item-icon" src="assets/images/features/embed.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">Available to Embed</h2>
+            <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ------ -->
+  <!-- Footer -->
+  <!-- ------ -->
+  <footer id="footer">
+    <div class="l-container">
+      Home
+      Stories
+      Features
+      Pricing
+      <div class="socials">
+        <a href="#" class="socials-link">
+          <span class="socials-icon icon-facebook"></span>
+        </a>
+        <a href="#" class="socials-link">
+          <span class="socials-icon icon-youtube"></span>
+        </a>
+        <a href="#" class="socials-link">
+          <span class="socials-icon icon-twitter"></span>
+        </a>
+        <a href="#" class="socials-link">
+          <span class="socials-icon icon-pinterest"></span>
+        </a>
+        <a href="#" class="socials-link">
+          <span class="socials-icon icon-instagram"></span>
+        </a>
+      </div>
+      Get an invite
+      Copyright 2019. All Rights Reserved
+    </div>
+  </footer>
+
+  <script src="js/_navigation.js"></script>
+</body>
+
+</html>

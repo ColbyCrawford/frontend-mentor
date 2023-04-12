@@ -1,0 +1,20 @@
+$gradient-400: linear-gradient(26.57deg, #FFC593 0.42%, #BC7198 43.46%, #5A77FF 83.33%);
+
+$clr-neutral-100: hsl(0, 0%, 100%);  // White
+$clr-neutral-300: hsl(0, 0%, 87%);   // Light Grey
+$clr-neutral-900: hsl(0, 0%, 0%);    // Pure Black
+
+
+$colors: (
+    neutral: (
+        lightest: $clr-neutral-100, 
+            base: $clr-neutral-300, 
+         darkest: $clr-neutral-900,
+        )
+    );
+
+
+@function clr($base, $shade: base, $a: 1) {
+    $rgb: map-get(map-get($colors, $base), $shade);
+    @return rgba($rgb, $a);
+}

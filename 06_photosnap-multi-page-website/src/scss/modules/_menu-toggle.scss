@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.menu-toggle {
+    @media #{$break1} {
+        inline-size: min-content;
+        background: transparent;
+        
+        #navigation & { justify-self: end; }
+    }
+    @media #{$break2open} { display: none; }
+}
+
+.menu-toggle .line {
+    transition:
+        transform 200ms ease-in 200ms,
+        rotate 200ms ease-in,
+        opacity 0ms 200ms;
+    transform-origin: center;
+}
+
+.menu-toggle[aria-expanded="true"] .line {
+    transition:
+        transform 200ms ease-in,
+        rotate 200ms ease-in 200ms,
+        opacity 0ms 200ms;
+    transform-origin: center;
+}
+
+.menu-toggle[aria-expanded="true"] .bottom {
+    transform: translateY(-10px);
+    rotate: -45deg;
+}
+
+.menu-toggle[aria-expanded="true"] .top {
+    transform: translateY(10px);
+    rotate: 45deg;
+}
+
+.hamburger {
+    display: block;
+}

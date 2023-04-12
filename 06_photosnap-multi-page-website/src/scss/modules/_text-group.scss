@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.text-group {
+    max-inline-size: pxToRem(387);
+}
+
+.text-group-body {
+    @media #{$break1} { margin-block: 1rem 1.4375rem; }
+    @media #{$break2open} { margin-block: 1.3125rem 3rem; }
+
+    // if parent has 'invert colors' 
+    // utility class, decrease opacity
+    .common-grid-masthead & { opacity: 0.6; }
+}
+
+
+
+.common-grid-masthead .text-group::before {
+    content: '';
+    position: absolute;
+    background: #{$gradient-400};
+
+    @media #{$break1} {
+        block-size: 0.375rem;
+        inline-size: 8rem;
+        top: 0;
+    }
+    @media #{$break2open} {
+        left: 0;
+        inline-size: 0.375rem;
+        block-size: 100%;
+    }
+}

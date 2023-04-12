@@ -1,0 +1,6 @@
+@use '../abstracts' as *;
+
+.u-invert-colors {
+    background-color: clr(neutral, darkest);
+    color: clr(neutral, lightest);
+}
