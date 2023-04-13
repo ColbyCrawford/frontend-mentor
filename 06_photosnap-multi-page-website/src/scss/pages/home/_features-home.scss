@@ -1,0 +1,24 @@
+@use '../../abstracts' as *;
+
+#features-home {
+    @media #{$break1} {
+        padding-block: 5rem;
+    }
+    @media #{$break2open} {
+        padding-block: $size-120;
+    }   
+}
+
+.l-features-home {
+    display: grid;
+    @media #{$break1} {
+        gap: 3.5rem;
+    }
+    @media #{$break2} {
+        gap: 5rem;
+    }
+    @media #{$break3open} {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.875rem;
+    }
+}

@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .socials {
     display: flex;
     gap: 0.833125rem;
@@ -5,6 +7,15 @@
     &-icon {
         display: block;
         font-size: 1.25rem;
+    }
+
+    // layout specific styles
+    #footer & {
+        @media #{$break1} { 
+            margin-block: 2rem 3rem; 
+            margin-inline: auto;
+        }
+        @media #{$break3open} { align-self: end; }
     }
 }
 
@@ -15,3 +26,5 @@
     & > .icon-twitter::before { --p-icon-bg: linear-gradient(225deg, #65FFEB 0%, #27718A 100%); }
     & > .icon-pinterest::before { --p-icon-bg: linear-gradient(225deg, #F6C683 0%, #DE3838 100%); }
 }
+
+

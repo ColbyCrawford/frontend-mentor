@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+#cta {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media #{$break1} {
+        padding-block: 4rem;
+        background-image: url('../assets/images/shared/bg-beta-mobile.jpg');
+    }
+    @media #{$break2} {
+        background-image: url('../assets/images/shared/bg-beta-tablet.jpg');
+    }
+    @media #{$break2open} {
+        padding-block: 4.25rem;
+    }
+    @media #{$break3open} {
+        background-image: url('../assets/images/shared/bg-beta-desktop.jpg');
+    }
+}
+
+#cta-title {
+    max-inline-size: pxToRem(400);
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: #{$gradient-400};
+    
+        @media #{$break1} {
+            block-size: 0.375rem;
+            inline-size: 8rem;
+            top: 0;
+        }
+        @media #{$break2open} {
+            left: 0;
+            top: 0;
+            inline-size: 0.375rem;
+            block-size: 100%;
+        }
+    }
+}
+
+.l-cta {
+    display: flex;
+    color: clr(neutral, lightest);
+
+    @media #{$break1} {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    @media #{$break2open} {
+        justify-content: space-between;
+    }
+}

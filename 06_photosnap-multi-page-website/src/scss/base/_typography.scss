@@ -17,6 +17,11 @@ body {
     background-color: clr(neutral, lightest);
 }
 
+p { 
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
 h1, .heading-lg,
 h2, .heading-md,
 h3, .heading-sm,
@@ -44,4 +49,11 @@ h6 {
 .heading-sm {
     font-size: $fs-4;
     line-height: 1.38888;
+}
+
+.overline {
+    font-size: $fs-7;
+    line-height: 1.3333;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
 }

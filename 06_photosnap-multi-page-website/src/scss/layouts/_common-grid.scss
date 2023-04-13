@@ -2,7 +2,7 @@
 
 .l-common-grid {
     display: grid;
-
+    
     @media #{$break2} { grid-template-columns: 65% 35%; }
     @media #{$break3open} { grid-template-columns: 40% 60%; }
 }
@@ -14,8 +14,18 @@
         .common-grid-content { order: 2; }
         .common-grid-img-container { order: 1; }
     }
+
     @media #{$break2} { grid-template-columns: 35% 65%; }
     @media #{$break3open} { grid-template-columns: 60% 40%; }
+}
+
+.l-common-grid,
+.l-common-grid-reverse {
+    @media #{$break1} {
+        .common-grid-masthead { order: 2; }
+        .common-grid-content { order: 2; }
+        .common-grid-img-container { order: 1; }
+    }
 }
 
 .common-grid-img {

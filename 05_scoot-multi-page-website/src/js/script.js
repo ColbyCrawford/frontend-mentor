@@ -5,7 +5,6 @@ const navMenu = document.querySelector('.navbar-actions-panel');
 const main = document.getElementById('main');
 const footer = document.getElementById('footer');
 
-
 let isMenuOpen = false;
 
 menuToggle.addEventListener('click', e => {
@@ -17,9 +16,6 @@ menuToggle.addEventListener('click', e => {
     // change isMenuOpen value
     isMenuOpen = changeBoolean(isMenuOpen);
 })
-
-
-
 
 
 

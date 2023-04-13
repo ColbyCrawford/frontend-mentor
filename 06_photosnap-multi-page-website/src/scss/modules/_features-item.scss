@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.features-item {
+    display: grid;
+    text-align: center;
+    grid-auto-rows: 7.5rem auto;
+    max-inline-size: pxToRem(457);
+
+    @media #{$break1}, #{$break2} { margin-inline: auto; }
+
+    &-icon { margin-inline: auto; }
+    &-text > h2 { margin-block-end: 1rem; }
+}
+
+.features-item:nth-child(2) .features-item-icon {
+    margin-block-start: 1.125rem;
+}

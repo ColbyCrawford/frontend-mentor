@@ -1,68 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
+  <link rel="stylesheet" href="../scss/main.scss">
+  <title>Features | Photosnap</title>
 </head>
+
 <body>
 
-  Stories
-  Features
-  Pricing
+  <!-- ---------- -->
+  <!-- Navigation -->
+  <!-- ---------- -->
+  <header id="navigation">
+    <div class="l-navigation l-container">
+      <a href="../index.html">
+        <img src="../assets/logo-dark.svg" alt="Photosnap home.">
+      </a>
+      <nav class="navigation-menu">
+        <ul class="navigation-links">
+          <li><a href="stories.html" class="link">Stories</a></li>
+          <li><a href="features.html" class="link">Features</a></li>
+          <li><a href="pricing.html" class="link">Pricing</a></li>
+        </ul>
+        <a href="#" class="navigation-btn btn-primary">Get an invite</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false">
+        <svg class="hamburger" viewBox="0 0 100 100" width="32">
+          <rect class="line top" width="80" height="6" x="10" , y="36">
+          </rect>
+          <rect class="line bottom" width="80" height="6" x="10" , y="54">
+          </rect>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-  Get an invite
+  <main id="main">
+    <!-- -------- -->
+    <!-- Masthead -->
+    <!-- -------- -->
+    <section id="masthead">
+      <div class="l-common-grid">
+        <div class="common-grid-masthead u-max-block-size-650">
+          <div class="common-grid-masthead-wrapper">
+            <header class="text-group">
+              <h1 class="heading-lg">Features</h1>
+              <p class="text-group-body">
+                We make sure all of our features are designed to be loved by every aspiring and even
+                professional photograpers who wanted to share their stories.
+              </p>
+              <div class="link-icon">
+                <a href="#" class="link">Get an invite</a>
+                <span class="icon-arrow" aria-hidden="true"></span>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div class="common-grid-img-container u-max-block-size-650">
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/features/hero-mobile.jpg">
+            <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/images/features/hero-tablet.jpg">
+            <source media="(min-width: 1199px)" srcset="../assets/images/features/hero-desktop.jpg">
+            <img class="common-grid-img" src="../assets/images/features/hero-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
 
-  Features
+    <section id="features">
+      <div class="l-features l-container">
+        <div class="features-item">
+          <img class="features-item-icon" src="../assets/images/features/responsive.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">100% Responsive</h2>
+            <p>No matter which the device you’re on, our site is fully responsive and stories look beautiful on any
+              screen.</p>
+          </div>
+        </div>
+        <div class="features-item">
+          <img class="features-item-icon" src="../assets/images/features/no-limit.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">No Photo Upload Limit</h2>
+            <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in
+              one go.</p>
+          </div>
+        </div>
+        <div class="features-item">
+          <img class="features-item-icon" src="../assets/images/features/embed.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">Available to Embed</h2>
+            <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.</p>
+          </div>
+        </div>
+        <div class="features-item">
+          <img class="features-item-icon" src="../assets/images/features/custom-domain.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">Custom Domain</h2>
+            <p>With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!</p>
+          </div>
+        </div>
+        <div class="features-item">
+          <img class="features-item-icon" src="../assets/images/features/boost-exposure.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">Boost Your Exposure</h2>
+            <p>Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.</p>
+          </div>
+        </div>
+        <div class="features-item">
+          <img class="features-item-icon" src="../assets/images/features/drag-drop.svg" alt="">
+          <div class="features-item-text">
+            <h2 class="heading-sm">Drag & Drop Image</h2>
+            <p> Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="cta">
+      <div class="l-cta l-container">
+        <h2 id="cta-title" class="heading-lg">We're in Beta. Get your invite today!</h2>
+        <div class="link-icon">
+          <a href="#" class="link">Get an invite</a>
+          <span class="icon-arrow" aria-hidden="true"></span>
+        </div>
+      </div>
+      <picture>
+        <img src="" alt="">
+      </picture>
+    </section>
+  </main>
 
-  We make sure all of our features are designed to be loved by every aspiring and even 
-  professional photograpers who wanted to share their stories.
+  <!-- ------ -->
+  <!-- Footer -->
+  <!-- ------ -->
+  <footer id="footer">
+    <div class="l-footer l-container">
+      <div class="footer-content-ls">
+        <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        <ul class="footer-navigation">
+          <li class="footer-navigation-item">
+            <a href="../index.html" class="footer-navigation-link link">Home</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="stories.html" class="footer-navigation-link link">Stories</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="features.html" class="footer-navigation-link link">Features</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="pricing.html" class="footer-navigation-link link">Pricing</a>
+          </li>
+        </ul>
+        <div class="socials">
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-facebook"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-youtube"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-twitter"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-pinterest"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-instagram"></span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-content-rs">
+        <div class="link-icon">
+          <a href="#" class="link">Get an invite</a>
+          <span class="icon-arrow"></span>
+        </div>
+        <p>Copyright 2019. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
 
-  100% Responsive
-
-  No matter which the device you’re on, our site is fully responsive and stories 
-  look beautiful on any screen.
-
-  No Photo Upload Limit
-
-  Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share 
-  all of your stories in one go.
-
-  Available to Embed
-
-  Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google 
-  Maps, and more. 
-
-  Custom Domain
-
-  With Photosnap subscriptions you can host your stories on your own domain. You can 
-  also remove our branding!
-
-  Boost Your Exposure
-
-  Users that viewed your story or gallery can easily get notifed of new and featured 
-  stories with our built in mailing list.
-
-  Drag & Drop Image
-
-  Easily drag and drop your image and get beautiful shots everytime. No over the top 
-  tooling to add friction to creating stories.
-
-  We're in Beta. Get your invite today!
-  
-  Get an invite
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
+  <script src="../js/_navigation.js"></script>
 </body>
+
 </html>

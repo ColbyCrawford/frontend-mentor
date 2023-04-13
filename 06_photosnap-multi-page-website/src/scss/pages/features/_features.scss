@@ -1,0 +1,24 @@
+@use '../../abstracts' as *;
+
+#features {
+    @media #{$break1} { padding-block: 4rem }
+    @media #{$break2} { padding-block: pxToRem(112); }
+    @media #{$break3open} { padding-block: pxToRem(160); }
+}
+
+.l-features {
+    display: grid;
+
+    @media #{$break1} { row-gap: 3.5rem }
+    @media #{$break2open} {
+        grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
+    }
+    @media #{$break2} { 
+        row-gap: $size-72;
+        column-gap: 0.625rem;
+    }
+    @media #{$break3open} { 
+        row-gap: 6.5rem;
+        column-gap: 1.875rem;
+    }
+}

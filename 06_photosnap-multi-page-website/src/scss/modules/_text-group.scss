@@ -7,10 +7,6 @@
 .text-group-body {
     @media #{$break1} { margin-block: 1rem 1.4375rem; }
     @media #{$break2open} { margin-block: 1.3125rem 3rem; }
-
-    // if parent has 'invert colors' 
-    // utility class, decrease opacity
-    .common-grid-masthead & { opacity: 0.6; }
 }
 
 
