@@ -49,6 +49,8 @@
 
 .navigation-links {
     display: flex;
+    color: clr(neutral, darkest);
+    
     @media #{$break1} {
         flex-direction: column;
         inline-size: 100%;

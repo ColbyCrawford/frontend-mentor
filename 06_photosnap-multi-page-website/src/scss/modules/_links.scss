@@ -8,10 +8,18 @@
     letter-spacing: 0.16666em;
 }
 
-.link-icon {
+.link-secondary-icon,
+.link-primary-icon {
     display: inline-flex;
     align-items: center;
     gap: 1.125rem;
+}
+
+.link-primary-icon {
+    color: clr(neutral, darkest);
+}
+.link-secondary-icon {
+    color: clr(neutral, lightest);
 }
 
 .link-icon-full {

@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.toggle {
+    position: relative;
+    inline-size: 4rem;
+    block-size: 2rem;
+    background-color: clr(neutral);
+    border-radius: 1rem;
+    cursor: pointer;
+
+    // toggle lever (circle)
+    &::before {
+        content: '';
+        position: absolute;
+        block-size: 1.5rem;
+        inline-size: 1.5rem;
+        border-radius: 100vh;
+        background-color: clr(neutral, darkest);
+        transition: left 0.3s ease-in-out;
+        left: 0.25rem;
+        top: 0.25rem;
+    }
+}
+
+.toggle:checked {
+    background-color: clr(neutral, darkest);
+    &::before {
+        background-color: clr(neutral, lightest);
+        left: calc(100% - 1.5rem - 0.25rem);
+    }
+
+}

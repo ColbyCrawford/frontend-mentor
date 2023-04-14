@@ -1,0 +1,5 @@
+@use '../abstracts' as *;
+
+.u-text-neutral-100 { color: clr(neutral, lightest) !important; }
+.u-text-neutral-300 { color: clr(neutral) !important; }
+.u-text-neutral-900 { color: clr(neutral, darkest) !important; }

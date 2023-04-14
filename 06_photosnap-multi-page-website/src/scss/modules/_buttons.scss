@@ -14,4 +14,21 @@
     @extend %btn;
     background-color: clr(neutral, darkest);
     color: clr(neutral, lightest);
+
+    &:hover,
+    &:focus-visible {
+        background-color: clr(neutral);
+        color: clr(neutral, darkest);
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: clr(neutral, lightest);
+    color: clr(neutral, darkest);
+
+    &:hover,
+    &:focus-visible {
+        background-color: clr(neutral);
+    }
 }

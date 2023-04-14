@@ -1,0 +1,152 @@
+@use '../../abstracts' as *;
+
+#plans {
+    @media #{$break1} {
+        padding-block: 4rem;
+    }
+
+    @media #{$break2} {
+        padding-block: 7rem;
+    }
+
+    @media #{$break3open} {
+        padding-block: $size-120 $size-160;
+    }
+}
+
+.pricing {
+    display: flex;
+
+    @media #{$break1}, #{$break2} {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    @media #{$break3open} {
+        gap: 1.875rem;
+        align-items: center;
+    }
+}
+
+.pricing-card {
+    display: grid;
+    padding-inline: 2.5rem;
+    position: relative;
+
+    @media #{$break1}, #{$break3open} {
+        row-gap: 2.5rem;
+    }
+
+    @media #{$break2} {
+        grid-template-columns: 1fr 1.25fr;
+        row-gap: 2rem;
+    }
+
+    @media #{$break2open} {
+        padding: 2.5rem;
+    }
+    
+    &:not(:nth-child(2)) {
+        background-color: hsl(0, 0%, 96%);
+        @media #{$break1}, #{$break3open} {
+            padding-block: 3.5rem 2.5rem;
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: clr(neutral, darkest);
+        color: clr(neutral, lightest);
+
+        @media #{$break1} {
+            padding-block: 3rem;
+        }
+        @media #{$break3open} {
+            padding-block: 5.5rem 4.5rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: #{$gradient-400};
+        
+            @media #{$break1}, #{$break3open} {
+                block-size: 0.375rem;
+                inline-size: 100%;
+                top: 0;
+            }
+            @media #{$break2} {
+                left: 0;
+                top: 0;
+                inline-size: 0.375rem;
+                block-size: 100%;
+            }
+        }
+    }
+}
+
+.plans-mo-yr {
+    display: inline-flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-54%);
+    gap: 2rem;
+
+    @media #{$break1},
+    #{$break2} {
+        margin-block-end: 2.5rem;
+    }
+
+    @media #{$break3open} {
+        margin-block-end: 3rem;
+    }
+}
+
+.plans-monthly { order: -1; }
+
+#plans-toggle {
+
+    & ~ .plans-monthly {
+        color: clr(neutral, darkest);
+    }
+    & ~ .plans-yearly {
+        color: clr(neutral, darkest, 0.5);
+    }
+
+    &:checked {
+
+        & ~ .plans-monthly {
+            color: clr(neutral, darkest, 0.5);
+        }
+        & ~ .plans-yearly {
+            color: clr(neutral, darkest);
+        }
+
+    }
+
+}
+
+.pricing-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+
+    @media #{$break1}, #{$break3open} {
+        text-align: center;
+    }
+}
+
+.pricing-card-cost {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$break2} {
+        text-align: right;
+    }
+    @media #{$break1}, #{$break3open} {
+        text-align: center;
+    }
+}
+
+.pricing-card-cost:nth-of-type(2) {
+    display: none;
+}

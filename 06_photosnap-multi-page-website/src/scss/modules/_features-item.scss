@@ -10,6 +10,7 @@
 
     &-icon { margin-inline: auto; }
     &-text > h2 { margin-block-end: 1rem; }
+    &-title { color: clr(neutral, darkest); }
 }
 
 .features-item:nth-child(2) .features-item-icon {

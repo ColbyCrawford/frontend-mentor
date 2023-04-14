@@ -1,76 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
+  <link rel="stylesheet" href="../scss/main.scss">
+  <title>Features | Photosnap</title>
 </head>
+
 <body>
 
-  Stories
-  Features
-  Pricing
+  <!-- ---------- -->
+  <!-- Navigation -->
+  <!-- ---------- -->
+  <header id="navigation">
+    <div class="l-navigation l-container">
+      <a href="../index.html">
+        <img src="../assets/logo-dark.svg" alt="Photosnap home.">
+      </a>
+      <nav class="navigation-menu">
+        <ul class="navigation-links">
+          <li><a href="stories.html" class="link">Stories</a></li>
+          <li><a href="features.html" class="link">Features</a></li>
+          <li><a href="pricing.html" class="link">Pricing</a></li>
+        </ul>
+        <a href="#" class="navigation-btn btn-primary">Get an invite</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false">
+        <svg class="hamburger" viewBox="0 0 100 100" width="32">
+          <rect class="line top" width="80" height="6" x="10" , y="36">
+          </rect>
+          <rect class="line bottom" width="80" height="6" x="10" , y="54">
+          </rect>
+        </svg>
+      </button>
+    </div>
+  </header>
 
-  Get an invite
+  <main id="main">
+    <!-- -------- -->
+    <!-- Masthead -->
+    <!-- -------- -->
+    <section id="masthead">
+      <div class="l-common-grid">
+        <div class="common-grid-masthead u-max-block-size-650">
+          <div class="common-grid-masthead-wrapper">
+            <header class="text-group">
+              <h1 class="heading-lg"> Pricing</h1>
+              <p class="text-group-body">
+                Create a your stories, Photosnap is a platform for photographers and visual storytellers.
+                It’s the simple way to create and share your photos.
+              </p>
+              <div class="link-icon">
+                <a href="#" class="link">Get an invite</a>
+                <span class="icon-arrow" aria-hidden="true"></span>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div class="common-grid-img-container u-max-block-size-650">
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/pricing/hero-mobile.jpg">
+            <source media="(min-width: 768px) and (max-width: 1198.99px)"
+              srcset="../assets/images/pricing/hero-tablet.jpg">
+            <source media="(min-width: 1199px)" srcset="../assets/images/pricing/hero-desktop.jpg">
+            <img class="common-grid-img" src="../assets/images/pricing/hero-mobile.jpg" alt="">
+          </picture>
+        </div>
+      </div>
+    </section>
 
-  Pricing
+    <section id="plans">
+      <div class="l-plans l-container">
+        <div class="plans-mo-yr">
+          <input class="toggle" type="checkbox" name="payment-options" id="plans-toggle">
+          <span class="plans-monthly heading-sm">Monthly</span>
+          <span class="plans-yearly heading-sm">Yearly</span>
+        </div>
+        <div class="pricing">
 
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
-  It’s the simple way to create and share your photos.
+          <div class="pricing-card">
+            <header class="pricing-card-header">
+              <h2 class="pricing-card-title">Basic</h2>
+              <p class="pricing-card-body">
+                Includes basic usage of our platform. Recommended for new and aspiring photographers.
+              </p>
+            </header>
+            <div class="pricing-card-cost">
+              <span class="pricing-card-numbers heading-lg">$19.00</span> <p>per month</p>
+            </div>
+            <div class="pricing-card-cost">
+              <span class="pricing-card-numbers heading-lg">$190.00</span> <p>per year</p>
+            </div>
+            <a href="" class="btn-primary">Pick Plan</a>
+          </div>
 
-  Monthly
-  Yearly
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h2 class="pricing-card-title">Pro</h2>
+              <p class="pricing-card-body">
+                More advanced features available. Recommended for photography veterans and professionals.
+              </p>
+            </div>
+            <div class="pricing-card-cost">
+              <span class="pricing-card-numbers heading-lg">$39.00</span> <p>per month</p>
+            </div>
+            <div class="pricing-card-cost">
+              <span class="pricing-card-numbers heading-lg">$390.00</span> <p>per year</p>
+            </div>
+            <a href="" class="btn-secondary">Pick Plan</a>
+          </div>
 
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
-  $190.00 per year
-  Pick Plan
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h2 class="pricing-card-title">Business</h2>
+              <p class="pricing-card-body">
+                Additional features available such as more detailed metrics. Recommended for business owners.
+              </p>
+            </div>
+            <div class="pricing-card-cost">
+              <span class="pricing-card-numbers heading-lg">$99.00</span> <p>per month</p>
+            </div>
+            <div class="pricing-card-cost">
+              <span class="pricing-card-numbers heading-lg">$990.00</span> <p>per year</p>
+            </div>
+            <a href="" class="btn-primary">Pick Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  Pro
-  More advanced features available. Recommended for photography veterans and professionals.
-  $39.00 per month
-  $390.00 per year
-  Pick Plan
+    <section id="compare">
+      Compare
 
-  Business
-  Additional features available such as more detailed metrics. Recommended for business owners.
-  $99.00 per month
-  $990.00 per year
-  Pick Plan
+      The Features
+      Basic
+      Pro
+      Business
+      Unlimited Story Posting
+      Unlimited Photo Upload
+      Embedding Custom Content
+      Customize Metadata
+      Advanced Metrics
+      Photo Downloads
+      Search Engine Indexing
+      Custom Analytics
+    </section>
 
-  Compare
+    <section id="cta">
+      <div class="l-cta l-container">
+        <h2 id="cta-title" class="heading-lg">We're in Beta. Get your invite today!</h2>
+        <div class="link-icon">
+          <a href="#" class="link">Get an invite</a>
+          <span class="icon-arrow" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  The Features
+  <!-- ------ -->
+  <!-- Footer -->
+  <!-- ------ -->
+  <footer id="footer">
+    <div class="l-footer l-container">
+      <div class="footer-content-ls">
+        <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        <ul class="footer-navigation">
+          <li class="footer-navigation-item">
+            <a href="../index.html" class="footer-navigation-link link">Home</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="stories.html" class="footer-navigation-link link">Stories</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="features.html" class="footer-navigation-link link">Features</a>
+          </li>
+          <li class="footer-navigation-item">
+            <a href="pricing.html" class="footer-navigation-link link">Pricing</a>
+          </li>
+        </ul>
+        <div class="socials">
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-facebook"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-youtube"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-twitter"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-pinterest"></span>
+          </a>
+          <a href="#" class="socials-link">
+            <span class="socials-icon icon-instagram"></span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-content-rs">
+        <div class="link-icon">
+          <a href="#" class="link">Get an invite</a>
+          <span class="icon-arrow"></span>
+        </div>
+        <p>Copyright 2019. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
 
-  Basic
-  Pro
-  Business
-
-  Unlimited Story Posting
-  Unlimited Photo Upload
-  Embedding Custom Content
-  Customize Metadata
-  Advanced Metrics
-  Photo Downloads
-  Search Engine Indexing
-  Custom Analytics
-
-  We're in Beta. Get your invite today!
-  
-  Get an invite
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
+  <script src="../js/_navigation.js"></script>
 </body>
+
 </html>
