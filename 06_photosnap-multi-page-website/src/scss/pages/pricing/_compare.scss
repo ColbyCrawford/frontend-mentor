@@ -1,0 +1,85 @@
+@use '../../abstracts' as *;
+
+.compare-table {
+    margin-inline: auto;
+    max-inline-size: pxToRem(731);
+    inline-size: 100%;
+    white-space: nowrap;
+
+    tr > th:not(:first-child),
+    tr > td:not(:first-child) {
+        @media #{$break2open} {
+            text-align: center;
+        }
+    }
+
+    thead tr {
+        border-bottom: 0.0625rem solid clr(neutral, darkest);
+    }
+
+    tbody tr {
+        border-bottom: 0.0625rem solid clr(neutral);
+
+        @media #{$break1} {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+            padding-block: 1.5rem;
+
+            & > td:first-child {
+                grid-column: span 3;
+            }
+
+            & > td:not(:first-child) {
+                display: flex;
+                gap: 0.5rem;
+                flex-direction: column;
+                
+                &::before {
+                    font-size: $fs-8;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: clr(neutral, darkest, 0.5);
+                    letter-spacing: 0.16666em;
+                }
+            
+            }
+
+            & > td:nth-child(2)::before {
+                content: 'basic';
+            }
+            & > td:nth-child(3)::before {
+                content: 'pro';
+            }
+            & > td:nth-child(4)::before {
+                content: 'business';
+            }
+        }
+
+    }
+
+    th:first-child {
+        inline-size: 40%;
+
+        @media #{$break1} {
+            padding-block-end: 1.5rem;
+        }
+    }
+    th:not(:first-child) {
+        @media #{$break1} {
+            display: none;
+        }
+        @media #{$break2open} {
+            inline-size: 20%;
+        }
+    }
+
+    th, td {
+        
+        @media #{$break2open} {
+            padding-inline: 1.5rem 3.875rem;
+            padding-block: 1.46875rem;
+        }
+    }
+}
+
