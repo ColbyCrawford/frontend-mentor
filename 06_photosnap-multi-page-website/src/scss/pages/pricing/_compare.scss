@@ -15,16 +15,37 @@
 
     thead tr {
         border-bottom: 0.0625rem solid clr(neutral, darkest);
+        padding-bottom: 1.4375rem;
     }
 
     tbody tr {
         border-bottom: 0.0625rem solid clr(neutral);
 
+        &:first-child {
+            @media #{$break1} {
+                padding-block: 1.4375rem 1.5rem;
+            }
+            @media #{$break2open} {
+                padding-block: 1.4375rem 1.46875rem;
+            }
+        }
+    }
+
+    tr {    
+        display: grid;
+
+        &:not(:first-of-type) {
+            @media #{$break1} {
+                padding-block: 1.46875rem 1.5rem;
+            }
+            @media #{$break2open} {
+                padding-block: 1.46875rem;
+            }
+        }
+
         @media #{$break1} {
-            display: grid;
             gap: 1rem;
             grid-template-columns: repeat(3, 1fr);
-            padding-block: 1.5rem;
 
             & > td:first-child {
                 grid-column: span 3;
@@ -56,29 +77,15 @@
             }
         }
 
-    }
-
-    th:first-child {
-        inline-size: 40%;
-
-        @media #{$break1} {
-            padding-block-end: 1.5rem;
+        @media #{$break2open} {
+            grid-template-columns: 2fr 1fr 1fr 1fr;
         }
+
     }
+
     th:not(:first-child) {
         @media #{$break1} {
             display: none;
-        }
-        @media #{$break2open} {
-            inline-size: 20%;
-        }
-    }
-
-    th, td {
-        
-        @media #{$break2open} {
-            padding-inline: 1.5rem 3.875rem;
-            padding-block: 1.46875rem;
         }
     }
 }
