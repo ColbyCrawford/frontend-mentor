@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="../scss/main.scss">
   <title>Stories | Photosnap</title>
 </head>
+
 <body>
 
   <!-- ---------- -->
@@ -18,14 +20,14 @@
   <!-- ---------- -->
   <header id="navigation">
     <div class="l-navigation l-container">
-      <a href="../index.html">
+      <a href="../index.html" class="logo-dark">
         <img src="../assets/logo-dark.svg" alt="Photosnap home.">
       </a>
       <nav class="navigation-menu">
         <ul class="navigation-links">
-          <li><a href="stories.html" class="link">Stories</a></li>
-          <li><a href="features.html" class="link">Features</a></li>
-          <li><a href="pricing.html" class="link">Pricing</a></li>
+          <li><a href="stories.html" class="site-nav-link">Stories</a></li>
+          <li><a href="features.html" class="site-nav-link">Features</a></li>
+          <li><a href="pricing.html" class="site-nav-link">Pricing</a></li>
         </ul>
         <a href="#" class="navigation-btn btn-primary">Get an invite</a>
       </nav>
@@ -39,14 +41,22 @@
       </button>
     </div>
   </header>
+  <!-- navigation end -->
 
+  <!-- ---- -->
+  <!-- Main -->
+  <!-- ---- -->
   <main id="main">
-    <section id="stories-masthead">
+
+    <!-- -------- -->
+    <!-- Masthead -->
+    <!-- -------- -->
+    <section id="stories-masthead" class="masthead" aria-labelledby="masthead-title">
       <div class="l-stories-masthead">
         <div class="stories-masthead-text-wrapper">
           <div class="stories-masthead-text">
             <span class="stories-masthead-overline overline">Last month's featured story</span>
-            <h1 class="stories-masthead-title heading-lg">Hazy full moon of Appalachia</h1>
+            <h1 id="masthead-title" class="stories-masthead-title heading-lg">Hazy full moon of Appalachia</h1>
             <span class="stories-masthead-date">March 2nd 2020</span>
             <span>by John Appleseed</span>
             <p class="stories-masthead-body">
@@ -54,7 +64,7 @@
               is popularly called "mountains," especially in eastern Kentucky and West Virginia,
               and while the ridges are not high, the terrain is extremely rugged.
             </p>
-            <div class="link-icon">
+            <div class="link-secondary-icon">
               <a href="stories.html" class="link">Read the story</a>
               <span class="icon-arrow" aria-hidden="true"></span>
             </div>
@@ -62,304 +72,362 @@
         </div>
         <picture class="stories-masthead-bg">
           <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/moon-of-appalacia.jpg">
-          <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/images/stories/tablet/moon-of-appalacia.jpg">
+          <source media="(min-width: 768px) and (max-width: 1198.99px)"
+            srcset="../assets/images/stories/tablet/moon-of-appalacia.jpg">
           <source media="(min-width: 1199px)" srcset="../assets/images/stories/desktop/moon-of-appalacia.jpg">
           <img class="stories-masthead-bg-img" src="../assets/images/stories/mobile/moon-of-appalacia.jpg" alt="">
         </picture>
       </div>
     </section>
 
-    <section id="gallery">
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">April 16th 2020</p>
-            <h2 class="heading-sm">The Mountains</h2>
-            <p class="gallery-card-author">by John Appleseed</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+    <!-- ------- -->
+    <!-- Gallery -->
+    <!-- ------- -->
+    <section id="gallery" aria-label="Stories">
+
+      <!-- ------------ -->
+      <!-- Gallery Card -->
+      <!-- ------------ -->
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">April 16th 2020</p>
+              <h2 class="heading-sm">The Mountains</h2>
+              <p class="gallery-card-author">by John Appleseed</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/mountains.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/mountains.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/mountains.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">April 14th 2020</p>
-            <h2 class="heading-sm">Sunset Cityscapes</h2>
-            <p class="gallery-card-author">by Benjamin Cruz</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/mountains.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/mountains.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/mountains.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">April 14th 2020</p>
+              <h2 class="heading-sm">Sunset Cityscapes</h2>
+              <p class="gallery-card-author">by Benjamin Cruz</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/cityscapes.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/cityscapes.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/cityscapes.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">April 11th 2020</p>
-            <h2 class="heading-sm">18 Days Voyage</h2>
-            <p class="gallery-card-author">by Alexei Borodin</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/cityscapes.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/cityscapes.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/cityscapes.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">April 11th 2020</p>
+              <h2 class="heading-sm">18 Days Voyage</h2>
+              <p class="gallery-card-author">by Alexei Borodin</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/18-days-voyage.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/18-days-voyage.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/18-days-voyage.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">April 9th 2020</p>
-            <h2 class="heading-sm">Architecturals</h2>
-            <p class="gallery-card-author">by Samantha Brooke</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/18-days-voyage.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/18-days-voyage.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/18-days-voyage.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">April 9th 2020</p>
+              <h2 class="heading-sm">Architecturals</h2>
+              <p class="gallery-card-author">by Samantha Brooke</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/architecturals.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/architecturals.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/architecturals.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">April 7th 2020</p>
-            <h2 class="heading-sm">World Tour 2019</h2>
-            <p class="gallery-card-author">by Timothy Wagner</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/architecturals.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/architecturals.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/architecturals.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">April 7th 2020</p>
+              <h2 class="heading-sm">World Tour 2019</h2>
+              <p class="gallery-card-author">by Timothy Wagner</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/world-tour.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/world-tour.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/world-tour.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">April 3rd 2020</p>
-            <h2 class="heading-sm">Unforeseen Corners</h2>
-            <p class="gallery-card-author">by William Malcolm</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/world-tour.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/world-tour.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/world-tour.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">April 3rd 2020</p>
+              <h2 class="heading-sm">Unforeseen Corners</h2>
+              <p class="gallery-card-author">by William Malcolm</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/unforeseen-corners.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/unforeseen-corners.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/unforeseen-corners.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 29th 2020</p>
-            <h2 class="heading-sm">King on Africa: Part II</h2>
-            <p class="gallery-card-author">by Tim Hillenburg</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/unforeseen-corners.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/unforeseen-corners.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/unforeseen-corners.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 29th 2020</p>
+              <h2 class="heading-sm">King on Africa: Part II</h2>
+              <p class="gallery-card-author">by Tim Hillenburg</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/king-on-africa.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/king-on-africa.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/king-on-africa.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 21st 2020</p>
-            <h2 class="heading-sm">The Trip to Nowhere</h2>
-            <p class="gallery-card-author">by Felicia Rourke</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/king-on-africa.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/king-on-africa.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/king-on-africa.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 21st 2020</p>
+              <h2 class="heading-sm">The Trip to Nowhere</h2>
+              <p class="gallery-card-author">by Felicia Rourke</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/trip-to-nowhere.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/trip-to-nowhere.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/trip-to-nowhere.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 19th 2020</p>
-            <h2 class="heading-sm">Rage of The Sea</h2>
-            <p class="gallery-card-author">by Mohammed Abdul</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/trip-to-nowhere.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/trip-to-nowhere.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/trip-to-nowhere.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 19th 2020</p>
+              <h2 class="heading-sm">Rage of The Sea</h2>
+              <p class="gallery-card-author">by Mohammed Abdul</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/rage-of-the-sea.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/rage-of-the-sea.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/rage-of-the-sea.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 16th 2020</p>
-            <h2 class="heading-sm">Running Free</h2>
-            <p class="gallery-card-author">by Michelle</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/rage-of-the-sea.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/rage-of-the-sea.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/rage-of-the-sea.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 16th 2020</p>
+              <h2 class="heading-sm">Running Free</h2>
+              <p class="gallery-card-author">by Michelle</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/running-free.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/running-free.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/running-free.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 11th 2020</p>
-            <h2 class="heading-sm">Behind the Waves</h2>
-            <p class="gallery-card-author">by Lamarr Wilson</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/running-free.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/running-free.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/running-free.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 11th 2020</p>
+              <h2 class="heading-sm">Behind the Waves</h2>
+              <p class="gallery-card-author">by Lamarr Wilson</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/behind-the-waves.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/behind-the-waves.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/behind-the-waves.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 9th 2020</p>
-            <h2 class="heading-sm">Calm Waters</h2>
-            <p class="gallery-card-author">by Samantha Brooke</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/behind-the-waves.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/behind-the-waves.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/behind-the-waves.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 9th 2020</p>
+              <h2 class="heading-sm">Calm Waters</h2>
+              <p class="gallery-card-author">by Samantha Brooke</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/calm-waters.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/calm-waters.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/calm-waters.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 5th 2020</p>
-            <h2 class="heading-sm">The Milky Way</h2>
-            <p class="gallery-card-author">by Benjamin Cruz</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/calm-waters.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/calm-waters.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/calm-waters.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 5th 2020</p>
+              <h2 class="heading-sm">The Milky Way</h2>
+              <p class="gallery-card-author">by Benjamin Cruz</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/milky-way.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/milky-way.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/milky-way.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 4th 2020</p>
-            <h2 class="heading-sm">Night at The Dark Forest</h2>
-            <p class="gallery-card-author">by Mohammed Abdul</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/milky-way.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/milky-way.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/milky-way.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 4th 2020</p>
+              <h2 class="heading-sm">Night at The Dark Forest</h2>
+              <p class="gallery-card-author">by Mohammed Abdul</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/dark-forest.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/dark-forest.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/dark-forest.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">March 1st 2020</p>
-            <h2 class="heading-sm">Somwarpet’s Beauty</h2>
-            <p class="gallery-card-author">by Michelle</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/dark-forest.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/dark-forest.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/dark-forest.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">March 1st 2020</p>
+              <h2 class="heading-sm">Somwarpet’s Beauty</h2>
+              <p class="gallery-card-author">by Michelle</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/somwarpet.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/somwarpet.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/somwarpet.jpg" alt="">
-        </picture>
-      </article>
-      <article class="gallery-card">
-        <div class="gallery-card-text">
-          <header class="gallery-card-header">
-            <p class="gallery-card-date">February 25th 2020</p>
-            <h2 class="heading-sm">Land of Dreams</h2>
-            <p class="gallery-card-author">by William Malcolm</p>
-          </header>
-          <div class="link-icon-full">
-            <a href="stories.html" class="link">Read Story</a>
-            <span class="icon-arrow" aria-hidden="true"></span>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/somwarpet.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/somwarpet.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/somwarpet.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
+      <a href="#" class="gallery-card-link">
+        <article class="gallery-card">
+          <div class="gallery-card-text">
+            <header class="gallery-card-header">
+              <p class="gallery-card-date">February 25th 2020</p>
+              <h2 class="heading-sm">Land of Dreams</h2>
+              <p class="gallery-card-author">by William Malcolm</p>
+            </header>
+            <div class="link-icon-full">
+              <span class="link">Read Story</span>
+              <span class="icon-arrow" aria-hidden="true"></span>
+            </div>
           </div>
-        </div>
-        <picture>
-          <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/land-of-dreams.jpg">
-          <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/land-of-dreams.jpg">
-          <img class="gallery-card-bg" src="../assets/images/stories/mobile/land-of-dreams.jpg" alt="">
-        </picture>
-      </article>
+          <picture>
+            <source media="(max-width: 767.99px)" srcset="../assets/images/stories/mobile/land-of-dreams.jpg">
+            <source media="(min-width: 768px)" srcset="../assets/images/stories/desktop/land-of-dreams.jpg">
+            <img class="gallery-card-bg" src="../assets/images/stories/mobile/land-of-dreams.jpg" alt="">
+          </picture>
+        </article>
+      </a>
+
     </section>
+
   </main>
+  <!-- main end -->
 
   <!-- ------ -->
   <!-- Footer -->
@@ -367,19 +435,21 @@
   <footer id="footer">
     <div class="l-footer l-container">
       <div class="footer-content-ls">
-        <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        <a href="" class="logo-light">
+          <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        </a>
         <ul class="footer-navigation">
           <li class="footer-navigation-item">
-            <a href="../index.html" class="footer-navigation-link link">Home</a>
+            <a href="../index.html" class="site-nav-link">Home</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="stories.html" class="footer-navigation-link link">Stories</a>
+            <a href="stories.html" class="site-nav-link">Stories</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="features.html" class="footer-navigation-link link">Features</a>
+            <a href="features.html" class="site-nav-link">Features</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="pricing.html" class="footer-navigation-link link">Pricing</a>
+            <a href="pricing.html" class="site-nav-link">Pricing</a>
           </li>
         </ul>
         <div class="socials">
@@ -401,7 +471,7 @@
         </div>
       </div>
       <div class="footer-content-rs">
-        <div class="link-icon">
+        <div class="link-secondary-icon">
           <a href="#" class="link">Get an invite</a>
           <span class="icon-arrow"></span>
         </div>
@@ -409,7 +479,9 @@
       </div>
     </div>
   </footer>
+  <!-- footer end -->
 
   <script src="../js/_navigation.js"></script>
 </body>
+
 </html>

@@ -2,3 +2,15 @@ $break1:     '(max-width: 767.99px)';
 $break2:     '(min-width: 768px) and (max-width: 1198.99px)';
 $break2open: '(min-width: 768px)';
 $break3open: '(min-width: 1199px)';
+
+@mixin sectionMarginBlockEnd($mobile: null, $tablet: null, $desktop: null) {
+    @if $mobile != null {
+        @media #{$break1} { margin-block-end: $mobile; }
+    }
+    @if $tablet != null {
+        @media #{$break2} { margin-block-end: $tablet; }
+    }
+    @if $desktop != null {
+        @media #{$break3open} { margin-block-end: $desktop; }
+    }
+}

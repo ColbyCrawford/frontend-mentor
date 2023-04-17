@@ -20,14 +20,14 @@
   <!-- ---------- -->
   <header id="navigation">
     <div class="l-navigation l-container">
-      <a href="../index.html">
+      <a class="logo-dark" href="../index.html">
         <img src="../assets/logo-dark.svg" alt="Photosnap home.">
       </a>
       <nav class="navigation-menu">
         <ul class="navigation-links">
-          <li><a href="stories.html" class="link">Stories</a></li>
-          <li><a href="features.html" class="link">Features</a></li>
-          <li><a href="pricing.html" class="link">Pricing</a></li>
+          <li><a href="stories.html" class="site-nav-link">Stories</a></li>
+          <li><a href="features.html" class="site-nav-link">Features</a></li>
+          <li><a href="pricing.html" class="site-nav-link">Pricing</a></li>
         </ul>
         <a href="#" class="navigation-btn btn-primary">Get an invite</a>
       </nav>
@@ -41,17 +41,19 @@
       </button>
     </div>
   </header>
+  <!-- navigation end -->
 
   <main id="main">
+
     <!-- -------- -->
     <!-- Masthead -->
     <!-- -------- -->
-    <section id="masthead">
+    <section id="pricing-masthead" class="masthead" aria-labelledby="masthead-title">
       <div class="l-common-grid">
         <div class="common-grid-masthead u-max-block-size-650">
           <div class="common-grid-masthead-wrapper">
-            <header class="text-group">
-              <h1 class="heading-lg"> Pricing</h1>
+            <header class="text-group gradient-decor">
+              <h1 id="masthead-title" class="heading-lg">Pricing</h1>
               <p class="text-group-body">
                 Create a your stories, Photosnap is a platform for photographers and visual storytellers.
                 It’s the simple way to create and share your photos.
@@ -75,13 +77,18 @@
       </div>
     </section>
 
-    <section id="plans">
+    <!-- ----- -->
+    <!-- Plans -->
+    <!-- ----- -->
+    <section id="plans" aria-label="Available plans">
       <div class="l-plans l-container">
+
         <div class="plans-mo-yr">
           <input class="toggle" type="checkbox" name="payment-options" id="plans-toggle">
           <span class="plans-monthly heading-sm">Monthly</span>
           <span class="plans-yearly heading-sm">Yearly</span>
         </div>
+
         <div class="pricing">
 
           <div class="pricing-card">
@@ -91,26 +98,26 @@
                 Includes basic usage of our platform. Recommended for new and aspiring photographers.
               </p>
             </header>
-            <div class="pricing-card-cost">
+            <div class="pricing-card-cost" data-active="true">
               <span class="pricing-card-numbers heading-lg">$19.00</span> <p>per month</p>
             </div>
-            <div class="pricing-card-cost">
+            <div class="pricing-card-cost" data-active="false">
               <span class="pricing-card-numbers heading-lg">$190.00</span> <p>per year</p>
             </div>
             <a href="" class="btn-primary">Pick Plan</a>
           </div>
 
-          <div class="pricing-card">
+          <div class="pricing-card gradient-decor">
             <div class="pricing-card-header">
               <h2 class="pricing-card-title">Pro</h2>
               <p class="pricing-card-body">
                 More advanced features available. Recommended for photography veterans and professionals.
               </p>
             </div>
-            <div class="pricing-card-cost">
+            <div class="pricing-card-cost" data-active="true">
               <span class="pricing-card-numbers heading-lg">$39.00</span> <p>per month</p>
             </div>
-            <div class="pricing-card-cost">
+            <div class="pricing-card-cost" data-active="false">
               <span class="pricing-card-numbers heading-lg">$390.00</span> <p>per year</p>
             </div>
             <a href="" class="btn-secondary">Pick Plan</a>
@@ -123,21 +130,27 @@
                 Additional features available such as more detailed metrics. Recommended for business owners.
               </p>
             </div>
-            <div class="pricing-card-cost">
+            <div class="pricing-card-cost" data-active="true">
               <span class="pricing-card-numbers heading-lg">$99.00</span> <p>per month</p>
             </div>
-            <div class="pricing-card-cost">
+            <div class="pricing-card-cost" data-active="false">
               <span class="pricing-card-numbers heading-lg">$990.00</span> <p>per year</p>
             </div>
             <a href="" class="btn-primary">Pick Plan</a>
           </div>
+
         </div>
+        <!-- pricing end -->
       </div>
+      <!-- plans container end -->
     </section>
 
-    <section id="compare">
+    <!-- ------- -->
+    <!-- Compare -->
+    <!-- ------- -->
+    <section id="compare" aria-labelledby="compare-title">
       <div class="l-container">
-        <h2 class="heading-lg">Compare</h2>
+        <h2 id="compare-title" class="heading-lg u-text-center">Compare</h2>
         <table class="compare-table">
           <thead>
             <tr>
@@ -202,16 +215,21 @@
       
     </section>
 
-    <section id="cta">
+    <!-- --- -->
+    <!-- CTA -->
+    <!-- --- -->
+    <section id="cta" aria-labelledby="cta-title">
       <div class="l-cta l-container">
-        <h2 id="cta-title" class="heading-lg">We're in Beta. Get your invite today!</h2>
+        <h2 id="cta-title" class="heading-lg gradient-decor">We're in Beta. Get your invite today!</h2>
         <div class="link-icon">
           <a href="#" class="link">Get an invite</a>
           <span class="icon-arrow" aria-hidden="true"></span>
         </div>
       </div>
     </section>
+
   </main>
+  <!-- main end -->
 
   <!-- ------ -->
   <!-- Footer -->
@@ -219,19 +237,21 @@
   <footer id="footer">
     <div class="l-footer l-container">
       <div class="footer-content-ls">
-        <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        <a href="#" class="logo-light">
+          <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        </a>
         <ul class="footer-navigation">
           <li class="footer-navigation-item">
-            <a href="../index.html" class="footer-navigation-link link">Home</a>
+            <a href="../index.html" class="site-nav-link">Home</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="stories.html" class="footer-navigation-link link">Stories</a>
+            <a href="stories.html" class="site-nav-link">Stories</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="features.html" class="footer-navigation-link link">Features</a>
+            <a href="features.html" class="site-nav-link">Features</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="pricing.html" class="footer-navigation-link link">Pricing</a>
+            <a href="pricing.html" class="site-nav-link">Pricing</a>
           </li>
         </ul>
         <div class="socials">
@@ -253,7 +273,7 @@
         </div>
       </div>
       <div class="footer-content-rs">
-        <div class="link-icon">
+        <div class="link-secondary-icon">
           <a href="#" class="link">Get an invite</a>
           <span class="icon-arrow"></span>
         </div>
@@ -261,8 +281,10 @@
       </div>
     </div>
   </footer>
+  <!-- footer end -->
 
   <script src="../js/_navigation.js"></script>
+  <script src="../js/_plans-toggle.js"></script>
 </body>
 
 </html>

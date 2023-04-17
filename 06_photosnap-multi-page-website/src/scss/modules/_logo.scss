@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+%logo {
+    &:focus-visible {
+        outline-offset: 0.25rem;
+        outline-width: 0.0625rem;
+        outline-style: solid;
+    }           
+}
+
+.logo-light {
+    @extend %logo;
+    &:focus-visible {
+        outline-color: clr(neutral, lightest);
+    }
+}
+
+.logo-dark {
+    @extend %logo;
+    &:focus-visible {
+        outline-color: clr(neutral, darkest);   
+    }
+}

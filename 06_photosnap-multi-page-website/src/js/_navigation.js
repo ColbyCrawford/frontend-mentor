@@ -2,7 +2,6 @@ const body = document.querySelector("body");
 const navMenu = document.querySelector(".navigation-menu");
 const menuToggle = document.querySelector(".menu-toggle");
 
-
 menuToggle.addEventListener("click", () => {
     const currentState = menuToggle.getAttribute("data-state");
 

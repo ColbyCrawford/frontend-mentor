@@ -8,7 +8,13 @@
     text-transform: uppercase;
     letter-spacing: 0.16666em;
     padding: 1em 2em;
-}
+
+    &:focus-visible {
+        outline-offset: 0.25rem;
+        outline-width: 0.0625rem;
+        outline-style: solid;
+    }
+ }
 
 .btn-primary {
     @extend %btn;
@@ -20,6 +26,10 @@
         background-color: clr(neutral);
         color: clr(neutral, darkest);
     }
+
+    &:focus-visible {
+        outline-color: clr(neutral, darkest);
+    }
 }
 
 .btn-secondary {
@@ -30,5 +40,9 @@
     &:hover,
     &:focus-visible {
         background-color: clr(neutral);
+    }
+
+    &:focus-visible {
+        outline-color: clr(neutral);
     }
 }

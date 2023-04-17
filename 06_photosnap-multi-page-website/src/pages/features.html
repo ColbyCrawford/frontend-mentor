@@ -20,14 +20,14 @@
   <!-- ---------- -->
   <header id="navigation">
     <div class="l-navigation l-container">
-      <a href="../index.html">
+      <a class="logo-dark" href="../index.html">
         <img src="../assets/logo-dark.svg" alt="Photosnap home.">
       </a>
       <nav class="navigation-menu">
         <ul class="navigation-links">
-          <li><a href="stories.html" class="link">Stories</a></li>
-          <li><a href="features.html" class="link">Features</a></li>
-          <li><a href="pricing.html" class="link">Pricing</a></li>
+          <li><a href="stories.html" class="site-nav-link">Stories</a></li>
+          <li><a href="features.html" class="site-nav-link">Features</a></li>
+          <li><a href="pricing.html" class="site-nav-link">Pricing</a></li>
         </ul>
         <a href="#" class="navigation-btn btn-primary">Get an invite</a>
       </nav>
@@ -41,17 +41,22 @@
       </button>
     </div>
   </header>
+  <!-- navigation end -->
 
+  <!-- ---- -->
+  <!-- Main -->
+  <!-- ---- -->
   <main id="main">
+
     <!-- -------- -->
     <!-- Masthead -->
     <!-- -------- -->
-    <section id="masthead">
+    <section id="features-masthead" class="masthead" aria-labelledby="masthead-title">
       <div class="l-common-grid">
         <div class="common-grid-masthead u-max-block-size-650">
           <div class="common-grid-masthead-wrapper">
             <header class="text-group">
-              <h1 class="heading-lg">Features</h1>
+              <h1 id="masthead-title" class="heading-lg">Features</h1>
               <p class="text-group-body">
                 We make sure all of our features are designed to be loved by every aspiring and even
                 professional photograpers who wanted to share their stories.
@@ -66,7 +71,8 @@
         <div class="common-grid-img-container u-max-block-size-650">
           <picture>
             <source media="(max-width: 767.99px)" srcset="../assets/images/features/hero-mobile.jpg">
-            <source media="(min-width: 768px) and (max-width: 1198.99px)" srcset="../assets/images/features/hero-tablet.jpg">
+            <source media="(min-width: 768px) and (max-width: 1198.99px)"
+              srcset="../assets/images/features/hero-tablet.jpg">
             <source media="(min-width: 1199px)" srcset="../assets/images/features/hero-desktop.jpg">
             <img class="common-grid-img" src="../assets/images/features/hero-mobile.jpg" alt="">
           </picture>
@@ -74,7 +80,10 @@
       </div>
     </section>
 
-    <section id="features">
+    <!-- -------- -->
+    <!-- Features -->
+    <!-- -------- -->
+    <section id="features" aria-label="Perks">
       <div class="l-features l-container">
         <div class="features-item">
           <img class="features-item-icon" src="../assets/images/features/responsive.svg" alt="">
@@ -103,35 +112,44 @@
           <img class="features-item-icon" src="../assets/images/features/custom-domain.svg" alt="">
           <div class="features-item-text">
             <h2 class="features-item-title heading-sm">Custom Domain</h2>
-            <p>With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!</p>
+            <p>With Photosnap subscriptions you can host your stories on your own domain. You can also remove our
+              branding!</p>
           </div>
         </div>
         <div class="features-item">
           <img class="features-item-icon" src="../assets/images/features/boost-exposure.svg" alt="">
           <div class="features-item-text">
             <h2 class="features-item-title heading-sm">Boost Your Exposure</h2>
-            <p>Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.</p>
+            <p>Users that viewed your story or gallery can easily get notifed of new and featured stories with our built
+              in mailing list.</p>
           </div>
         </div>
         <div class="features-item">
           <img class="features-item-icon" src="../assets/images/features/drag-drop.svg" alt="">
           <div class="features-item-text">
             <h2 class="features-item-title heading-sm">Drag & Drop Image</h2>
-            <p> Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.</p>
+            <p> Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add
+              friction to creating stories.</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="cta">
+
+    <!-- --- -->
+    <!-- CTA -->
+    <!-- --- -->
+    <section id="cta" aria-labelledby="cta-title">
       <div class="l-cta l-container">
-        <h2 id="cta-title" class="heading-lg">We're in Beta. Get your invite today!</h2>
+        <h2 id="cta-title" class="heading-lg gradient-decor">We're in Beta. Get your invite today!</h2>
         <div class="link-icon">
           <a href="#" class="link">Get an invite</a>
           <span class="icon-arrow" aria-hidden="true"></span>
         </div>
       </div>
     </section>
+
   </main>
+  <!-- main end -->
 
   <!-- ------ -->
   <!-- Footer -->
@@ -139,19 +157,21 @@
   <footer id="footer">
     <div class="l-footer l-container">
       <div class="footer-content-ls">
-        <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        <a href="#" class="logo-light">
+          <img src="../assets/logo-light.svg" alt="Photosnap home.">
+        </a>
         <ul class="footer-navigation">
           <li class="footer-navigation-item">
-            <a href="../index.html" class="footer-navigation-link link">Home</a>
+            <a href="../index.html" class="site-nav-link">Home</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="stories.html" class="footer-navigation-link link">Stories</a>
+            <a href="stories.html" class="site-nav-link">Stories</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="features.html" class="footer-navigation-link link">Features</a>
+            <a href="features.html" class="site-nav-link">Features</a>
           </li>
           <li class="footer-navigation-item">
-            <a href="pricing.html" class="footer-navigation-link link">Pricing</a>
+            <a href="pricing.html" class="site-nav-link">Pricing</a>
           </li>
         </ul>
         <div class="socials">
@@ -181,6 +201,7 @@
       </div>
     </div>
   </footer>
+  <!-- footer-end -->
 
   <script src="../js/_navigation.js"></script>
 </body>

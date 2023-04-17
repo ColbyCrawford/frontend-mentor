@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+.gradient-decor::before {
+    content: '';
+    position: absolute;
+    background: #{$gradient-400};
+
+    @media #{$break1} {
+        block-size: 0.375rem;
+        top: 0;
+    }
+}
+
+#cta-title.gradient-decor::before,
+.text-group.gradient-decor::before {
+    @media #{$break1} {
+        inline-size: 8rem;
+    }
+
+    @media #{$break2open} {
+        left: 0;
+        top: 0;
+        inline-size: 0.375rem;
+        block-size: 100%;
+    }
+}
+
+.pricing-card.gradient-decor::before {
+    @media #{$break1}, #{$break3open} {
+        inline-size: 100%;
+    }
+    @media #{$break2} {
+        left: 0;
+        top: 0;
+        inline-size: 0.375rem;
+        block-size: 100%;
+    }
+}
+
+
+

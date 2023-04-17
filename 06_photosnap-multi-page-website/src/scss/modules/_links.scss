@@ -1,12 +1,38 @@
 @use '../abstracts' as *;
 
-.link {
+.link,
+.site-nav-link {
     font-size: $fs-7;
     line-height: 1.33333;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.16666em;
 }
+
+.link:hover,
+.link:focus-visible {
+    text-decoration: underline;
+}
+
+.site-nav-link {
+    display: block;
+
+    &:hover,
+    &:focus-visible {
+        opacity: 0.3;
+    }
+}
+
+.link-secondary-icon,
+.link-primary-icon,
+.link-icon-full {
+    cursor: pointer;
+
+    &:hover > .link {
+        text-decoration: underline;
+    }
+}
+
 
 .link-secondary-icon,
 .link-primary-icon {
@@ -18,6 +44,7 @@
 .link-primary-icon {
     color: clr(neutral, darkest);
 }
+
 .link-secondary-icon {
     color: clr(neutral, lightest);
 }

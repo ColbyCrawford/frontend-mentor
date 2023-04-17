@@ -8,6 +8,12 @@
         #navigation & { justify-self: end; }
     }
     @media #{$break2open} { display: none; }
+
+    &:focus-visible {
+        outline-offset: 0.25rem;
+        outline: 0.0625rem solid clr(neutral, darkest);
+        border-radius: 0.25rem;
+    }
 }
 
 .menu-toggle .line {

@@ -1,5 +1,10 @@
 @use '../../abstracts' as *;
 
+#compare {
+    @include sectionMarginBlockEnd($size-64, 7rem, $size-160);
+}
+
+
 .compare-table {
     margin-inline: auto;
     max-inline-size: pxToRem(731);
@@ -80,7 +85,6 @@
         @media #{$break2open} {
             grid-template-columns: 2fr 1fr 1fr 1fr;
         }
-
     }
 
     th:not(:first-child) {

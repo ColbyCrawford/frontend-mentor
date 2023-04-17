@@ -1,17 +1,7 @@
 @use '../../abstracts' as *;
 
 #plans {
-    @media #{$break1} {
-        padding-block: 4rem;
-    }
-
-    @media #{$break2} {
-        padding-block: 7rem;
-    }
-
-    @media #{$break3open} {
-        padding-block: $size-120 $size-160;
-    }
+    @include sectionMarginBlockEnd($size-64, 7rem, $size-160);
 }
 
 .pricing {
@@ -62,24 +52,6 @@
         }
         @media #{$break3open} {
             padding-block: 5.5rem 4.5rem;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            background: #{$gradient-400};
-        
-            @media #{$break1}, #{$break3open} {
-                block-size: 0.375rem;
-                inline-size: 100%;
-                top: 0;
-            }
-            @media #{$break2} {
-                left: 0;
-                top: 0;
-                inline-size: 0.375rem;
-                block-size: 100%;
-            }
         }
     }
 }
@@ -135,7 +107,12 @@
     }
 }
 
-.pricing-card-cost {
+
+.pricing-card-cost[data-active="false"] {
+    display: none;
+}
+
+.pricing-card-cost[data-active="true"] {
     display: flex;
     flex-direction: column;
 
@@ -145,8 +122,4 @@
     @media #{$break1}, #{$break3open} {
         text-align: center;
     }
-}
-
-.pricing-card-cost:nth-of-type(2) {
-    display: none;
 }

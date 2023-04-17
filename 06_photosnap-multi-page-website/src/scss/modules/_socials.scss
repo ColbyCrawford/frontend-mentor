@@ -19,7 +19,8 @@
     }
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus-visible {
     & > .icon-facebook::before { --p-icon-bg: linear-gradient(225deg, hsl(202, 62%, 62%) 0%, hsl(257, 88%, 55%) 100%); }
     & > .icon-youtube::before { --p-icon-bg: linear-gradient(45deg, hsl(341, 74%, 48%) 0%, hsl(0, 100%, 68%) 100%); }
     & > .icon-instagram::before { --p-icon-bg:  linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%); }
